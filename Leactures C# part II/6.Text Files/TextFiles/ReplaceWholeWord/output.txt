@@ -1,0 +1,5 @@
+Some sentance with finish word in int. - finish, finish.
+Some sentance without.
+..and again finish!
+.
+...finish...

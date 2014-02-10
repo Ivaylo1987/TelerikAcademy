@@ -1,0 +1,5 @@
+line 1 - Some sentance with start word in int. - start, start.
+line 2 - Some sentance without.
+line 3 - ..and again start!
+line 4 - .
+line 5 - ...start...

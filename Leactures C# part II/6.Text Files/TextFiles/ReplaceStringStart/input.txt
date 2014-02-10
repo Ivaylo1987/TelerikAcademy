@@ -1,0 +1,5 @@
+Some sentance with start word in int. - start, start.
+Some sentance without.
+..and again start!
+.
+...start...
