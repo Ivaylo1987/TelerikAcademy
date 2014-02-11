@@ -16,7 +16,7 @@
             builder.Append("Some str@nge text for testing!");
             string subStr = builder.SubString(4, 8);
 
-            Console.WriteLine("Substring from StringBuilder:_{0}", subStr);
+            Console.WriteLine("Substring from StringBuilder:{0}", subStr);
 
             // Testing IEnumerable extensions
             List<int> intEnum = new List<int>();

@@ -41,7 +41,7 @@
         }
 
         // Extension method Product to IEnumerable<T>
-        public static T Product<T>(this IEnumerable<T> collection)
+        public static dynamic Product<T>(this IEnumerable<T> collection)
         {
             dynamic result = 1;
                     
