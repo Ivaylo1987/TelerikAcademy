@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Demo\Extensio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries.csproj", "{87AFDF8A-DB05-40E4-8A94-661AC8A95A1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateTimer", "DelegateTimer\DelegateTimer.csproj", "{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{87AFDF8A-DB05-40E4-8A94-661AC8A95A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87AFDF8A-DB05-40E4-8A94-661AC8A95A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87AFDF8A-DB05-40E4-8A94-661AC8A95A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

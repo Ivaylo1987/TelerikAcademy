@@ -1,4 +1,4 @@
-﻿namespace DotNetExtensions
+﻿namespace Extensions
 {
     using System;
     using System.Collections.Generic;
