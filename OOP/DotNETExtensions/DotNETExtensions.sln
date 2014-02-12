@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateTimer", "DelegateTimer\DelegateTimer.csproj", "{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentQueries", "Student\StudentQueries.csproj", "{1FFA4F0E-380B-4E39-9EB5-126C446245FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F905BCC3-E61C-4A13-AB95-57E8CB22A5E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FFA4F0E-380B-4E39-9EB5-126C446245FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FFA4F0E-380B-4E39-9EB5-126C446245FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FFA4F0E-380B-4E39-9EB5-126C446245FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FFA4F0E-380B-4E39-9EB5-126C446245FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

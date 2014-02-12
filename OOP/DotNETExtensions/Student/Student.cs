@@ -1,4 +1,4 @@
-﻿namespace DotNetExtensions
+﻿namespace StudentQueries
 {
     using System;
     using System.Collections.Generic;
