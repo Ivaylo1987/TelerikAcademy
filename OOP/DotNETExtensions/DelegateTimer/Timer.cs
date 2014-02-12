@@ -8,11 +8,13 @@
     using System.Threading;
     using System.Threading.Tasks;
 
+    // Generic delegate
     public delegate void ExecuteMethod<T>(T item);
 
     public class Timer
     {
-        public void ExecuteAtCertainInterval<T>(ExecuteMethod<T> method, T paramOfMethod, int seconds)
+        // Method that different executes methods with different parameters.
+        public void ExecuteAt<T>(ExecuteMethod<T> method, T paramOfMethod, int seconds)
         {
             int sleepTime = seconds * 1000;
 

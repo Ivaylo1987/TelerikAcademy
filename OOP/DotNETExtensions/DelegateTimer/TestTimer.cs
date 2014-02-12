@@ -10,9 +10,10 @@
     {
         static void Main()
         {
-            Timer executeAt1 = new Timer();
-            int period = 1;   // change period to whatever whanted!
-            executeAt1.ExecuteAtCertainInterval(Console.WriteLine, string.Format("I exacute every {0} seconds :)!", period), period);
+            Timer timer = new Timer();
+            int seconds = 2;   // change period to whatever whanted!
+
+            timer.ExecuteAt(Console.WriteLine, string.Format("I exacute every {0} seconds :)!", seconds), seconds);
         }
     }
 }
