@@ -21,5 +21,21 @@
 
             return result;
         }
+
+        // Task 19
+        public static void PrintStundetByGroups(this List<Student> students)
+        {
+            var groupedByGroupNumber = students.GroupBy(s => s.GroupNumer);
+
+            foreach (var group in groupedByGroupNumber)
+            {
+                Console.WriteLine("Group {0}", group.Key);
+
+                foreach (var student in group)
+                {
+                    Console.WriteLine(student.FirstName + " " + student.LastName);
+                }
+            }
+        }
     }
 }
