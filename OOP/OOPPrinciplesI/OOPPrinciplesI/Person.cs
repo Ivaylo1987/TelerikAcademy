@@ -1,0 +1,7 @@
+﻿namespace School
+{
+    class Person
+    {
+
+    }
+}
