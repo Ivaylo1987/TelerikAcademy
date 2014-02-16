@@ -1,7 +1,8 @@
 ﻿namespace School
 {
-    class Person
+    public abstract class Person
     {
+        public string Name { get; private set; }
 
     }
 }
