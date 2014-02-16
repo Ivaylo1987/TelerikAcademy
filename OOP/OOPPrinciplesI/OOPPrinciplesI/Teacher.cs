@@ -1,6 +1,6 @@
 ﻿namespace School
 {
-    class Student : Person
+    class Teacher : Person
     {
         
     }

@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Discipline.cs" />
+    <Compile Include="IComment.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudentClass.cs" />
+    <Compile Include="Teacher.cs" />
     <Compile Include="TestSchool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
