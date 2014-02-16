@@ -1,7 +1,7 @@
 ﻿namespace School
 {
     using System;
-    class Discipline : IComment
+    public class Discipline : IComment
     {
         private int lectures;
         private int excercises;

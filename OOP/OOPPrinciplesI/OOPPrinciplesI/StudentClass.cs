@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    class StudentClass : IComment
+    public class StudentClass : IComment
     {
 
         private string identifier;

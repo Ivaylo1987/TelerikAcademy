@@ -1,7 +1,7 @@
 ﻿namespace School
 {
     using System.Collections.Generic;
-    class Teacher : Person
+    public class Teacher : Person
     {
         public Teacher(string name)
             :base(name)
