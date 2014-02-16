@@ -4,6 +4,7 @@
     {
         static void Main()
         {
+            Teacher tch1 = new Teacher("pesho");
 
         }
     }
