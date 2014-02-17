@@ -1,6 +1,8 @@
 ﻿namespace AnimalWorld
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public abstract class Animal : ISound
     {
@@ -49,6 +51,12 @@
         }
 
         public Sex Sex { get; private set; }
+
+        public static int CalcAverageAge(IEnumerable<Animal> animals)
+        {
+            var result = animals.Average( a => a.Age);
+            return (int)result;
+        }
 
         public abstract void MakeSound();
 

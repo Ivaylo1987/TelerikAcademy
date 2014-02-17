@@ -6,11 +6,11 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    class TestAnimalWorld
+    public class TestAnimalWorld
     {
         static void Main()
         {
- 
+
         }
     }
 }
