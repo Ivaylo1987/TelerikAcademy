@@ -12,7 +12,7 @@
         
         public override void MakeSound()
         {
-            Console.WriteLine("Murr, murrr!");
+            Console.WriteLine("Miaaaaau, murrr!");
         }
     }
 }
