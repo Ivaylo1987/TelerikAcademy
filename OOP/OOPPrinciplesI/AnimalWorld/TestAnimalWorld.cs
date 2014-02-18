@@ -57,7 +57,7 @@
             frogs[1].MakeSound();
             Console.WriteLine("Frogs average Age: {0: 0.0}", Animal.CalcAverageAge(frogs));
 
-            Animal kitten = new Kitten("Kiti", 1);
+            Animal kitten = new Kitten("Kiti", 1);   //declared as animal
 
             kitten.MakeSound();
             Console.WriteLine(kitten.Sex);
