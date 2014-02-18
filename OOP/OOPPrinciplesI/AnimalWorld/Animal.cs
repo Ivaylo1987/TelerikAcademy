@@ -52,10 +52,10 @@
 
         public Sex Sex { get; private set; }
 
-        public static int CalcAverageAge(IEnumerable<Animal> animals)
+        public static decimal CalcAverageAge(IEnumerable<Animal> animals)
         {
             var result = animals.Average( a => a.Age);
-            return (int)result;
+            return (decimal)result;
         }
 
         public abstract void MakeSound();

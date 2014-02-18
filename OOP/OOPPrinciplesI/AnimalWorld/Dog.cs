@@ -9,10 +9,10 @@
         {
 
         }
-        
+
         public override void MakeSound()
         {
-            Console.WriteLine("Bauuu!");
+            Console.WriteLine("Bauuu! Dog");
         }
     }
 }
