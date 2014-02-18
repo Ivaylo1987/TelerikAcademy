@@ -57,11 +57,19 @@
             frogs[1].MakeSound();
             Console.WriteLine("Frogs average Age: {0: 0.0}", Animal.CalcAverageAge(frogs));
 
+            // testing kitten sex restrictions
             Animal kitten = new Kitten("Kiti", 1);   //declared as animal
 
             kitten.MakeSound();
             Console.WriteLine(kitten.Sex);
+            // kitten.Sex = Sex.Male;   throws exception if uncommented
 
+            // Testing dog Sex propertie.
+            Animal doggie = new Dog("pesho", 3, Sex.Female);
+            
+            Console.WriteLine(doggie.Sex);
+            doggie.Sex = Sex.Male;
+            Console.WriteLine(doggie.Sex);
         }
     }
 }

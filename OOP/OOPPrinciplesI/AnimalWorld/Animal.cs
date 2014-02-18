@@ -50,7 +50,7 @@
             }
         }
 
-        public Sex Sex { get; private set; }
+        public virtual Sex Sex { get; set; }
 
         public static decimal CalcAverageAge(IEnumerable<Animal> animals)
         {
