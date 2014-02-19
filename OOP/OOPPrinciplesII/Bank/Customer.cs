@@ -1,6 +1,13 @@
 ﻿namespace Bank
 {
-    public class Customer
+    public abstract class Customer
     {
+
+        protected Customer(string name)
+        {
+            this.Name = name;
+        }
+        protected string Name { get; set; }
+
     }
 }

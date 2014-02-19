@@ -1,6 +1,11 @@
 ﻿namespace Bank
 {
-    public class Individual
+    public class Individual : Customer
     {
+        public Individual(string name)
+            : base(name)
+        {
+ 
+        }
     }
 }
