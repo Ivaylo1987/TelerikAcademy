@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{7DC7B89D-BC01-48DE-87B6-AD9C1D3C46AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRangeException", "GenericRangeException\GenericRangeException.csproj", "{7536B79B-D181-4684-8199-F119B8BDE248}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7DC7B89D-BC01-48DE-87B6-AD9C1D3C46AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DC7B89D-BC01-48DE-87B6-AD9C1D3C46AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DC7B89D-BC01-48DE-87B6-AD9C1D3C46AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7536B79B-D181-4684-8199-F119B8BDE248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7536B79B-D181-4684-8199-F119B8BDE248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7536B79B-D181-4684-8199-F119B8BDE248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7536B79B-D181-4684-8199-F119B8BDE248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
