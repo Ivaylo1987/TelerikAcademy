@@ -1,20 +1,27 @@
 ﻿namespace Bank
 {
-    public class Deposit : Account, IDepositable, IWithDrawable
+    public class Deposit : Account, IWithDrawable
     {
-        public override decimal CalculateInterest(decimal periodMonths)
-        {
-            throw new System.NotImplementedException();
+        public Deposit(decimal balance, Customer customer, decimal interestRate)
+            : base(balance, customer, interestRate)
+        { 
         }
 
-        public void DepositMoney(decimal amount)
+        public override decimal CalculateInterest(decimal periodMonths)
         {
-            throw new System.NotImplementedException();
+            if (this.Balance > 0 || this.Balance < 1000)
+            {
+                return 0;
+            }
+            else
+            {
+                return this.InterestRate * periodMonths;
+            }
         }
 
         public void WithDrawMomey(decimal amout)
         {
-            throw new System.NotImplementedException();
+            this.Balance -= amout;
         }
     }
 }

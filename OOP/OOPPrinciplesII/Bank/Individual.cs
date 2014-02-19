@@ -5,7 +5,8 @@
         public Individual(string name)
             : base(name)
         {
- 
         }
+
+        public string PersonalID { get; set; }
     }
 }

@@ -3,7 +3,6 @@
     using System;
     public abstract class Account : IInterest
     {
-        private decimal balance;
         private decimal interestRate;
 
         protected Account(decimal balance, Customer accountholder, decimal interestRate)
@@ -11,21 +10,14 @@
             this.Balance = balance;
             this.AccountHolder = accountholder;
             this.InterestRate = interestRate;
+            CreateDate = DateTime.Now;
         }
 
-        public Customer AccountHolder { get; protected set; }
+        public Customer AccountHolder { get; set; }
 
-        public decimal Balance 
-        {
-            get
-            {
-                return this.balance;
-            }
-            set 
-            {
-                this.balance = value;
-            }
-        }
+        public decimal Balance { get; set; }
+
+        public DateTime CreateDate { get; private set; }
 
         public decimal InterestRate
         {
@@ -42,6 +34,11 @@
 
                 this.interestRate = value;
             }
+        }
+
+        public void DepositMoney(decimal amount)
+        {
+            this.Balance += amount;
         }
 
         public abstract decimal CalculateInterest(decimal periodMonths);

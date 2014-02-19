@@ -6,5 +6,7 @@
             : base(name) 
         {
         }
+
+        public int IDNumber { get; set; }
     }
 }

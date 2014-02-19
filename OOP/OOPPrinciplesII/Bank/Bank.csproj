@@ -46,7 +46,6 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Demo.cs" />
     <Compile Include="Deposit.cs" />
-    <Compile Include="IDeposit.cs" />
     <Compile Include="IInterest.cs" />
     <Compile Include="Individual.cs" />
     <Compile Include="IWithDraw.cs" />
