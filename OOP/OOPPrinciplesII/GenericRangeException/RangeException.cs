@@ -14,6 +14,8 @@
         public RangeException(string msg, Exception innerException, T _startOfRange, T _endOfRange)
             : base(msg, innerException)
         {
+            this.startOfRange = _startOfRange;
+            this.endOfRange = _endOfRange;
         }
 
         public override string Message
