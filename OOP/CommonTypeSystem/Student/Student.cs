@@ -4,6 +4,21 @@
 
     public class Student
     {
+        public Student(string firstName, string secondName, string lastName, int ssnumber, string mobile,
+            string mail, int course, SpecialtiesEnum specialty, FacultiesEnum faculty, UniversityEnum univerisity)
+        {
+            this.FirstName = firstName;
+            this.SecondName = secondName;
+            this.ThirdName = lastName;
+            this.SSNumber = ssnumber;
+            this.Mobile = mobile;
+            this.Mail = mail;
+            this.Course = course;
+            this.Specialty = specialty;
+            this.Faculty = faculty;
+            this.Univeristy = univerisity;
+        }
+
         public string FirstName { get; set; }
 
         public string SecondName { get; set; }
@@ -20,7 +35,7 @@
 
         public int Course { get; set; }
 
-        public SpecialtiesEnum Specialties { get; private set; }
+        public SpecialtiesEnum Specialty { get; private set; }
 
         public FacultiesEnum Faculty { get; private set; }
 
