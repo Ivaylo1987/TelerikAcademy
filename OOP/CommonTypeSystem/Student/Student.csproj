@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Demo.cs" />
+    <Compile Include="FacultiesEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialtiesEnum.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="UniversityEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
