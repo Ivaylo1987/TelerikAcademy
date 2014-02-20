@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Student
+    public class Student : ICloneable
     {
         public Student(string firstName, string secondName, string lastName, int ssnumber, string mobile,
             string mail, int course, SpecialtiesEnum specialty, FacultiesEnum faculty, UniversityEnum univerisity)
@@ -96,6 +96,12 @@
         public static bool operator !=(Student firstStd, Student secondStd)
         {
             return !(Student.Equals(firstStd, secondStd));
+        }
+
+        public object Clone()
+        {
+            return new Student(this.FirstName, this.SecondName, this.ThirdName, this.SSNumber, this.Mobile, this.Mail, this.Course, this.Specialty,
+                this.Faculty, this.Univeristy);
         }
     }
 }
