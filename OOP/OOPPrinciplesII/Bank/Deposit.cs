@@ -15,7 +15,7 @@
             }
             else
             {
-                return this.InterestRate * periodMonths;
+                return this.InterestRate * periodMonths * this.Balance / 100;
             }
         }
 

@@ -17,7 +17,7 @@
 
         public decimal Balance { get; set; }
 
-        public DateTime CreateDate { get; private set; }
+        public DateTime CreateDate { get; private set; }   // for testing purposes tasks doesn't need it.
 
         public decimal InterestRate
         {

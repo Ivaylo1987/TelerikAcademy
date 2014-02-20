@@ -20,18 +20,18 @@
                 }
                 else
                 {
-                    return this.InterestRate * (periodMonths - NO_INTEREST_PERIOD_INDIVIDIAL);
+                    return this.InterestRate * (periodMonths - NO_INTEREST_PERIOD_INDIVIDIAL) * this.Balance / 100;
                 }
             }
             else
             {
                 if (periodMonths <= HALF_INTEREST_PERIOD_COMPANY)
                 {
-                    return (this.InterestRate *periodMonths) / 2;
+                    return (this.InterestRate * periodMonths) / 2 * this.Balance / 100;
                 }
                 else
                 {
-                    return this.InterestRate * periodMonths;
+                    return ((this.InterestRate * HALF_INTEREST_PERIOD_COMPANY) / 2 * this.Balance / 100) + (this.InterestRate * (periodMonths - HALF_INTEREST_PERIOD_COMPANY) * this.Balance / 100);
                 }
             }
         }

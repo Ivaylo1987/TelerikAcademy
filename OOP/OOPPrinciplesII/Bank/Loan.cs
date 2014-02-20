@@ -22,7 +22,7 @@
                 }
                 else
                 {
-                    return this.InterestRate * (periodMonths - NO_INTEREST_PERIOD_INDIVIDIAL);
+                    return this.InterestRate * (periodMonths - NO_INTEREST_PERIOD_INDIVIDIAL) * this.Balance / 100;
                 }
             }
             else
@@ -33,7 +33,7 @@
                 }
                 else
                 {
-                    return this.InterestRate * (periodMonths - NO_INTEREST_PERIOD_COMPANY);
+                    return (this.InterestRate * (periodMonths - NO_INTEREST_PERIOD_COMPANY)) * this.Balance / 100;
                 }
             }
         }
