@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Student : ICloneable
+    public class Student : ICloneable, IComparable<Student>
     {
         public Student(string firstName, string secondName, string lastName, int ssnumber, string mobile,
             string mail, int course, SpecialtiesEnum specialty, FacultiesEnum faculty, UniversityEnum univerisity)
@@ -102,6 +102,19 @@
         {
             return new Student(this.FirstName, this.SecondName, this.ThirdName, this.SSNumber, this.Mobile, this.Mail, this.Course, this.Specialty,
                 this.Faculty, this.Univeristy);
+        }
+
+        public int CompareTo(Student other)
+        {
+            if (this.FirstName == other.FirstName)
+            {
+                return this.SSNumber.CompareTo(other.SSNumber);
+            }
+            else
+            {
+                return this.FirstName.CompareTo(other.FirstName);
+            }
+
         }
     }
 }
