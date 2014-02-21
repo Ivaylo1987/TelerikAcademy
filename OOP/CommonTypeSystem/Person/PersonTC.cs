@@ -19,12 +19,12 @@ namespace Person
 
         public string Name
         {
-            get 
+            get
             {
                 return this.name;
 
             }
-            set 
+            set
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
@@ -35,7 +35,7 @@ namespace Person
             }
         }
 
-        public int? Age 
+        public int? Age
         {
             get
             {
@@ -53,8 +53,7 @@ namespace Person
 
         public override string ToString()
         {
-            
-            return this.Name + " " + this.Age ?? " - no age specified";
+            return this.Name + " " + (this.Age == null ? "Age not specified!" : this.Age.ToString());
         }
     }
 }

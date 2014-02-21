@@ -1,4 +1,4 @@
-﻿namespace Person
+﻿namespace _64BitArray
 {
     using System;
     using System.Collections.Generic;
@@ -10,12 +10,6 @@
     {
         static void Main()
         {
-            PersonTC gosho = new PersonTC("Gosho");
-
-            PersonTC pesho = new PersonTC("Pesho", 21);
-
-            Console.WriteLine(gosho);
-            Console.WriteLine(pesho);
         }
     }
 }
