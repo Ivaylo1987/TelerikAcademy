@@ -12,15 +12,15 @@
 
         public ulong this[int index]
         {
-            get 
+            get
             {
                 if (index < 0 || index > 63)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
-                return (this.number & (ulong)(1 << index)); 
+                return (this.number & (ulong)(1 << index)) >> index;
             }
-            set 
+            set
             {
                 if (index < 0 || index > 63)
                 {
@@ -43,6 +43,11 @@
 
         public override bool Equals(object obj)
         {
+            if (!(obj is UlongBitArray))
+            {
+                throw new ArgumentNullException("InvalidObject!!!");
+            }
+
             return this.number == (obj as UlongBitArray).number;
         }
 
