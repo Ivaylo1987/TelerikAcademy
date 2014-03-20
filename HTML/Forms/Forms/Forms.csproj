@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BasicForm.html" />
+    <Content Include="LaptopCatalog.html" />
     <Content Include="StudentTable2.html" />
     <Content Include="index.html" />
     <Content Include="StudentTable4.html" />
