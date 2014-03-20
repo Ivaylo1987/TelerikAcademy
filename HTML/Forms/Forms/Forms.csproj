@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3FC2C1CC-8B83-4940-8FC9-24DBF3759E21}</ProjectGuid>
+    <ProjectGuid>{91E394E2-C73D-4839-8937-2F7F8732ACE0}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tables</RootNamespace>
-    <AssemblyName>Tables</AssemblyName>
+    <RootNamespace>Forms</RootNamespace>
+    <AssemblyName>Forms</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,10 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Calc.html" />
-    <Content Include="Fruits.html" />
-    <Content Include="LettersTable.html" />
-    <Content Include="SimpleForm.html" />
+    <Content Include="BasicForm.html" />
+    <Content Include="StudentTable.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +85,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>48150</DevelopmentServerPort>
+          <DevelopmentServerPort>8527</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:48150/</IISUrl>
+          <IISUrl>http://localhost:8527/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
