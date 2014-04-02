@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Task1.html" />
+    <Content Include="Task1Styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
