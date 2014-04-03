@@ -1,0 +1,14 @@
+﻿body {
+}
+
+table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: normal;
+    background-color: #55B806;
+    border-right: 1px solid #CCC;
+    color: #FFF;
+}
