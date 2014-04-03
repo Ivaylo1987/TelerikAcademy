@@ -1,8 +1,5 @@
-﻿body {
-}
-
-table {
-    font-family: sans-serif;
+﻿table {
+    font-family: Calibri, sans-serif;
     border-collapse: collapse;
 }
 
@@ -11,4 +8,24 @@ th {
     background-color: #55B806;
     border-right: 1px solid #CCC;
     color: #FFF;
+    width: 25%;
+}
+
+td {
+    border-right: 1px solid #CCC;
+    padding-left: 1rem;
+}
+tr:nth-child(2n){
+    background-color: #FFF;
+}
+
+tr:nth-child(2n+1){
+    background-color: #EFEFEF;
+}
+img{
+    margin-right: 0.5rem;
+    vertical-align:middle;
+}
+td span{
+    display:inline-block;
 }
