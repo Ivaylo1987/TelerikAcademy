@@ -64,6 +64,8 @@
     <Content Include="images\Sample Logo.png" />
     <Content Include="Task1.html" />
     <Content Include="Task1Styles.css" />
+    <Content Include="Task3.html" />
+    <Content Include="Task3Styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
