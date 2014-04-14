@@ -57,7 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="button.png" />
+    <Content Include="buttonShort.png" />
     <Content Include="first.png" />
+    <Content Include="FirstCat.png" />
+    <Content Include="SecondCat.png" />
     <Content Include="Task1.css">
       <DependentUpon>Task1.less</DependentUpon>
     </Content>
