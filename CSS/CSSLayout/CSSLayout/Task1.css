@@ -1,0 +1,22 @@
+﻿body {
+  margin: 0;
+  padding: 0;
+}
+body ul {
+  list-style-type: none;
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+body ul ul {
+  display: none;
+}
+body ul a {
+  text-decoration: none;
+  color: black;
+}
+body ul li:hover > a {
+  text-decoration: underline;
+  color: #808080;
+}
+body ul li:hover > ul {
+  display: block;
+}

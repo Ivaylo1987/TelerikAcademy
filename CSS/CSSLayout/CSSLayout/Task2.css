@@ -1,0 +1,63 @@
+﻿body,
+header,
+div,
+img,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+#wrapper {
+  margin: 0 auto;
+  width: 40%;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  padding: 15px;
+  border: none;
+  padding-top: 10px;
+}
+img {
+  float: left;
+  vertical-align: central;
+  margin-right: 10px;
+  border: 1px solid #9A9592;
+  border-style: outset;
+  display: inline-block;
+}
+img.buttonImg {
+  display: inline-block;
+  border: 1px solid #E48184;
+  margin-top: 8%;
+  position: relative;
+  left: 25%;
+}
+div {
+  overflow: hidden;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border: 1px solid #9A9592;
+  margin: 20px;
+}
+em {
+  font-weight: bold;
+}
+p#listen {
+  display: inline-block;
+  font-size: 14px;
+  color: #EEEEEE;
+  position: relative;
+  left: -25px;
+  bottom: -36px;
+  z-index: 10;
+}
+p#add {
+  display: inline-block;
+  font-size: 14px;
+  color: #EEEEEE;
+  position: relative;
+  left: 16px;
+  bottom: -36px;
+  z-index: 10;
+}
+/*# sourceMappingURL=Task2.css.map */

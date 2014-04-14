@@ -29,9 +29,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#d9e4f1',GradientType=0 ); /* IE6-9 */
 	color: #1E395B;
 }
-#title {
-	margin: 0 0 5px 18px;
-}
+
 ul#menu li {
 	padding: 0;
 	list-style: none;
