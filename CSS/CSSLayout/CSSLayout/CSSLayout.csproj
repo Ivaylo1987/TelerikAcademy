@@ -58,9 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="button.png" />
-    <Content Include="buttonShort.png" />
     <Content Include="first.png" />
     <Content Include="FirstCat.png" />
+    <Content Include="old_Task2.css">
+      <DependentUpon>old_Task2.less</DependentUpon>
+    </Content>
     <Content Include="SecondCat.png" />
     <Content Include="Task1.css">
       <DependentUpon>Task1.less</DependentUpon>
@@ -70,6 +72,7 @@
       <DependentUpon>Task2.less</DependentUpon>
     </Content>
     <Content Include="Task2.html" />
+    <Content Include="ThirdCat.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -80,10 +83,14 @@
     <Content Include="Task1.css.map">
       <DependentUpon>Task1.css</DependentUpon>
     </Content>
-    <Content Include="Task2.less" />
+    <Content Include="old_Task2.less" />
     <Content Include="Task2.css.map">
       <DependentUpon>Task2.css</DependentUpon>
     </Content>
+    <Content Include="old_Task2.css.map">
+      <DependentUpon>old_Task2.css</DependentUpon>
+    </Content>
+    <Content Include="Task2.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

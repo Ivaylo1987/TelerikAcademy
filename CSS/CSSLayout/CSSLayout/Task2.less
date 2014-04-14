@@ -1,7 +1,7 @@
-﻿body, header, div, img, p {
+﻿body, div, p, img, input {
     margin: 0;
     padding: 0;
-    font-family: Arial;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
 }
 
 #wrapper {
@@ -10,59 +10,52 @@
     background-color: #EEEEEE;
     border-radius: 10px;
     padding: 15px;
-    border : none;
-    padding-top: 10px;
+    border: none;
+}
+
+header{
+    margin-bottom: 10%;
+}
+
+div {
+    margin: 10px;
+    background-color: white;
+    padding: 15px;
+    overflow: hidden;
+    border: 1px solid #9A9592;
 }
 
 img {
     float: left;
-    vertical-align: central;
     margin-right: 10px;
     border: 1px solid #9A9592;
-    border-style: outset;
-    display:inline-block;
 }
 
-    img.buttonImg {
-
-        display: inline-block;
-        border: 1px solid #E48184;
-        margin-top: 8%;
-        position: relative;
-        left: 25%;
-    }
-
-
-div {
-    overflow: hidden;
-    padding: 10px;
-    background-color: white;
-    margin: 10px;
-    border: 1px solid #9A9592;
-    margin: 20px;
+.listen{
+    background-image: url("button.png");
+    padding-left: 4%;
+    margin-left: 40%;
+    margin-top: 3%;
+    width: 16%;
+    border-left-color: #BE7173;
+    border-top-color: #E98180;
+    border-bottom-color: #660000;
+    border-right-color: #660000;
+    color: #eee;
 }
 
+.add{
+    background-image: url("button.png");
+    padding-left: 4%;
+    margin-left: 1%;
+    margin-top: 3%;
+    width: 12%;
+    border-left-color: #BE7173;
+    border-top-color: #E98180;
+    border-bottom-color: #660000;
+    border-right-color: #660000;
+    color: #eee;
+}
 em{
     font-weight: bold;
-}
-
-p#listen{
-    display: inline-block;
-    font-size: 14px;
-    color: #EEEEEE;
-    position: relative;
-    left: -25px;
-    bottom: -36px;
-    z-index: 10;
-
-}
-
-p#add{
-    display: inline-block;
-    font-size: 14px;
-    color: #EEEEEE;
-    position: relative;
-    left: 16px;
-    bottom: -36px;
-    z-index: 10;
 }
