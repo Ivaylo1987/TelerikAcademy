@@ -22,7 +22,6 @@ div {
   margin: 10px;
   background-color: white;
   padding: 15px;
-  overflow: hidden;
   border: 1px solid #9A9592;
 }
 img {
@@ -57,4 +56,3 @@ img {
 em {
   font-weight: bold;
 }
-/*# sourceMappingURL=Task2.css.map */
