@@ -72,7 +72,12 @@
       <DependentUpon>Task2.less</DependentUpon>
     </Content>
     <Content Include="Task2.html" />
+    <Content Include="Task3.css">
+      <DependentUpon>Task3.less</DependentUpon>
+    </Content>
+    <Content Include="Task3.html" />
     <Content Include="ThirdCat.png" />
+    <Content Include="TV.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +96,10 @@
       <DependentUpon>old_Task2.css</DependentUpon>
     </Content>
     <Content Include="Task2.less" />
+    <Content Include="Task3.less" />
+    <Content Include="Task3.css.map">
+      <DependentUpon>Task3.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

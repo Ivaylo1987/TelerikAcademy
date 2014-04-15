@@ -35,10 +35,7 @@ img {
   margin-left: 40%;
   margin-top: 3%;
   width: 16%;
-  border-left-color: #BE7173;
-  border-top-color: #E98180;
-  border-bottom-color: #660000;
-  border-right-color: #660000;
+  border-color: #BE7173 #E98180 #660000 #660000;
   color: #eee;
 }
 .add {
@@ -47,10 +44,7 @@ img {
   margin-left: 1%;
   margin-top: 3%;
   width: 12%;
-  border-left-color: #BE7173;
-  border-top-color: #E98180;
-  border-bottom-color: #660000;
-  border-right-color: #660000;
+  border-color: #BE7173 #E98180 #660000 #660000;
   color: #eee;
 }
 em {
