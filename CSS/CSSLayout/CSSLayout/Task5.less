@@ -1,0 +1,68 @@
+﻿body, ul, h1, div, span, img {
+    margin: 0;
+    padding: 0;
+}
+
+#navigation {
+    width: 50%;
+
+    li {
+        display: inline-block;
+        list-style: none;
+    }
+}
+
+a {
+    color: #00ADEF;
+}
+
+section {
+    display: inline-block;
+    width: 510px;
+    border: 2px solid #C0C0C0;
+    padding: 1%;
+}
+
+fieldset {
+    display: inline-block;
+    width: 43%;
+}
+
+
+span {
+    display: inline-block;
+    margin-left: 12%;
+}
+
+img {
+    display: inline-block;
+}
+
+.absolute {
+    & span {
+        display: block;
+        margin: 5px;
+    }
+
+    position: relative;
+    left: 9%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+body {
+    & > div {
+        display: inline-block;
+        div{
+            margin: 3%;
+        }
+    }
+
+    padding-left: 1%;
+}
+ul{
+    border-bottom: 2px solid #C0C0C0;
+    padding: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+}

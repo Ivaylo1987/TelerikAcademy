@@ -1,0 +1,44 @@
+﻿body {
+    background-color: #A9A9A9;
+}
+
+.white {
+    color: white;
+}
+
+#mainHeader {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#navLinks {
+    list-style-type: none;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+a:hover {
+    background-color: #D3D3D3;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+li:last-child a{
+    text-decoration: underline;
+}
+
+.doncho {
+    text-decoration: none;
+    color: black;
+}
+
+#finalFooter{
+    text-align: center;
+}

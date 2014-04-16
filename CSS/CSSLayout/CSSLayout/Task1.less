@@ -1,0 +1,29 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+
+    ul {
+        list-style-type: none;
+        font-family:Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+
+        ul {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li:hover {
+            & > a {
+                text-decoration: underline;
+                color: #808080;
+            }
+
+            & > ul {
+                display: block;
+            }
+        }
+    }
+}

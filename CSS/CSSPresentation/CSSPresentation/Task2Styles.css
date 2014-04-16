@@ -1,0 +1,44 @@
+﻿body {
+    background: #d493fe; /* Old browsers */
+    background: -moz-linear-gradient(top, #d493fe 0%, #c68cf2 5%, #a338f4 15%, #8f19ef 21%, #9215f2 24%, #9215f2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d493fe), color-stop(5%,#c68cf2), color-stop(15%,#a338f4), color-stop(21%,#8f19ef), color-stop(24%,#9215f2), color-stop(100%,#9215f2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d493fe 0%,#c68cf2 5%,#a338f4 15%,#8f19ef 21%,#9215f2 24%,#9215f2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d493fe 0%,#c68cf2 5%,#a338f4 15%,#8f19ef 21%,#9215f2 24%,#9215f2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d493fe 0%,#c68cf2 5%,#a338f4 15%,#8f19ef 21%,#9215f2 24%,#9215f2 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #d493fe 0%,#c68cf2 5%,#a338f4 15%,#8f19ef 21%,#9215f2 24%,#9215f2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d493fe', endColorstr='#9215f2',GradientType=0 ); /* IE6-9 */
+}
+
+div#reg-form-container div input {
+    background-color: #B35EF3;
+}
+
+body header div#header-container div#reg-form-container button {
+    color: white;
+    background-color: #B35EF3;
+    width: 90px;
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-width: 1px;
+    border-left-color: #aaa;
+    border-top-color: #aaa;
+    border-bottom-color: #999;
+    border-right-color: #999;
+}
+
+body section {
+    color: white;
+}
+
+body footer p {
+    text-align: center;
+}
+
+#doncho {
+    color: #aaa;
+}
+
+.article, #nav {
+    border-radius: 15px;
+}

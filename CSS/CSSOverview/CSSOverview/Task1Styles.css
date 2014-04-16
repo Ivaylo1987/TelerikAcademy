@@ -1,0 +1,46 @@
+﻿body {
+    background-color: white;
+}
+
+table {
+    background-color: #595959;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    color: #CCC;
+}
+
+td {
+    padding-top: 10px;
+}
+
+#thCell {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+.firstCol {
+    font-style: italic;
+    color: #FFF;
+}
+
+/*this is how you transform div into spot*/
+#spot {
+    display:inline-block;
+    background-color:#6BB776;
+    border-radius: 50%;
+    width:10px;
+    height: 10px;
+}
+
+#status {
+    color: orange;
+}
+
+#support{
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: #E7DDBA;
+}

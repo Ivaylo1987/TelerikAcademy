@@ -1,0 +1,62 @@
+﻿body,
+ul,
+h1,
+div,
+span,
+img {
+  margin: 0;
+  padding: 0;
+}
+#navigation {
+  width: 50%;
+}
+#navigation li {
+  display: inline-block;
+  list-style: none;
+}
+a {
+  color: #00ADEF;
+}
+section {
+  display: inline-block;
+  width: 510px;
+  border: 2px solid #C0C0C0;
+  padding: 1%;
+}
+fieldset {
+  display: inline-block;
+  width: 43%;
+}
+span {
+  display: inline-block;
+  margin-left: 12%;
+}
+img {
+  display: inline-block;
+}
+.absolute {
+  position: relative;
+  left: 9%;
+  display: inline-block;
+  vertical-align: top;
+}
+.absolute span {
+  display: block;
+  margin: 5px;
+}
+body {
+  padding-left: 1%;
+}
+body > div {
+  display: inline-block;
+}
+body > div div {
+  margin: 3%;
+}
+ul {
+  border-bottom: 2px solid #C0C0C0;
+  padding: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+/*# sourceMappingURL=Task5.css.map */
