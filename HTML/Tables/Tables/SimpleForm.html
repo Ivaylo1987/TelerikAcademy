@@ -1,7 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Simple Form</title>
+    <style type="text/css">
+        #submit{
+            width: 50px;
+        }
+    </style>
 </head>
 <body>
     <form name="Simple Form" method="post" action="/">
@@ -17,7 +22,7 @@
         <label for="pass">Password: </label>
         <input type="text" name="password" id="pass" placeholder="Enter password here" required="required" /><span>*req</span><br />
         
-        <input type="image" src="submit.jpg" alt="submit image" style="width:40px">
+        <input type="image" src="submit.jpg" id="submit" alt="submit image">
     </form>
 </body>
 </html>
