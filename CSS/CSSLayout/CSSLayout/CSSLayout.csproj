@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="button.png" />
-    <Content Include="first.png" />
     <Content Include="FirstCat.png" />
     <Content Include="laptop.JPG" />
     <Content Include="old_Task2.css">
