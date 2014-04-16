@@ -1,0 +1,67 @@
+﻿body,
+section,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  color: #889286;
+}
+ul a {
+  color: #889286;
+  text-decoration: none;
+}
+ul:nth-child(1) {
+  list-style: none;
+}
+ul:nth-child(1) li {
+  display: inline-block;
+  background-color: #4b5f67;
+  padding: 1%;
+}
+ul:nth-child(1) li:hover a {
+  text-decoration: underline;
+}
+ul:nth-child(1) li:nth-child(1) {
+  background: #1e3741;
+  text-decoration: none;
+  color: white;
+}
+section {
+  padding: 1%;
+  background-color: #1e3741;
+  width: 612px;
+  height: 326px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #337d8f;
+}
+ul:nth-child(2) {
+  margin-top: 3%;
+  width: 234px;
+  display: inline-block;
+  list-style-type: none;
+}
+ul:nth-child(2) li {
+  margin-bottom: 0;
+  border-bottom: 1px solid #354b54;
+  padding: 2%;
+}
+ul:nth-child(2) li:last-child {
+  border-bottom: 0;
+}
+ul:nth-child(2) li:nth-child(1) {
+  background: #00968c;
+  color: white;
+}
+ul:nth-child(2) li:visited {
+  background-color: white;
+}
+img {
+  padding-top: 3%;
+  vertical-align: top;
+  margin-left: 1%;
+}
+/*# sourceMappingURL=Task6.css.map */

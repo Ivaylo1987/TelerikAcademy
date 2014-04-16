@@ -60,6 +60,7 @@
     <Content Include="button.png" />
     <Content Include="FirstCat.png" />
     <Content Include="laptop.JPG" />
+    <Content Include="novinite.png" />
     <Content Include="old_Task2.css">
       <DependentUpon>old_Task2.less</DependentUpon>
     </Content>
@@ -80,6 +81,10 @@
       <DependentUpon>Task5.less</DependentUpon>
     </Content>
     <Content Include="Task5.html" />
+    <Content Include="Task6.css">
+      <DependentUpon>Task6.less</DependentUpon>
+    </Content>
+    <Content Include="Task6.html" />
     <Content Include="ThirdCat.png" />
     <Content Include="TV.png" />
     <Content Include="Web.config" />
@@ -107,6 +112,10 @@
     <Content Include="Task5.less" />
     <Content Include="Task5.css.map">
       <DependentUpon>Task5.css</DependentUpon>
+    </Content>
+    <Content Include="Task6.less" />
+    <Content Include="Task6.css.map">
+      <DependentUpon>Task6.css</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
