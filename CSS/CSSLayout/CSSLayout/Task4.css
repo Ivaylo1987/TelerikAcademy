@@ -1,0 +1,180 @@
+﻿body {
+    background-color: #f1f1f1;
+    font: 12px/1.2 Verdana,sans-serif;
+}
+
+#main-nav {
+    float: left;
+    margin-left: 3px;
+    width: 150px;
+}
+
+#main-section {
+    _width: 728px;
+    width: 780px;
+    border: 1px solid black;
+    margin: 50px;
+    margin-left: 290px;
+}
+
+article {
+    width: 400px;
+    border: 1px solid #c9c9c9;
+    float: left;
+    margin: 5px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 5px;
+    padding-bottom: 47px;
+}
+
+aside {
+    float: left;
+    width: 150px;
+}
+
+div {
+    clear: both;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#home:before {
+    background-image: url(images/iconhome.png);
+    content: "\00a0";
+    padding: 2px 7px;
+    background-repeat: no-repeat;
+    background-position-x: -2px;
+}
+
+#main-nav li:first-child a{
+    color: #8c1729;
+    font-weight: bold;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+article h1 {
+    font-size: 18px;
+    margin: 0;
+    margin-top: 15px;
+}
+
+h2 {
+    background-color: #808080;
+    color: white;
+    font-size: 12px;
+    padding-left: 4px;
+}
+
+.buttons li {
+    display: inline-block;
+    border: 1px solid black;
+    position: relative;
+}
+
+.buttons a, .buttons a:visited{
+    color: black;
+}
+
+.previous {
+    padding: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.previous:before{
+    content: "◄";
+    position: absolute;
+    left: 3px;
+    bottom: 3px;
+}
+
+.next {
+    padding: 32px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.next:after {
+    content: "►";
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+}
+
+#logo {
+    float: left;
+    margin-right: 15px;
+}
+
+#tutorial p{
+    font-size: 11px;
+}
+
+article a{
+    color: #990a0e;
+}
+
+aside section {
+    margin-top: 5px;
+}
+
+aside h2 {
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+input[type*="search"] {
+    width: 91px;
+    height: 18px;
+    margin-left: 19px;
+    margin-top: 10px;
+}
+
+input[type*="submit"] {
+    width: 16px;
+    padding: 0;
+    padding-bottom: 1px;
+    height: 15px;
+    content: "";
+    background-image: url(images/dots.jpg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position-y: -4px;
+    background-position-x: -1px;
+    border-radius: 3px;
+}
+
+aside a {
+    color: #990a0e;
+}
+
+aside li li a{
+    padding: 0 10px 0 10px;
+}
+
+aside {
+    text-align: center;
+}
+
+    .styled{
+        border: 1px solid #8A8A8A;
+        margin-bottom: 2px;
+        background: none repeat scroll 0 0 #FFFFFF;
+    }
+
+    aside ul {
+        margin: 0;
+    }
+
+        aside ul li {
+            padding: 1.8px 0 1.8px 0;
+        }
