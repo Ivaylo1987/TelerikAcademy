@@ -1,0 +1,43 @@
+﻿#simple-web-gallery nav {
+  width: 612px;
+  margin: 0 auto;
+}
+#simple-web-gallery nav ul {
+  margin: 0;
+  padding: 0;
+}
+#simple-web-gallery nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+#simple-web-gallery nav ul li .thubnail {
+  width: 150px;
+  height: 94px;
+}
+.images-container {
+  position: relative;
+  width: 617px;
+  margin: 0 auto;
+}
+.images-container input[type="radio"] {
+  display: none;
+}
+.images-container input[type="radio"]:checked + .image {
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+}
+.images-container .image {
+  width: 617px;
+  height: 386px;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  display: inline-block;
+  position: absolute;
+  -webkit-transition: all 555ms ease-in-out;
+  -moz-transition: all 555ms ease-in-out;
+  -o-transition: all 555ms ease-in-out;
+  transition: all 555ms ease-in-out;
+}
+/*# sourceMappingURL=StyleTask2.css.map */
