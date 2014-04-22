@@ -1,0 +1,88 @@
+﻿body, div, form, fieldset, legend, label, input, button, br {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+.GradientMixin(@firstColor, @secondColor) {
+    background: @firstColor; /* Old browsers */
+    background: -moz-linear-gradient(top, @firstColor 0%, @secondColor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@firstColor), color-stop(100%,@secondColor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @firstColor 0%,@secondColor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @firstColor 0%,@secondColor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @firstColor 0%,@secondColor 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @firstColor 0%,@secondColor 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36c2ff', endColorstr='#8bfefb',GradientType=0 ); /* IE6-9 */
+}
+
+#wrapper {
+    width: 960px;
+
+    form {
+        width: 380px;
+        margin-left: 25px;
+        margin-top: 25px;
+        padding: 15px;
+        border-radius: 15px;
+        border: 1px solid #000;
+        text-align: right;
+        .GradientMixin(#69d2ff, #8bfefb);
+
+        fieldset {
+            border: 3px solid #000;
+            border-radius: 5px;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            legend {
+                margin-left: 95px;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 1.3rem;
+                font-style: italic;
+            }
+
+            input {
+               .GradientMixin(#69d2ff, #8bfefb);
+                border-collapse: collapse;
+                border-radius: 5px;
+                border: 1px solid #008FCE;
+                height: 26px;
+                width: 165px;
+                padding-left: 15px;
+                margin-bottom: 1px;
+                color: #333;
+
+                &#tb-age {
+                    width: 40px;
+                    padding-left: 5px;
+                }
+            }
+        }
+
+        button, input[type=reset] {
+            margin-top: 15px;
+            border-collapse: collapse;
+            border-radius: 5px;
+            border: 0;
+            border-bottom: 1px solid #000;
+            padding: 5px 15px;
+            font-size: 1.2rem;
+            color: #333;
+           .GradientMixin(#69d2ff, #8bfefb);
+            &:hover {
+                background: #9BE1FF;
+            }
+        }
+
+        fieldset:nth-child(2) {
+            margin-bottom: 5px;
+        }
+    }
+}

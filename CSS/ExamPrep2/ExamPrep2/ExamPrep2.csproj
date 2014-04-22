@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DC119CA5-E18C-446D-939B-9DA7C3C96A14}</ProjectGuid>
+    <ProjectGuid>{AD7C85AF-69D8-45CD-8034-A0C7110EC6B2}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExamPrep1</RootNamespace>
-    <AssemblyName>ExamPrep1</AssemblyName>
+    <RootNamespace>ExamPrep2</RootNamespace>
+    <AssemblyName>ExamPrep2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,21 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="task1\imgs\arrow.png" />
-    <Content Include="task2\jquery-1.9.1.js" />
-    <Content Include="task2\tab-strip.js" />
-    <Content Include="task1\task1.css">
-      <DependentUpon>task1.less</DependentUpon>
-    </Content>
-    <Content Include="task1\task1.html" />
-    <Content Include="task2\task2.css">
-      <DependentUpon>task2.less</DependentUpon>
-    </Content>
-    <Content Include="task2\task2.html" />
     <Content Include="task3\task3.css">
       <DependentUpon>task3.less</DependentUpon>
     </Content>
-    <Content Include="task3\jquery-1.9.1.js" />
     <Content Include="task3\task3.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -79,14 +67,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="task1\task1.less" />
-    <Content Include="task1\task1.css.map">
-      <DependentUpon>task1.css</DependentUpon>
-    </Content>
-    <Content Include="task2\task2.less" />
-    <Content Include="task2\task2.css.map">
-      <DependentUpon>task2.css</DependentUpon>
-    </Content>
     <Content Include="task3\task3.less" />
     <Content Include="task3\task3.css.map">
       <DependentUpon>task3.css</DependentUpon>
@@ -111,9 +91,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>36687</DevelopmentServerPort>
+          <DevelopmentServerPort>39093</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:36687/</IISUrl>
+          <IISUrl>http://localhost:39093/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
