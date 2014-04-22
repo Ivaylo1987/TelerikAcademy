@@ -1,0 +1,61 @@
+﻿body,
+div,
+ul,
+li,
+a,
+img,
+span {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+#wrapper {
+  width: 960px;
+}
+#wrapper img {
+  border-radius: 5px;
+}
+#wrapper > div {
+  padding: 10px;
+  margin: 15px;
+  display: inline-block;
+  background: #ccc;
+  border-radius: 5px;
+}
+#wrapper .holder {
+  display: inline-block;
+  vertical-align: top;
+}
+#wrapper .holder img {
+  width: 550px;
+}
+#wrapper .playlist {
+  display: inline-block;
+  text-align: center;
+}
+#wrapper .playlist ul {
+  list-style-type: none;
+}
+#wrapper .playlist li {
+  width: 120px;
+}
+#wrapper .playlist li img {
+  vertical-align: central;
+}
+#wrapper .playlist li span {
+  display: block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+#wrapper .playlist a {
+  color: black;
+  text-decoration: none;
+}
+#wrapper .playlist a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=task2.css.map */
