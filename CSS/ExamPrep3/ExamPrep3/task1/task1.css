@@ -1,0 +1,66 @@
+﻿body,
+div,
+img,
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+  font-size: 16px;
+}
+#wrapper {
+  width: 960px;
+}
+#wrapper > div {
+  margin: 25px;
+  padding: 15px 35px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  position: relative;
+  background: #de28ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #de28ff), color-stop(75%, #f9dbff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #de28ff 15%, #f9dbff 75%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#de28ff', endColorstr='#f9dbff', GradientType=0);
+  /* IE6-9 */
+}
+#wrapper > div .info {
+  text-align: justify;
+}
+#wrapper > div h1 {
+  font-size: 1.8rem;
+  display: inline-block;
+}
+#wrapper > div img {
+  position: absolute;
+}
+#wrapper > div img.left-arrow {
+  left: 0;
+  top: 40%;
+}
+#wrapper > div img.right-arrow {
+  right: 0;
+  top: 40%;
+}
+#wrapper > div .postedby {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-left: 15px;
+}
+/*# sourceMappingURL=task1.css.map */
