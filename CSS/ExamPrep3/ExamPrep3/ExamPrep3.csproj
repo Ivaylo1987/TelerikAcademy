@@ -60,6 +60,9 @@
     <Content Include="task2\imgs\arrow-left.png" />
     <Content Include="task2\imgs\arrow-right.png" />
     <Content Include="task2\jquery-1.9.1.js" />
+    <Content Include="task2\task2.css">
+      <DependentUpon>task2.less</DependentUpon>
+    </Content>
     <Content Include="task2\task2.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -67,6 +70,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="task2\task2.less" />
+    <Content Include="task2\task2.css.map">
+      <DependentUpon>task2.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
