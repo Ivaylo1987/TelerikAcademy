@@ -70,6 +70,16 @@
       <DependentUpon>task2.less</DependentUpon>
     </Content>
     <Content Include="task2\task2.html" />
+    <Content Include="task3\imgs\about.png" />
+    <Content Include="task3\imgs\install.png" />
+    <Content Include="task3\imgs\manage.png" />
+    <Content Include="task3\imgs\openSource.png" />
+    <Content Include="task3\imgs\tuneUp.png" />
+    <Content Include="task3\imgs\twitter.png" />
+    <Content Include="task3\task3.css">
+      <DependentUpon>task3.less</DependentUpon>
+    </Content>
+    <Content Include="task3\task3.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +94,10 @@
     <Content Include="task2\task2.css.map">
       <DependentUpon>task2.css</DependentUpon>
     </Content>
+    <Content Include="task3\task3.less" />
+    <Content Include="task3\task3.css.map">
+      <DependentUpon>task3.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,9 +105,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="task3\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

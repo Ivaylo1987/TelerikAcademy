@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="task1\jquery-1.9.1.js" />
+    <Content Include="task1\task1.css">
+      <DependentUpon>task1.less</DependentUpon>
+    </Content>
+    <Content Include="task1\task1.html" />
     <Content Include="task3\task3.css">
       <DependentUpon>task3.less</DependentUpon>
     </Content>
@@ -70,6 +75,10 @@
     <Content Include="task3\task3.less" />
     <Content Include="task3\task3.css.map">
       <DependentUpon>task3.css</DependentUpon>
+    </Content>
+    <Content Include="task1\task1.less" />
+    <Content Include="task1\task1.css.map">
+      <DependentUpon>task1.css</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,0 +1,121 @@
+﻿body,
+div,
+ul,
+li,
+h1,
+a,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+  font-size: 16px;
+}
+#wrapper {
+  width: 960px;
+}
+#wrapper .accordion {
+  margin: 50px;
+  list-style-type: none;
+  border: 1px solid #000;
+  width: 400px;
+}
+#wrapper .accordion > li {
+  padding-bottom: 10px;
+  border: 1px solid black;
+  background: #eeeeee;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #eeeeee), color-stop(75%, #aaaaaa));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #eeeeee 25%, #aaaaaa 75%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#aaaaaa', GradientType=0);
+  /* IE6-9 */
+}
+#wrapper .accordion > li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1.3rem;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+}
+#wrapper .accordion > li a:hover {
+  background: #AAAAAA;
+}
+#wrapper .accordion > li .accordion-content {
+  display: none;
+}
+#wrapper .accordion > li.current .accordion-content {
+  margin: 0 15px;
+  display: block;
+  color: #444;
+}
+#wrapper .accordion > li.current p {
+  text-align: justify;
+}
+#wrapper .accordion > li.current h1 {
+  font-size: 1.6rem;
+  margin-left: 55px;
+  color: #5E5E5E;
+}
+#wrapper .accordion > li.current table {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+#wrapper .accordion > li.current table th {
+  padding: 5px;
+  border: 1px solid #000;
+  background: #eeeeee;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #eeeeee), color-stop(75%, #aaaaaa));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #eeeeee 25%, #aaaaaa 75%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#aaaaaa', GradientType=0);
+  /* IE6-9 */
+}
+#wrapper .accordion > li.current table th:first-of-type {
+  border-top-left-radius: 15px;
+}
+#wrapper .accordion > li.current table td {
+  padding: 5px;
+  color: #fff;
+  border: 1px solid #000;
+  background: #eeeeee;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #eeeeee), color-stop(75%, #aaaaaa));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #eeeeee 25%, #aaaaaa 75%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #eeeeee 25%, #aaaaaa 75%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#aaaaaa', GradientType=0);
+  /* IE6-9 */
+}
+/*# sourceMappingURL=task1.css.map */
