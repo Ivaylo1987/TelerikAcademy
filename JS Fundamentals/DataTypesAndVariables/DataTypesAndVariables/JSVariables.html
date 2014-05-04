@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>1 JS Variables</title>
+    <link href="JSConsole/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="console"></div>
+    <script src="JSConsole/js-console.js"></script>
+    <script>
+        //Task 2 - Create a string variable with quoted text in it. For example: 'How you doin'?', Joey said.
+        var stringVar = 'I am a "string!" ';
+        jsConsole.writeLine(stringVar);
+
+        //Task 1 - Assign all the possible JavaScript literals to different variables.
+        var numVar = 1;
+        var boolVar = true;
+        var arrVar = [1, 2, 3];
+        var nulVar = null;
+        var leftUdefined;
+
+        //Task 3 - Try typeof on all variables you created.
+        jsConsole.writeLine(typeof (numVar));
+        jsConsole.writeLine(typeof stringVar);
+        jsConsole.writeLine(typeof boolVar);
+        jsConsole.writeLine(typeof arrVar);
+        function myfunction() {
+        }
+        jsConsole.writeLine(typeof myfunction)
+
+        // Task - Create null, undefined variables and try typeof on them.
+        jsConsole.writeLine(typeof nulVar);
+        jsConsole.writeLine(typeof leftUdefined);
+    </script>
+</body>
+</html>
