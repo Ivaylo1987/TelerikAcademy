@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OperatorsAndExpressions</title>
+    <link href="JsConsoleAndStyles/formStyles.css" rel="stylesheet" type="text/css" />
+    <link href="JsConsoleAndStyles/js-console.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Task 1 form -->
+    <label for="tb-first">Odd or Even</label>
+    <input type="text" id="tb-first" />
+    <br />
+    <a href="#" onclick="OddOrEven()">Odd Or Even</a>
+    <br />
+
+    <!-- Task 2 form -->
+    <label for="tb-second">Can be devided by 5 and 7 or not?</label>
+    <input type="text" id="tb-second" />
+    <br />
+    <a href="#" onclick="DevidedBy5And7()">Can be devided by 5 and 7 or not?</a>
+    <br />
+
+    <!-- Task 3 form -->
+    <label for="tb-height">Rectangle Height</label>
+    <input type="text" id="tb-height" />
+    <br />
+    <label for="tb-width">Rectangle Width</label>
+    <input type="text" id="tb-width" />
+    <br />
+    <a href="#" onclick="RectangleArea()">Calculate area</a>
+    <br />
+
+    <!-- Task 4 form -->
+    <label for="tb-thdigit">Check 3rd Digit</label>
+    <input type="text" id="tb-thdigit" />
+    <br />
+    <a href="#" onclick="ThirdDigit()">Is 3rd digit 7?</a>
+    <br />
+
+    <!-- Task 5 form -->
+    <label for="tb-thirdBit">Third Bit</label>
+    <input type="text" id="tb-thirdBit" />
+    <br />
+    <a href="#" onclick="ThirdBit()">Find 3rd Bit</a>
+    <br />
+
+    <!--Console Definition-->
+    <div id="console"></div>
+    <script src="JsConsoleAndStyles/js-console.js"></script>
+
+    <script>
+
+        //Task 1
+        function OddOrEven() {
+            var num = jsConsole.readFloat("#tb-first");
+
+            if (num % 2 == 0) {
+                jsConsole.writeLine('Even');
+            }
+            else {
+                jsConsole.writeLine('Odd');
+            }
+        }
+
+        //Task2
+        function DevidedBy5And7() {
+            var num = jsConsole.readFloat('#tb-second');
+            if (num % 35 == 0) {
+                jsConsole.writeLine('Yes')
+            }
+            else {
+                jsConsole.writeLine('No')
+            }
+        }
+
+        //Task 3
+        function RectangleArea() {
+            var height = jsConsole.readFloat('#tb-height');
+            var width = jsConsole.readFloat('#tb-width');
+
+            jsConsole.writeLine('Area = ' + width * height);
+        }
+
+        //Task 4
+        function ThirdDigit() {
+            var num = jsConsole.read('#tb-thdigit');
+            var char = num[num.length - 3];
+            if (char == 7) {
+                jsConsole.writeLine('Yes it is 7!');
+            }
+            else {
+                jsConsole.writeLine('No it is Not 7!');
+
+            }
+        }
+
+        //Task 5
+        function ThirdBit() {
+            var num = jsConsole.readInteger('#tb-thirdBit');
+
+            if ((num & 4) == 4) {
+                jsConsole.writeLine('1');
+            }
+            else {
+                jsConsole.writeLine('0');
+            }
+        }
+    </script>
+</body>
+</html>
