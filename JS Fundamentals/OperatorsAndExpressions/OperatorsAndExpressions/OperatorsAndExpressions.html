@@ -44,7 +44,6 @@
     <a href="#" onclick="ThirdBit()">Find 3rd Bit</a>
     <br />
 
-
     <!-- Task 6 form -->
     <label for="tb-xCoord">Point X</label>
     <input type="text" id="tb-xCoord" />
@@ -52,7 +51,38 @@
     <label for="tb-yCoord">Point Y</label>
     <input type="text" id="tb-yCoord" />
     <br />
-    <a href="#" onclick="PointInCircle()">Check if in circle?</a>
+    <a href="#" onclick="PointInCircle()">Check if in circle (0, 5)?</a>
+    <br />
+
+    <!-- Task 7 form -->
+    <label for="tb-prime">Prime Number</label>
+    <input type="text" id="tb-prime" />
+    <br />
+    <a href="#" onclick="IsNumberPrime()">Is number prime?</a>
+    <br />
+
+    <!-- Task 8 form -->
+    <label for="tb-sideA">Side A</label>
+    <input type="text" id="tb-sideA" />
+    <br />
+    <label for="tb-sideB">Side B</label>
+    <input type="text" id="tb-sideB" />
+    <br />
+    <label for="tb-tzheight">Height H</label>
+    <input type="text" id="tb-tzheight" />
+    <br />
+    <a href="#" onclick="TrapezoidArea()">Calculate Trapezoid area</a>
+    <br />
+
+
+    <!-- Task 9 form -->
+    <label for="tb-x">Point X</label>
+    <input type="text" id="tb-x" />
+    <br />
+    <label for="tb-y">Point Y</label>
+    <input type="text" id="tb-y" />
+    <br />
+    <a href="#" onclick="InCircleInRectangle()">Check if in circle K( (1,1), 3) and out of rectangle R(top=1, left=-1, width=6, height=2) ?</a>
     <br />
 
     <!--Console Definition-->
@@ -119,9 +149,80 @@
 
         //Task 6
         function PointInCircle() {
+            //(x - center_x)^2 + (y - center_y)^2 < radius^2 - the formula used to determine if point is in circle
             var x = jsConsole.readFloat('#tb-xCoord');
             var y = jsConsole.readFloat('#tb-yCoord');
+            var result = (x * x) + (y * y) < 25;
 
+            if (result) {
+                jsConsole.writeLine('Point is in the Circle.');
+            }
+            else {
+                jsConsole.writeLine('Point is NOT in the Circle.');
+
+            }
+
+        }
+        
+        //Task7
+        function IsNumberPrime() {
+            var num = jsConsole.readFloat('#tb-prime');
+            var isPrime = true;
+
+            for (var i = 2; i <= Math.sqrt(num) ; i++) {
+
+                if (num % i == 0) {
+
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            jsConsole.writeLine(isPrime);
+        }
+
+        //Task 8
+        function TrapezoidArea() {
+
+            var sideA = jsConsole.readFloat('#tb-sideA');
+            var sideB = jsConsole.readFloat('#tb-sideB');
+            var tzheight = jsConsole.readFloat('#tb-tzheight');
+
+            var area = sideA * sideB / 2 * tzheight;
+
+            jsConsole.writeLine(area);
+        }
+
+        //Task 9
+        function InCircleInRectangle() {
+
+            //(x - center_x)^2 + (y - center_y)^2 < radius^2 - the formula used to determine if point is in circle
+            var x = jsConsole.readFloat('#tb-x');
+            var y = jsConsole.readFloat('#tb-y');
+            var crResult = (x - 1)*(x - 1) + (y - 1)*(y - 1) < 9;
+
+            if (crResult) {
+                jsConsole.write('Point is IN the Circle');
+            }
+            else {
+                jsConsole.write('Point is OUT of the Circle');
+            }
+
+            var racLeftX = -1;
+            var racRightX = 5;
+            var racUpY = 1;
+            var racDownY = -1;
+
+            //Formula for ractangle - (Y more than upY or less than downY) or (X less than leftX or more than rightX)
+            var isOutOfRac = (y > racUpY) || (y < racDownY) || (x < racLeftX) || (x > racRightX);
+
+            if (isOutOfRac) {
+
+                jsConsole.writeLine(' and OUT of the Rectangle');
+            }
+            else {
+                jsConsole.writeLine(' and IN the Rectangle.');
+            }
         }
     </script>
 </body>
