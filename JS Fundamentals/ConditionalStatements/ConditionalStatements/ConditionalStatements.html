@@ -7,23 +7,86 @@
 </head>
 <body>
 
+    <!-- Task 1 form -->
     <label for="tb-first">First number: </label>
     <input type="text" id="tb-first" />
     <br />
     <label for="tb-second">Second number: </label>
     <input type="text" id="tb-second" />
     <br />
-    <a href="#" onclick="ExchangeNumbers()">Exchange numbers</a>
+    <a href="#" onclick="ExchangeNumbers()">Exchange Numbers</a>
+    <br />
+
+    <!-- Task 2 form -->
+    <label for="tb-number1">First number: </label>
+    <input type="text" id="tb-number1" />
+    <br />
+    <label for="tb-number2">Second number: </label>
+    <input type="text" id="tb-number2" />
+    <br />
+    <label for="tb-number3">Second number: </label>
+    <input type="text" id="tb-number3" />
+    <br />
+    <a href="#" onclick="DetermineSign()">Determine Sign of Product</a>
+    <br />
+
+    <!-- Task 3 button -->
+    <a href="#" onclick="FindBiggest()">Find Biggest Number</a>
+    <br />
+
+    <!-- Task 4 button -->
+    <a href="#" onclick="SortDescending()">Sort Descending</a>
+    <br />
+
+    <!-- Task 5 -->
+    <label for="tb-digit">Digit: </label>
+    <input type="text" id="tb-digit" />
+    <br />
+    <a href="#" onclick="DigitName()">Name of digit</a>
+    <br />
+
+    <!-- Task 6 -->
+    <label for="tb-a">Eqiasion A: </label>
+    <input type="text" id="tb-a" />
+    <br />
+    <label for="tb-b">Eqiasion: B</label>
+    <input type="text" id="tb-b" />
+    <br />
+    <label for="tb-c">Equasion: C</label>
+    <input type="text" id="tb-c" />
+    <br />
+    <a href="#" onclick="SolvQuadraticEquasion()">Solve Equasion</a>
+    <br />
+
+    <!-- Task 7 -->
+    <label for="first">First Number </label>
+    <input type="text" id="first" />
+    <br />
+    <label for="second">Second Number</label>
+    <input type="text" id="second" />
+    <br />
+    <label for="third">Third Number</label>
+    <input type="text" id="third" />
+    <br />
+    <label for="fourth">Fourth Number</label>
+    <input type="text" id="fourth" />
+    <br />
+    <label for="fifth">Fifth Number</label>
+    <input type="text" id="fifth" />
+    <br />
+    <a href="#" onclick="GreatestOfFive()">Find Greatest of Five</a>
+    <br />
 
     <!-- js console definition-->
     <div id="console"></div>
 
     <script>
+        // HW presumes that all input is correct and does not explicitly check for correctnes.
         //Task 1
         function ExchangeNumbers() {
             var first = jsConsole.readFloat("#tb-first");
             var second = jsConsole.readFloat("#tb-second");
-           
+
             if (first > second) {
                 var temp = first;
                 first = second;
@@ -34,6 +97,176 @@
             else {
                 jsConsole.writeLine('No exchange needed!');
             }
+        }
+
+        //Task 2
+        function DetermineSign() {
+            var first = jsConsole.readFloat("#tb-number1");
+            var second = jsConsole.readFloat("#tb-number2");
+            var third = jsConsole.readFloat("#tb-number3");
+
+            if (first < 0) {
+
+                if (second * third < 0) {
+                    jsConsole.writeLine('Sign is: + ');
+                }
+                else {
+                    jsConsole.writeLine('Sign is: - ');
+                }
+            }
+            else {
+                if (second * third < 0) {
+                    jsConsole.writeLine('Sign is: - ');
+
+                }
+                else {
+                    jsConsole.writeLine('Sign is: + ');
+                }
+            }
+        }
+
+        //Task 3
+        function FindBiggest() {
+            var first = jsConsole.readFloat("#tb-number1");
+            var second = jsConsole.readFloat("#tb-number2");
+            var third = jsConsole.readFloat("#tb-number3");
+
+            var biggest = first;
+
+            if (biggest < second) {
+                biggest = second;
+            }
+            if (biggest < third) {
+                biggest = third;
+            }
+
+            jsConsole.writeLine('Biggest number: ' + biggest);
+        }
+
+        //Task 4
+        function SortDescending() {
+            var first = jsConsole.readFloat("#tb-number1");
+            var second = jsConsole.readFloat("#tb-number2");
+            var third = jsConsole.readFloat("#tb-number3");
+            var result;
+
+            if (first > second) {
+
+                if (first > third) {
+                    result = first.toString();
+
+                    if (second > third) {
+                        result += ' ' + second + ' ' + third;
+                    }
+                    else {
+                        result += ' ' + third + ' ' + second;
+                    }
+                }
+                else {
+                    result = third.toString() + ' ' + first + ' ' + second;
+                }
+            }
+            else {
+                if (third > second) {
+                    result = third.toString() + ' ' + second + ' ' + first;
+                }
+                else {
+                    result = second.toString();
+
+                    if (third > first) {
+                        result += ' ' + third + ' ' + first;
+                    }
+                    else {
+                        result += ' ' + first + ' ' + third;
+                    }
+                }
+            }
+
+            jsConsole.writeLine(result);
+        }
+
+
+        //Task 5
+
+        function DigitName() {
+            var number = jsConsole.readInteger("#tb-digit");
+
+            switch (number) {
+                case 0: jsConsole.writeLine('Zero');
+                    berak;
+                case 1: jsConsole.writeLine('One');
+                    berak;
+                case 2: jsConsole.writeLine('Two');
+                    berak;
+                case 3: jsConsole.writeLine('Three');
+                    berak;
+                case 4: jsConsole.writeLine('Four');
+                    berak;
+                case 5: jsConsole.writeLine('Five');
+                    berak;
+                case 6: jsConsole.writeLine('Six');
+                    berak;
+                case 7: jsConsole.writeLine('Seven');
+                    berak;
+                case 8: jsConsole.writeLine('Eight');
+                    berak;
+                case 9: jsConsole.writeLine('Nine');
+                    berak;
+                default: jsConsole.writeLine('Not a valid digit!');
+                    break;
+
+            }
+        }
+
+        //Task 6
+        function SolvQuadraticEquasion() {
+            var a = parseFloat(document.getElementById('tb-a').value);
+            var b = parseFloat(document.getElementById('tb-b').value);
+            var c = parseFloat(document.getElementById('tb-c').value);
+            var result = '';
+
+            var determ = b * b - 4 * a * c;
+            if (determ < 0) {
+                jsConsole.writeLine('Equasion has 0 roots.');
+            }
+            else if (determ == 0) {
+                result += 'Equasion has 1 root: '
+                result += -b / 2 * a;
+            }
+            else {
+                result += 'Equasion has two roots: '
+                result += (-b + Math.sqrt(determ)) / (2 * a);
+                result += ', ';
+                result += (-b - Math.sqrt(determ)) / (2 * a);
+
+            }
+            jsConsole.writeLine(result);
+        }
+
+        //task 7
+        function GreatestOfFive() {
+            var first = parseFloat(document.getElementById('first').value);
+            var second = parseFloat(document.getElementById('second').value);
+            var third = parseFloat(document.getElementById('third').value);
+            var fourth = parseFloat(document.getElementById('fourth').value);
+            var fifth = parseFloat(document.getElementById('fifth').value);
+
+
+            var max = first;
+            if (max < second) {
+                max = second;
+            }
+            if (max < third) {
+                max = third;
+            }
+            if (max < fourth) {
+                max = fourth;
+            }
+            if (max < fifth) {
+                max = fifth;
+            }
+
+            jsConsole.writeLine(max);
         }
     </script>
 
