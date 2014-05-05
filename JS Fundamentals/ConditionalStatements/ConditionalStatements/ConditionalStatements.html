@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Conditional Statements</title>
+    <link href="jsConsoleAndStyles/formStyles.css" rel="stylesheet" />
+    <link href="jsConsoleAndStyles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <label for="tb-first">First number: </label>
+    <input type="text" id="tb-first" />
+    <br />
+    <label for="tb-second">Second number: </label>
+    <input type="text" id="tb-second" />
+    <br />
+    <a href="#" onclick="ExchangeNumbers()">Exchange numbers</a>
+
+    <!-- js console definition-->
+    <div id="console"></div>
+
+    <script>
+        //Task 1
+        function ExchangeNumbers() {
+            var first = jsConsole.readFloat("#tb-first");
+            var second = jsConsole.readFloat("#tb-second");
+           
+            if (first > second) {
+                var temp = first;
+                first = second;
+                second = temp;
+                jsConsole.writeLine('First: ' + first);
+                jsConsole.writeLine('Second: ' + second);
+            }
+            else {
+                jsConsole.writeLine('No exchange needed!');
+            }
+        }
+    </script>
+
+    <script src="jsConsoleAndStyles/js-console.js"></script>
+</body>
+</html>
