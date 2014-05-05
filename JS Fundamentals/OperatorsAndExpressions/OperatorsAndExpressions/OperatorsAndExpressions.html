@@ -44,6 +44,17 @@
     <a href="#" onclick="ThirdBit()">Find 3rd Bit</a>
     <br />
 
+
+    <!-- Task 6 form -->
+    <label for="tb-xCoord">Point X</label>
+    <input type="text" id="tb-xCoord" />
+    <br />
+    <label for="tb-yCoord">Point Y</label>
+    <input type="text" id="tb-yCoord" />
+    <br />
+    <a href="#" onclick="PointInCircle()">Check if in circle?</a>
+    <br />
+
     <!--Console Definition-->
     <div id="console"></div>
     <script src="JsConsoleAndStyles/js-console.js"></script>
@@ -104,6 +115,13 @@
             else {
                 jsConsole.writeLine('0');
             }
+        }
+
+        //Task 6
+        function PointInCircle() {
+            var x = jsConsole.readFloat('#tb-xCoord');
+            var y = jsConsole.readFloat('#tb-yCoord');
+
         }
     </script>
 </body>
