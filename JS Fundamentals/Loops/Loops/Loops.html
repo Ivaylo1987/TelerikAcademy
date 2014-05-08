@@ -7,7 +7,105 @@
 </head>
 <body>
     <div id="console"></div>
+    <label for="input">Please, enter N: </label>
+    <input type="text" id="input" />
+    <button onclick="PrintNotDevisibleBy3And()">Generate Numbers Not Devisible by 3 and 7.</button>
+    <br />
 
     <script src="jsConsoleAndStyles/js-console.js"></script>
+    <script>
+        //Task 1
+        function PrintNumbers(num) {
+
+            for (var i = 1; i <= num; i++) {
+                if (i != 10) {
+                    jsConsole.write(i + ', ');
+                }
+                else {
+                    jsConsole.writeLine(i);
+                }
+            }
+
+        }
+
+        PrintNumbers(10);
+
+        //Task 2
+        function PrintNotDevisibleBy3And() {
+            var num = jsConsole.readInteger('input');
+
+            for (var i = 1; i <= num; i++) {
+                if (i % 21 == 0) {
+                    continue;
+                }
+
+                if (i != num) {
+                    jsConsole.write(i + ', ');
+                }
+                else {
+                    jsConsole.writeLine(i);
+                }
+            }
+        }
+
+        //Task 3
+        var arr = [10, -4, 13, 111, 13, 0, 3, 6, 7, 8];
+        function FindMax(inputArr) {
+            var max = inputArr[0];
+
+            for (var i = 1; i < inputArr.length; i++) {
+                if (inputArr[i] > max) {
+                    max = inputArr[i];
+                }
+            }
+
+            jsConsole.writeLine(max);
+        }
+
+        function FindMin(inputArr) {
+            var min = inputArr[0];
+
+            for (var i = 1; i < inputArr.length; i++) {
+                if (inputArr[i] < min) {
+                    min = inputArr[i];
+                }
+            }
+
+            jsConsole.writeLine(min);
+        }
+
+        FindMax(arr);
+        FindMin(arr);
+
+
+        function GetPropertiesOf(obj) {
+            var min;
+            var max;
+            for (var property in obj) {
+                if (min === undefined) {
+                    min = property;
+                }
+                if (max === undefined) {
+                    max = property;
+                }
+                if (property < min) {
+                    min = property;
+                }
+
+                if (property > max) {
+                    max = property;
+                }
+            }
+
+            jsConsole.writeLine(min);
+            jsConsole.writeLine(max);
+
+        }
+
+        GetPropertiesOf(window);
+        GetPropertiesOf(document);
+        GetPropertiesOf(navigator);
+
+    </script>
 </body>
 </html>
