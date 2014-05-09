@@ -116,7 +116,7 @@
 })();
 
 //Task 6
-(function Task4() {
+(function Task6() {
     var arr = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3];
     var current;
     var finalElement;
@@ -149,6 +149,34 @@
 })();
 
 //Task 7
-function Task6() {
+(function Task7() {
 
-}
+    function selectionSort(arr, key, minIndex, maxIndex) {
+        var midIndex;
+
+        if (maxIndex < minIndex) {
+            return jsConsole.writeLine('Key not found!');
+        }
+
+        else {
+            midIndex = getMidIndex(minIndex, maxIndex);
+
+            if (arr[midIndex] < key) {
+                return selectionSort(arr, key, midIndex + 1, maxIndex);
+            }
+            else if (arr[midIndex] > key) {
+                return selectionSort(arr, key, minIndex, midIndex - 1);
+            }
+            else {
+                return jsConsole.writeLine(midIndex);
+            }
+        }
+    }
+
+    function getMidIndex(minIndex, maxIndex) {
+        return Math.floor(minIndex + ((maxIndex - minIndex) / 2));
+    }
+
+    var sortedArr = [1, 2, 7, 15, 43, 101, 221, 444, 1005, 10000, 3333332];
+    selectionSort(sortedArr, 15, 0, sortedArr.length); //should return 3
+})();
