@@ -1,4 +1,5 @@
-﻿b = navigator.appNameaddScroll = false;
+﻿var b = navigator.appNameaddScroll = false;
+var addScroll;
 
 if ((navigator.userAgent.indexOf('MSIE 5') > 0) || (navigator.userAgent.indexOf('MSIE 6')) > 0) {
     addScroll = true;
@@ -12,8 +13,8 @@ var pY = 0;
 document.onmousemove = mouseMove;
 
 if (b == "Netscape") {
-    document.captureEvents(Event.MOUSEMOVE)
-};
+    document.captureEvents(Event.MOUSEMOVE);
+}
 
 function mouseMove(evn) {
     if (b == "Netscape") {
@@ -49,6 +50,7 @@ function PopTip() {
         theLayer.top = pY + 15;
         theLayer.visibility = 'show';
     }
+
     else {
         theLayer = eval('document.all[\'ToolTip\']');
         if (theLayer) {
@@ -83,6 +85,7 @@ function HideMenu1() {
     if (b == "Netscape") {
         document.layers['menu1'].visibility = 'hide';
     }
+
     else {
         document.all['menu1'].style.visibility = 'hidden';
     }
