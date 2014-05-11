@@ -76,8 +76,20 @@
 
     //3.Write a function that makes a deep copy of an object
     //The function should work for both primitive and reference types
-    // TODO:
 
+    function makeDeepCopy(obj) {
+        return JSON.parse(JSON.stringify(obj));
+    }
+
+    var ivcho = {
+        firstName: 'Ivcho',
+        lastName: 'Stoyanov',
+        age: 23,
+       
+    }
+
+    var ivchoCoppy = makeDeepCopy(ivcho);
+    jsConsole.writeLine(ivchoCoppy.firstName + ' ' + ivchoCoppy.lastName);
 
     //4.Write a function that checks if a given object contains a given property
 
@@ -140,7 +152,7 @@
     //The function must return an associative array, with keys - the groups, and values -arrays with persons in this groups
     //Use function overloading (i.e. just one function)
 
-    //used to generate people array
+    //used only to generate array of people.
     function generatePeople(count) {
 
         var firstNames = ["Joro", "Marko", "Petko", "Vasko", "Pesho"];
