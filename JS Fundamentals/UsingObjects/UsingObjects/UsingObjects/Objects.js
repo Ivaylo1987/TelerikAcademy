@@ -184,5 +184,28 @@
     }
 
     var arrPeople = generatePeople(30);
-    jsConsole.writeLine(arrPeople);
+    //jsConsole.writeLine(arrPeople); for test purposes
+   
+    function groupBy(arr, property) {
+        var groupedArr = {};
+        for (var i = 0; i < arr.length; i++) {
+            if (!groupedArr[arr[i][property]]) {
+                groupedArr[arr[i][property]] = [];
+            }
+
+            groupedArr[arr[i][property]].push(arr[i].toString());
+        }
+
+        return groupedArr;
+    }
+
+    var groupByAge = groupBy(arrPeople, 'age');
+    var groupByLastName = groupBy(arrPeople, 'lastName');
+
+    jsConsole.writeLine('Grouped by Age:');
+    jsConsole.writeLine(JSON.stringify(groupByAge));
+
+    //Uncoment if you want to test
+    //jsConsole.writeLine('Grouped by Last Name:');
+    //jsConsole.writeLine(JSON.stringify(groupByLastName));
 })()
