@@ -23,3 +23,6 @@ class CatalanNumber
         Console.WriteLine(catalanNum);
     }
 }
+
+
+function F(n){for(var i=2,s=1;i<=n;i++)s*=(4*i-2)/(1+i);return s/2;}
