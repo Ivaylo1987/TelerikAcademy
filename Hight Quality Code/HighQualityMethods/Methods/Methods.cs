@@ -8,9 +8,16 @@ namespace Methods
         {
             if (a <= 0 || b <= 0 || c <= 0)
             {
-                Console.Error.WriteLine("Sides should be positive.");
-                return -1;
+                throw new ArgumentException("Triagle must have positive side lengths!");
             }
+
+            if (a + b <= c ||
+                a + c <= b ||
+                c + b <= b)
+            {
+                throw new ArgumentException("These values do not form a triangle.");
+            }
+
             double s = (a + b + c) / 2;
             double area = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
             return area;
@@ -20,60 +27,123 @@ namespace Methods
         {
             switch (number)
             {
-                case 0: return "zero";
-                case 1: return "one";
-                case 2: return "two";
-                case 3: return "three";
-                case 4: return "four";
-                case 5: return "five";
-                case 6: return "six";
-                case 7: return "seven";
-                case 8: return "eight";
-                case 9: return "nine";
+                case 0:
+                    return "zero";
+                case 1:
+                    return "one";
+                case 2:
+                    return "two";
+                case 3:
+                    return "three";
+                case 4:
+                    return "four";
+                case 5:
+                    return "five";
+                case 6:
+                    return "six";
+                case 7:
+                    return "seven";
+                case 8:
+                    return "eight";
+                case 9:
+                    return "nine";
+                default: throw new ArgumentException("Invalid value is provided!");
             }
-
-            return "Invalid number!";
         }
 
         static int FindMax(params int[] elements)
         {
-            if (elements == null || elements.Length == 0)
+            if (elements == null)
             {
-                return -1;
+                throw new ArgumentNullException("Elements value cannot be null.");
             }
 
+            if (elements.Length == 0)
+            {
+                throw new ArgumentException("Provide at least one argument.");
+            }
+
+            int max = elements[0];
             for (int i = 1; i < elements.Length; i++)
             {
-                if (elements[i] > elements[0])
+                if (max < elements[i])
                 {
-                    elements[0] = elements[i];
+                    max = elements[i];
                 }
             }
-            return elements[0];
+
+            return max;
         }
 
-        static void PrintAsNumber(object number, string format)
+        static void PrintAsTwoSymbolDecimal(object number)
         {
-            if (format == "f")
+            if (number == null)
             {
-                Console.WriteLine("{0:f2}", number);
+                throw new ArgumentNullException("Number cannot be null");
             }
-            if (format == "%")
-            {
-                Console.WriteLine("{0:p0}", number);
-            }
-            if (format == "r")
-            {
-                Console.WriteLine("{0,8}", number);
-            }
+
+            Console.WriteLine("{0:f2}", number);
         }
 
-
-        static double CalcDistance(double x1, double y1, double x2, double y2, 
-            out bool isHorizontal, out bool isVertical)
+        static void PrintAsPercentage(object number)
         {
-            isHorizontal = (y1 == y2);
-            isVertical = (x1 == x2);
+            if (number == null)
+            {
+                throw new ArgumentNullException("Number cannot be null");
+            }
+
+            Console.WriteLine("{0:p0}", number);
+        }
+
+        static void PrintRightAlignedByEight(object number)
+        {
+            if (number == null)
+            {
+                throw new ArgumentNullException("Number cannot be null");
+            }
+
+            Console.WriteLine("{0,8}", number);
+        }
+
+        //This one is refactered to the upper 3 methods.
+
+        //static void PrintAsNumber(object number, string format)
+        //{
+        //    if (format == "f")
+        //    {
+        //        Console.WriteLine("{0:f2}", number);
+        //    }
+
+        //    if (format == "%")
+        //    {
+        //        Console.WriteLine("{0:p0}", number);
+        //    }
+
+        //    if (format == "r")
+        //    {
+        //        Console.WriteLine("{0,8}", number);
+        //    }
+        //}
+
+        static bool isVertical(double x1, double y1, double x2, double y2)
+        {
+            return x1 == x2;
+        }
+
+        static bool isHorizontal(double x1, double y1, double x2, double y2)
+        {
+            return y1 == y2;
+        }
+
+        static double CalcDistance(double x1, double y1, double x2, double y2)
+        {
+            if (x1 == null ||
+                x2 == null ||
+                y1 == null ||
+                y2 == null)
+            {
+                throw new ArgumentNullException("Values should not be null");
+            }
 
             double distance = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
             return distance;
@@ -82,19 +152,18 @@ namespace Methods
         static void Main()
         {
             Console.WriteLine(CalcTriangleArea(3, 4, 5));
-            
-            Console.WriteLine(NumberToDigit(5));
-            
-            Console.WriteLine(FindMax(5, -1, 3, 2, 14, 2, 3));
-            
-            PrintAsNumber(1.3, "f");
-            PrintAsNumber(0.75, "%");
-            PrintAsNumber(2.30, "r");
 
-            bool horizontal, vertical;
-            Console.WriteLine(CalcDistance(3, -1, 3, 2.5, out horizontal, out vertical));
-            Console.WriteLine("Horizontal? " + horizontal);
-            Console.WriteLine("Vertical? " + vertical);
+            Console.WriteLine(NumberToDigit(5));
+
+            Console.WriteLine(FindMax(5, -1, 3, 2, 14, 2, 3));
+
+            PrintAsTwoSymbolDecimal(1.3);
+            PrintAsPercentage(0.75);
+            PrintRightAlignedByEight(2.30);
+
+            Console.WriteLine(CalcDistance(3, -1, 3, 2.5));
+            Console.WriteLine("Horizontal? " + isHorizontal(3, -1, 3, 2.5));
+            Console.WriteLine("Vertical? " + isVertical(3, -1, 3, 2.5));
 
             Student peter = new Student() { FirstName = "Peter", LastName = "Ivanov" };
             peter.OtherInfo = "From Sofia, born at 17.03.1992";
