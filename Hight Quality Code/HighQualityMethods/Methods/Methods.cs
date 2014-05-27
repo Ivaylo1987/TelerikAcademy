@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace Methods
+﻿namespace Methods
 {
-    class Methods
+    using System;
+
+    public class Methods
     {
-        static double CalcTriangleArea(double a, double b, double c)
+        public static double CalcTriangleArea(double a, double b, double c)
         {
             if (a <= 0 || b <= 0 || c <= 0)
             {
@@ -23,7 +23,7 @@ namespace Methods
             return area;
         }
 
-        static string NumberToDigit(int number)
+        public static string NumberToDigit(int number)
         {
             switch (number)
             {
@@ -51,7 +51,7 @@ namespace Methods
             }
         }
 
-        static int FindMax(params int[] elements)
+        public static int FindMax(params int[] elements)
         {
             if (elements == null)
             {
@@ -75,7 +75,7 @@ namespace Methods
             return max;
         }
 
-        static void PrintAsTwoSymbolDecimal(object number)
+        public static void PrintAsTwoSymbolDecimal(object number)
         {
             if (number == null)
             {
@@ -85,7 +85,7 @@ namespace Methods
             Console.WriteLine("{0:f2}", number);
         }
 
-        static void PrintAsPercentage(object number)
+       public static void PrintAsPercentage(object number)
         {
             if (number == null)
             {
@@ -95,7 +95,7 @@ namespace Methods
             Console.WriteLine("{0:p0}", number);
         }
 
-        static void PrintRightAlignedByEight(object number)
+        public static void PrintRightAlignedByEight(object number)
         {
             if (number == null)
             {
@@ -105,51 +105,24 @@ namespace Methods
             Console.WriteLine("{0,8}", number);
         }
 
-        //This one is refactered to the upper 3 methods.
-
-        //static void PrintAsNumber(object number, string format)
-        //{
-        //    if (format == "f")
-        //    {
-        //        Console.WriteLine("{0:f2}", number);
-        //    }
-
-        //    if (format == "%")
-        //    {
-        //        Console.WriteLine("{0:p0}", number);
-        //    }
-
-        //    if (format == "r")
-        //    {
-        //        Console.WriteLine("{0,8}", number);
-        //    }
-        //}
-
-        static bool isVertical(double x1, double y1, double x2, double y2)
+        // double is not a nullable type so no need for checks.
+        public static bool ArePointsVertical(double x1, double y1, double x2, double y2)
         {
             return x1 == x2;
         }
 
-        static bool isHorizontal(double x1, double y1, double x2, double y2)
+       public static bool ArePointsHorizontal(double x1, double y1, double x2, double y2)
         {
             return y1 == y2;
         }
 
-        static double CalcDistance(double x1, double y1, double x2, double y2)
+       public static double CalcDistance(double x1, double y1, double x2, double y2)
         {
-            if (x1 == null ||
-                x2 == null ||
-                y1 == null ||
-                y2 == null)
-            {
-                throw new ArgumentNullException("Values should not be null");
-            }
-
-            double distance = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+            double distance = Math.Sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
             return distance;
         }
 
-        static void Main()
+        public static void Main()
         {
             Console.WriteLine(CalcTriangleArea(3, 4, 5));
 
@@ -162,17 +135,18 @@ namespace Methods
             PrintRightAlignedByEight(2.30);
 
             Console.WriteLine(CalcDistance(3, -1, 3, 2.5));
-            Console.WriteLine("Horizontal? " + isHorizontal(3, -1, 3, 2.5));
-            Console.WriteLine("Vertical? " + isVertical(3, -1, 3, 2.5));
+            Console.WriteLine("Horizontal? " + ArePointsHorizontal(3, -1, 3, 2.5));
+            Console.WriteLine("Vertical? " + ArePointsVertical(3, -1, 3, 2.5));
 
             Student peter = new Student() { FirstName = "Peter", LastName = "Ivanov" };
-            peter.OtherInfo = "From Sofia, born at 17.03.1992";
+            peter.OtherInfo = "From Sofia";
+            peter.BirthDay = new DateTime(1992, 03, 17);
 
             Student stella = new Student() { FirstName = "Stella", LastName = "Markova" };
-            stella.OtherInfo = "From Vidin, gamer, high results, born at 03.11.1993";
+            stella.BirthDay = new DateTime(1993, 11, 3);
+            stella.OtherInfo = "From Vidin, gamer, high results";
 
-            Console.WriteLine("{0} older than {1} -> {2}",
-                peter.FirstName, stella.FirstName, peter.IsOlderThan(stella));
+            Console.WriteLine("{0} older than {1} -> {2}", peter.FirstName, stella.FirstName, peter.IsOlderThan(stella.BirthDay));
         }
     }
 }
