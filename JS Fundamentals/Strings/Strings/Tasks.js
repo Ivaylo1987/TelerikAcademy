@@ -1,4 +1,5 @@
 ﻿(function () {
+
     //task 1
     function reverse(input) {
         var result = input.split('').reverse().join('');
