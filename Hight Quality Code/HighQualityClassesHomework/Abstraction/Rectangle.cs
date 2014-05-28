@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace Abstraction
+﻿namespace Abstraction
 {
+    using System;
     class Rectangle : Figure
     {
         public Rectangle()
