@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Abstraction
+﻿namespace Abstraction
 {
+    using System;
+
     class FiguresExample
     {
         static void Main()

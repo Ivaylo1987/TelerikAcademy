@@ -1,69 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace InheritanceAndPolymorphism
+﻿namespace InheritanceAndPolymorphism
 {
-    public class OffsiteCourse
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    public class OffsiteCourse : Course
     {
-        public string Name { get; set; }
-        public string TeacherName { get; set; }
-        public IList<string> Students { get; set; }
-        public string Town { get; set; }
-
         public OffsiteCourse(string name)
+            : base(name)
         {
-            this.Name = name;
-            this.TeacherName = null;
-            this.Students = new List<string>();
-            this.Town = null;
         }
 
-        public OffsiteCourse(string courseName, string teacherName)
+        public OffsiteCourse(string name, string teacherName)
+            : base(name, teacherName)
         {
-            this.Name = courseName;
-            this.TeacherName = teacherName;
-            this.Students = new List<string>();
-            this.Town = null;
         }
 
-        public OffsiteCourse(string courseName, string teacherName, IList<string> students)
+        public OffsiteCourse(string courseName, string teacherName,  IList<string> students)
+            : base(courseName, teacherName, students)
         {
-            this.Name = courseName;
-            this.TeacherName = teacherName;
-            this.Students = students;
-            this.Town = null;
         }
 
-        private string GetStudentsAsString()
+        public OffsiteCourse(string courseName, string teacherName, IList<string> students, string town)
+            : base(courseName, teacherName, students)
         {
-            if (this.Students == null || this.Students.Count == 0)
-            {
-                return "{ }";
-            }
-            else
-            {
-                return "{ " + string.Join(", ", this.Students) + " }";
-            }
+            this.Town = town;
         }
 
+        public string Town { get; set; }
+       
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder();
-            result.Append("OffsiteCourse { Name = ");
+            var result = new StringBuilder();
+
+            result.Append("OffLineCourse { Name = ");
             result.Append(this.Name);
-            if (this.TeacherName != null)
-            {
-                result.Append("; Teacher = ");
-                result.Append(this.TeacherName);
-            }
-            result.Append("; Students = ");
-            result.Append(this.GetStudentsAsString());
+
+            result.Append(base.ToString());
+            
             if (this.Town != null)
             {
                 result.Append("; Town = ");
                 result.Append(this.Town);
             }
+
             result.Append(" }");
             return result.ToString();
         }

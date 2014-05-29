@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileNameUtils.cs" />
+    <Compile Include="PointUtils.cs" />
     <Compile Include="UtilsExamples.cs" />
-    <Compile Include="Utils.cs" />
+    <Compile Include="Cuboid.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
