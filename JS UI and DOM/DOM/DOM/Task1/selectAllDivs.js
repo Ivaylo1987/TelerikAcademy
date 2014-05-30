@@ -4,7 +4,12 @@
     // Task 1 with querySelectorAll();
     function selectDivsQuerySelector() {
         var divsInDiv = document.querySelectorAll('div > div')
-        return divsInDiv; // returns NodeList
+        var result = [];
+
+        for (var i = 0, iLen= divsInDiv.length ; i < iLen; i++) {
+            result.push(divsInDiv[i]);
+        }
+        return result; // returns NodeList
     }
 
     console.log(selectDivsQuerySelector()); 

@@ -65,8 +65,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Demo.html" />
-    <Content Include="selectAllDivs.js" />
+    <Content Include="Task1\Demo.html" />
+    <Content Include="Task1\selectAllDivs.js" />
+    <Content Include="Task2 and Task3\Demo.html" />
+    <Content Include="Task2 and Task3\printInputValue.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
