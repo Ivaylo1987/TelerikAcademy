@@ -1,0 +1,12 @@
+﻿body > div {
+    border: 1px solid black;
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+div > div {
+    border: 1px solid black;
+    color: blue;
+    padding: 5px;
+}
