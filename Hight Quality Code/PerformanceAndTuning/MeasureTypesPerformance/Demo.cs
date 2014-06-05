@@ -11,7 +11,9 @@
         // keep in mind that some of the tests take up to 16 seconds to complete with loopTo = 100000000 :)
         static void Main()
         {
+            Console.WriteLine("Add:");
             int loopTo = 100000000;
+
             MeasureFunctions.LogElapsedTime("Add int", () =>
             {
                 int count = 0;
@@ -53,7 +55,7 @@
             });
 
 
-            Console.WriteLine();
+            Console.WriteLine("Subtract:");
 
             {
                 MeasureFunctions.LogElapsedTime("Subract int", () =>
@@ -97,7 +99,7 @@
                 });
             }
 
-            Console.WriteLine();
+            Console.WriteLine("Increment:");
 
             {
                 MeasureFunctions.LogElapsedTime("Increment int", () =>
@@ -141,7 +143,7 @@
                 });
             }
 
-            Console.WriteLine();
+            Console.WriteLine("Multiply");
 
             {
                 MeasureFunctions.LogElapsedTime("Multiply int", () =>
@@ -185,7 +187,7 @@
                 });
             }
 
-            Console.WriteLine();
+            Console.WriteLine("Divide:");
 
             {
                 MeasureFunctions.LogElapsedTime("Divide int", () =>
