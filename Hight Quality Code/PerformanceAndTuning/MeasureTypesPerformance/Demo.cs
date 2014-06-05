@@ -8,6 +8,7 @@
 
     class Demo
     {
+        // keep in mind that some of the tests take up to 16 seconds to complete with loopTo = 100000000 :)
         static void Main()
         {
             int loopTo = 100000000;
