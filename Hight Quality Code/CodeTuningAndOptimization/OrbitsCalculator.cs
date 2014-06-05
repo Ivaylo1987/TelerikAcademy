@@ -93,9 +93,11 @@ namespace SolarSystem
 
         private void EarthRotation()
         {
-			for (decimal step = 0; step <= 360; step+=0.00005m)
+            // Removed cast - define step as double not decimal.
+            // This enhances performance and does not change logic.
+			for (double step = 0; step <= 360; step+=0.00005)
 			{
-				EarthRotationAngle = ((double)step) * Days / EarthRotationPeriod;
+				EarthRotationAngle = step * Days / EarthRotationPeriod;
 			}
             Update("EarthRotationAngle");
         }
