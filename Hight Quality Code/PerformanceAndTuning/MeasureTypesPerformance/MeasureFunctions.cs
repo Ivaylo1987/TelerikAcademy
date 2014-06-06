@@ -15,7 +15,7 @@
 
             stopwatch.Stop();
 
-            Console.WriteLine("{0} time: {1}", type, stopwatch.Elapsed); 
+            Console.WriteLine("{0} time: {1}", type, stopwatch.Elapsed);
         }
     }
 }

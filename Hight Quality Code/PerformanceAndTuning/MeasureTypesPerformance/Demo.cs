@@ -8,7 +8,7 @@
 
     class Demo
     {
-        // keep in mind that some of the tests take up to 16 seconds to complete with loopTo = 100000000 :)
+        // keep in mind that some of the tests take up to 15 - 20 seconds to complete with loopTo = 100000000 :)
         static void Main()
         {
             Console.WriteLine("Add:");
@@ -183,7 +183,7 @@
                     decimal count = 1;
 
                     for (int i = 1; i < loopTo; i++)
-                        count *= 1.000000000001m;
+                        count *= 1.01m;
                 });
             }
 
