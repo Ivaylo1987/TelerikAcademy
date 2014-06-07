@@ -53,6 +53,7 @@
     <Compile Include="TestSchool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestStudent.cs" />
+    <Compile Include="TestCourse.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\School\School.csproj">

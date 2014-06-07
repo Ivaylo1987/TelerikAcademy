@@ -5,6 +5,8 @@
 
     public class Course
     {
+        public const int StudentsMaxCount = 30;
+
         private IList<Student> students;
 
         public Course(string name, IList<Student> studentsIncourse)
@@ -21,7 +23,7 @@
             }
             private set
             {
-                if (value.Count > 30)
+                if (value.Count > StudentsMaxCount)
                 {
                     throw new ArgumentOutOfRangeException("Course cannot contain more than 30 students.");
                 }
@@ -34,7 +36,7 @@
 
         public void AddStudent(Student student)
         {
-            if (students == null)
+            if (student == null)
             {
                 throw new ArgumentNullException("Student cannot be null");
             }
@@ -44,12 +46,17 @@
                 throw new ArgumentException("Student already exists in the course!");
             }
 
+            if (this.Students.Count == StudentsMaxCount)
+            {
+                throw new ArgumentOutOfRangeException("Students are already 30. More than 30 is not allowed");
+            }
+
             this.Students.Add(student);
         }
 
         public bool RemoveStudent(Student student)
         {
-            if (students == null)
+            if (student == null)
             {
                 throw new ArgumentNullException("Student cannot be null");
             }

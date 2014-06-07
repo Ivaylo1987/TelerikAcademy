@@ -9,7 +9,7 @@
         private School school = new School();
 
         [TestMethod]
-        public void TestSchool_AddFirstStudent()
+        public void TestSchool_CreateFirstStudent()
         {
             var studentsCountBefore = this.school.Students.Count;
             this.school.AddStundent(new Student("Pesho", 12345));
@@ -19,7 +19,7 @@
         }
 
         [TestMethod]
-        public void TestSchool_AddStudentWithRandomNumber()
+        public void TestAddStudent_WithRandomNumber()
         {
             var studentGosho = new Student("Gosho", 16001);
             this.school.AddStundent(studentGosho);
@@ -30,7 +30,7 @@
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void TestSchool_AddDuplicateStudent()
+        public void TestAddStudent_DuplicateID()
         {
             var studentMaria = new Student("Maria", 16001);
             this.school.AddStundent(studentMaria);
@@ -41,7 +41,7 @@
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void TestSchool_AddNullStudent()
+        public void TestAddStudent_NullStudent()
         {
             this.school.AddStundent(null);
         }
