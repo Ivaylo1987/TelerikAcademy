@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SVG Homework - Task 1 - MEAN</title>
+    <script src="functions.js"></script>
+    <style>
+        svg {
+            background: #f5ffdf;
+            margin: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>	
+<body>
+    <svg id="mySvg" width="320" height="450"></svg>
+    <script>
+        var svg = document.getElementById("mySvg");
+ 
+        svg.innerHTML += createCircle(195, 100, 76, "#3e3f37");
+        svg.innerHTML += createText(50, 110, "#3e3f37", "M");
+        svg.innerHTML += mLogo();
+ 
+        svg.innerHTML += createCircle(195, 175, 76, "#282827");
+        svg.innerHTML += createText(50, 185, "#282827", "E");
+        svg.innerHTML += createText(130, 183, "#fff", "express", 35, "Consolas", "normal");
+ 
+        svg.innerHTML += createCircle(195, 260, 76, "#e23337");
+        svg.innerHTML += createText(50, 270, "#e23337", "A");
+        svg.innerHTML += aLogo();
+ 
+        svg.innerHTML += createCircle(195, 340, 76, "#8ec74e");
+        svg.innerHTML += createText(50, 350, "#8ec74e", "N");
+        svg.innerHTML += nodeLogo();
+       
+    </script>
+</body>
+</html>
