@@ -5,9 +5,10 @@
 
     public class School
     {
-        public School(IList<Course> courses)
+        public School()
         {
-            this.Courses = courses;
+            this.Courses = new List<Course>();
+            this.Students = new List<Student>();
         }
 
         public IList<Student> Students { get; private set; }
