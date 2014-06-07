@@ -9,7 +9,8 @@ class IsPrimeNumber
         bool isPrime = true;
         for (int i = 2; i < Math.Sqrt(numToCheck); i++)
         {
-            if (numToCheck % i == 0)
+            var tst = numToCheck % i;
+            if (tst == 0)
             {
                 isPrime = false;
             }
