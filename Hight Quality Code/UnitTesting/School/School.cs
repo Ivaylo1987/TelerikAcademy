@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     public class School
     {
@@ -17,7 +18,7 @@
 
         public void AddStundent(Student student)
         {
-            if (this.Students == null)
+            if (student == null)
             {
                 throw new ArgumentNullException("Student cannot be null");
             }
