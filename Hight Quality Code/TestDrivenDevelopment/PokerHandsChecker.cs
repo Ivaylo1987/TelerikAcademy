@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Poker
 {
@@ -6,17 +7,22 @@ namespace Poker
     {
         public bool IsValidHand(IHand hand)
         {
-            throw new NotImplementedException();
+            if (hand == null)
+            {
+                throw new ArgumentNullException("Hand cannot be null!");
+            }
+            
+           return hand.Cards.Distinct().Count() == 5;
         }
 
-        public bool IsStraightFlush(IHand hand)
+        public bool IsFlush(IHand hand)
         {
-            throw new NotImplementedException();
+            return hand.Cards.All(c => c.Suit == hand.Cards.First().Suit);
         }
 
         public bool IsFourOfAKind(IHand hand)
         {
-            throw new NotImplementedException();
+            return hand.Cards.All(c => c.Face == hand.Cards.First().Face);
         }
 
         public bool IsFullHouse(IHand hand)
@@ -24,7 +30,7 @@ namespace Poker
             throw new NotImplementedException();
         }
 
-        public bool IsFlush(IHand hand)
+        public bool IsStraightFlush(IHand hand)
         {
             throw new NotImplementedException();
         }
