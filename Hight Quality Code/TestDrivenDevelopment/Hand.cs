@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Poker
+﻿namespace Poker
 {
+    using System;
+    using System.Collections.Generic;
+
     public class Hand : IHand
     {
-        public IList<ICard> Cards { get; private set; }
-
         public Hand(IList<ICard> cards)
         {
             this.Cards = cards;
         }
 
+        public IList<ICard> Cards { get; private set; }
+
         public override string ToString()
         {
-            throw new NotImplementedException();
+            var result = string.Join(" ", this.Cards);
+            return result.ToString();
         }
     }
 }

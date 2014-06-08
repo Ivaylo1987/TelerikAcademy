@@ -1,8 +1,8 @@
-﻿using System;
-using System.Text;
-
-namespace Poker
+﻿namespace Poker
 {
+    using System;
+    using System.Text;
+
     public class Card : ICard
     {
         public Card(CardFace face, CardSuit suit)
@@ -11,8 +11,9 @@ namespace Poker
             this.Suit = suit;
         }
 
-        public CardFace Face { get; private set; }
-        public CardSuit Suit { get; private set; }
+        public CardFace Face{ get; private set; }
+
+        public CardSuit Suit{ get; private set; }
 
         public override string ToString()
         {
