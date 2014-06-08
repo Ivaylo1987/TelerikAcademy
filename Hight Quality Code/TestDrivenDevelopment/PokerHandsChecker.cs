@@ -11,17 +11,26 @@ namespace Poker
             {
                 throw new ArgumentNullException("Hand cannot be null!");
             }
-            
+
+           
            return hand.Cards.Distinct().Count() == 5;
         }
 
         public bool IsFlush(IHand hand)
         {
+            if (hand == null)
+            {
+                throw new ArgumentNullException("Hand cannot be null!");
+            }
             return hand.Cards.All(c => c.Suit == hand.Cards.First().Suit);
         }
 
         public bool IsFourOfAKind(IHand hand)
         {
+            if (hand == null)
+            {
+                throw new ArgumentNullException("Hand cannot be null!");
+            }
             return hand.Cards.All(c => c.Face == hand.Cards.First().Face);
         }
 
