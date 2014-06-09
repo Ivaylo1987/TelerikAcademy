@@ -155,3 +155,11 @@ $RECYCLE.BIN/
 # Mac desktop service store files
 .DS_Store
 /Hight Quality Code/CodeFormatting/PowerCollections.zip
+/Hight Quality Code/CodeTuningAndOptimization/PerformanceAndTuning/MeasureMathFunctionsPerformance/Settings.StyleCop
+/Hight Quality Code/CodeTuningAndOptimization/PerformanceAndTuning/MeasureTypesPerformance
+/Hight Quality Code/CodeTuningAndOptimization/PerformanceAndTuning/MeasureTypesPerformance/Settings.StyleCop
+/Hight Quality Code/UnitTesting
+/Hight Quality Code/UnitTesting/School
+/Hight Quality Code/UnitTesting/School/Settings.StyleCop
+/Hight Quality Code/UnitTesting/School.Test
+/Hight Quality Code/UnitTesting/School.Test/Settings.StyleCop
