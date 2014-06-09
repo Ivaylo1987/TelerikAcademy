@@ -3,7 +3,7 @@
     using System;
     using System.Text;
 
-    public class Card : ICard, IEquatable<Card>
+    public class Card : ICard
     {
         public Card(CardFace face, CardSuit suit)
         {
@@ -78,16 +78,6 @@
             }
 
             return result.ToString();
-        }
-
-        public bool Equals(Card other)
-        {
-            return (this.Face == other.Face && this.Suit == other.Suit);
-        }
-
-        public override int GetHashCode()
-        {
-            return this.Face.GetHashCode() ^ this.Suit.GetHashCode();
         }
     }
 }
