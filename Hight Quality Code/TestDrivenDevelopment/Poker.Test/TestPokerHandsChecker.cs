@@ -86,5 +86,21 @@
             var checker = new PokerHandsChecker();
             Assert.AreEqual(true, checker.IsFourOfAKind(hand));
         }
+
+        [TestMethod]
+        public void TestIsFourOfAKind_NotValid()
+        {
+            var cards = new List<ICard>(){
+                new Card(CardFace.Ace, CardSuit.Clubs),
+                new Card(CardFace.Ace, CardSuit.Spades),
+                new Card(CardFace.Ace, CardSuit.Hearts),
+                new Card(CardFace.Ten, CardSuit.Diamonds),
+                new Card(CardFace.Ten, CardSuit.Clubs)
+            };
+
+            var hand = new Hand(cards);
+            var checker = new PokerHandsChecker();
+            Assert.AreEqual(false, checker.IsFourOfAKind(hand));
+        }
     }
 }
