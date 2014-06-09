@@ -11,9 +11,12 @@ namespace Poker
             {
                 throw new ArgumentNullException("Hand cannot be null!");
             }
-
-           
-           return hand.Cards.Distinct().Count() == 5;
+            // group by ToString()
+            var groupedByCard = hand.Cards.GroupBy(card => card.ToString());
+            // take one element of each group
+            var firstOfEachGroup = groupedByCard.Select(group => group.First());
+            // If there are 5 groups => all cards are different.
+            return firstOfEachGroup.Count() == 5;
         }
 
         public bool IsFlush(IHand hand)
@@ -22,6 +25,7 @@ namespace Poker
             {
                 throw new ArgumentNullException("Hand cannot be null!");
             }
+            // if all cards have the suit of the first => we have a flush.
             return hand.Cards.All(c => c.Suit == hand.Cards.First().Suit);
         }
 
@@ -31,7 +35,12 @@ namespace Poker
             {
                 throw new ArgumentNullException("Hand cannot be null!");
             }
-            return hand.Cards.All(c => c.Face == hand.Cards.First().Face);
+            // group by ToString()
+            var groupedByCard = hand.Cards.GroupBy(card => card.Face);
+            // see if any gorup is 4 elements long
+            var isAnyFourInLength = groupedByCard.Any(g => g.Count() == 4);
+
+            return isAnyFourInLength;
         }
 
         public bool IsFullHouse(IHand hand)
