@@ -67,11 +67,14 @@
   <ItemGroup>
     <Content Include="1.DivDemo\Demo.html" />
     <Content Include="1.DivDemo\functions.js" />
+    <Content Include="3.Sliders\demo.html" />
+    <Content Include="3.Sliders\functions.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
