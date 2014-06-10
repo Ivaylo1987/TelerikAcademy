@@ -16,9 +16,8 @@
         return "rgb(" + red + "," + green + "," + blue + ")";
     };
 
-    var generateBtn = document.getElementById('generate');
-
-    generateBtn.addEventListener('click', function () {
+    // Generate divs
+    function generateDivs() {
         // generate divs
         var divCount = randomGenerator(10, 20);
         var fragment = document.createDocumentFragment();
@@ -45,5 +44,9 @@
         }
 
         document.body.appendChild(fragment);
-    });
+    }
+
+    var generateBtn = document.getElementById('generate');
+
+    generateBtn.addEventListener('click', generateDivs);
 }
