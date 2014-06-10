@@ -67,6 +67,8 @@
   <ItemGroup>
     <Content Include="1.DivDemo\Demo.html" />
     <Content Include="1.DivDemo\functions.js" />
+    <Content Include="2.CirclingDivs\demo.html" />
+    <Content Include="2.CirclingDivs\functions.js" />
     <Content Include="3.Sliders\demo.html" />
     <Content Include="3.Sliders\functions.js" />
     <Content Include="Web.config" />
