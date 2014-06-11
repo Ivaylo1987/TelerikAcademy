@@ -3,18 +3,22 @@
 <head>
     <title>To Do list</title>
     <script src="functions.js"></script>
+    <style>
+        label {
+            display: block;
+            color: gray;
+        }
+    </style>
 </head>
 <body>
+    <label for="textArea">Enter a new task and press "Add Tsk" to add it to the list.</label>
+    <textarea id="textArea" placeholder="Enter task here..."></textarea>
     <div>
-        <label for="textArea">Enter a new task:</label>
-        <textarea id="textArea" placeholder="Enter task here..."></textarea>
-        <div>
-            <select id="select" multiple>
-                <option id="1">Get some groceries</option>
-            </select>
-        </div>
-        <button id="add">Add Task</button>
-        <button id="remove">Remove Task</button>
+        <select id="select" multiple>
+            <option id="1">Get some groceries :)</option>
+        </select>
     </div>
+    <button id="add">Add Task</button>
+    <button id="remove">Remove Task</button>
 </body>
 </html>
