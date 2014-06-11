@@ -7,7 +7,7 @@
     addBtn.addEventListener('click', function () {
         if (textArea.value) {
             var newOption = document.createElement('option');
-            newOption.innerText = textArea.value;
+            newOption.innerHTML = textArea.value;
             newOption.id = select.children.length + 1;
             select.appendChild(newOption);
             textArea.value = '';
