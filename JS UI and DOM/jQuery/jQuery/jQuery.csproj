@@ -73,6 +73,8 @@
     <Content Include="1.Slider\images\jack-russell-6.jpg" />
     <Content Include="1.Slider\scripts.js" />
     <Content Include="1.Slider\slider.html" />
+    <Content Include="2.AddBeforeAdnAfter\demoBeforeAndAfter.html" />
+    <Content Include="2.AddBeforeAdnAfter\scripts.js" />
     <Content Include="libs\jquery-2.1.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="_reference.js" />
