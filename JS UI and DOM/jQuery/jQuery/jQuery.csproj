@@ -65,15 +65,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1.Slider\images\jack-russell-1.jpg" />
+    <Content Include="1.Slider\images\jack-russell-2.jpg" />
+    <Content Include="1.Slider\images\jack-russell-3.jpg" />
+    <Content Include="1.Slider\images\jack-russell-4.jpg" />
+    <Content Include="1.Slider\images\jack-russell-5.jpg" />
+    <Content Include="1.Slider\images\jack-russell-6.jpg" />
+    <Content Include="1.Slider\scripts.js" />
     <Content Include="1.Slider\slider.html" />
+    <Content Include="libs\jquery-2.1.1.min.js" />
     <Content Include="Web.config" />
+    <Content Include="_reference.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="libs\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

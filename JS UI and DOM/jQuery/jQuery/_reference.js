@@ -1,0 +1,1 @@
+﻿/// <reference path="E:\Docs\GitRepos\TelerikAcademy\JS UI and DOM\jQuery\jQuery\libs/jquery-2.1.1.min.js" />

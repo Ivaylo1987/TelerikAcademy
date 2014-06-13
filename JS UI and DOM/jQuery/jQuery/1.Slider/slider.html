@@ -2,8 +2,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Slider</title>
+    <script src="../libs/jquery-2.1.1.min.js"></script>
+    <style>
+        #container li{
+            display: none;
+        }
+        #container .current{
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-
+    <button id="previous">Prevous</button>
+    <ul id="container">
+        <li>
+            <div>Picture 1</div>
+            <img src="images/jack-russell-1.jpg" alt="Jack russle image"/>
+        </li>
+        <li>
+            <div>Picture 2</div>
+            <img src="images/jack-russell-2.jpg" alt="Jack russle imaget" />
+        </li>
+        <li>
+            <div>Picture 3</div>
+            <img src="images/jack-russell-3.jpg" alt="Jack russle image" />
+        </li>
+        <li >
+            <div>Picture 4</div>
+            <img src="images/jack-russell-4.jpg" alt="Jack russle image" />
+        </li>
+        <li>
+            <div>Picture 5</div>
+            <img src="images/jack-russell-5.jpg" alt="Jack russle imaget" />
+        </li>
+        <li>
+            <div>Picture 6</div>
+            <img src="images/jack-russell-6.jpg" alt="Jack russle image" />
+        </li>
+    </ul>
+    <button id="next">Next</button>
+    <script src="scripts.js"></script>
 </body>
 </html>
