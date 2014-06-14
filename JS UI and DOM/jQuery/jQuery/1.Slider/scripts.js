@@ -2,7 +2,10 @@
 $(function () {
     var $container = $('#container'),
         $nextButton = $('#next'),
-        $prevoiusButton = $('#previous');
+        $prevoiusButton = $('#previous'),
+        $slideShowButton = $('#slideShow'),
+        isOnSlideShow = false,
+        slideShowHadler;
 
     $container.children().first().addClass('current');
 
@@ -29,11 +32,18 @@ $(function () {
             current.prev().addClass('current');
         }
     })
+    
+    $slideShowButton.on('click', function () {
+        isOnSlideShow = !isOnSlideShow;
 
-    // slef sliding ever 4 seconds
-    function moveimage() {
-        $nextButton.click();
-        setTimeout(moveimage, 4000);
-    }
-    moveimage();
+        if (isOnSlideShow) {
+            function moveImage() {
+                $nextButton.click();
+            }
+            slideShowHadler = setInterval(moveImage, 2000)
+        }
+        else {
+            clearInterval(slideShowHadler);
+        }
+    })
 })
