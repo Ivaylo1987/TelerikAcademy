@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Template Table</title>
+    <script src="../libs/handlebars-v1.3.0.js"></script>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 5px;
+            border: 1px solid black;
+        }
+        thead{
+            color: #FFF;
+            background-color: #808080;
+        }
+        tr:nth-of-type(2n){
+            background-color: #dedede;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script id="template" type="text/x-handlebars-template">
+        <table id="table-courses">
+            <thead >
+                <tr>
+                    <th>No:</th>
+                    <th>Title</th>
+                    <th>Date #1</th>
+                    <th>Date #2</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each courses}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{title}}</td>
+                    <td>{{firstDate}}</td>
+                    <td>{{secondDate}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
