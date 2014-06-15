@@ -69,7 +69,10 @@
     <Content Include="1.Table\table.html" />
     <Content Include="2.Select\scripts.js" />
     <Content Include="2.Select\select.html" />
+    <Content Include="3.jQueryTemplates\jQueryTemplates.html" />
+    <Content Include="3.jQueryTemplates\scripts.js" />
     <Content Include="libs\handlebars-v1.3.0.js" />
+    <Content Include="libs\jquery-2.1.1.min.js" />
     <Content Include="libs\_reference.js" />
     <Content Include="Web.config" />
   </ItemGroup>

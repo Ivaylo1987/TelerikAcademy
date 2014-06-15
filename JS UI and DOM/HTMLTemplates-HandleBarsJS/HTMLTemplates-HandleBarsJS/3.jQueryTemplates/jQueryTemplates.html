@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Templates</title>
+    <script src="../libs/handlebars-v1.3.0.js"></script>
+    <script src="../libs/jquery-2.1.1.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <ul id="books-list" data-template="book-item-template"></ul>
+
+    <table>
+        <thead>
+            <tr><th>#</th><th>Name</th><th>Mark</th></tr>
+        </thead>
+        <tbody id="students-table" data-template="students-row-template"></tbody>
+    </table>
+
+    <script id="book-item-template" type="…">
+        <li class="book-item">
+            <a href="/#books/{{id}}">
+                <strong>{{title}}</strong>
+            </a>
+        </li>
+    </script>
+   
+    <script id="students-row-template" type="…">
+        <tr class="student-row">
+            <td>{{number}}</td>
+            <td>{{name}}</td>
+            <td>{{mark}}</td>
+        </tr>
+    </script>
+</body>
+</html>
