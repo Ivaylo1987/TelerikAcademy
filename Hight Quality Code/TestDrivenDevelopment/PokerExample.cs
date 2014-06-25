@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using log4net.Config;
 
 namespace Poker
 {
@@ -20,10 +21,13 @@ namespace Poker
             Console.WriteLine(hand);
 
             IPokerHandsChecker checker = new PokerHandsChecker();
-            Console.WriteLine(checker.IsValidHand(hand));
-            Console.WriteLine(checker.IsFourOfAKind(hand));
-            Console.WriteLine(checker.IsOnePair(hand));
-            Console.WriteLine(checker.IsTwoPair(hand));
+
+            // logging
+            Logger.Log.Info(checker.IsValidHand(hand));
+            Logger.Log.Info(checker.IsFourOfAKind(hand));
+
+            //Console.WriteLine(checker.IsOnePair(hand));
+            //Console.WriteLine(checker.IsTwoPair(hand));
         }
     }
 }
