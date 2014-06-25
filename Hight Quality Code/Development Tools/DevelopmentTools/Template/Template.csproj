@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28FE6BA3-4622-406E-81C4-419B0D2368F9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{B3A85BF3-F900-40E5-9553-325C1891A4DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Poker</RootNamespace>
-    <AssemblyName>Poker</AssemblyName>
+    <RootNamespace>Template</RootNamespace>
+    <AssemblyName>Template</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,10 +31,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,36 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="CardFace.cs" />
-    <Compile Include="CardSuit.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="PokerHandsChecker.cs" />
-    <Compile Include="Hand.cs" />
-    <Compile Include="ICard.cs" />
-    <Compile Include="IHand.cs" />
-    <Compile Include="IPokerHandsChecker.cs" />
-    <Compile Include="PokerExample.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="TestTeplate.tt">
+    <None Include="App.config" />
+    <None Include="SquareTemplate1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TestTeplate.txt</LastGenOutput>
+      <LastGenOutput>SquareTemplate1.txt</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestTeplate.txt">
-      <DependentUpon>TestTeplate.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="SquareTemplate1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SquareTemplate1.tt</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

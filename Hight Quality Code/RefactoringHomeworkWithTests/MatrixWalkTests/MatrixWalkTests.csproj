@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B5F525AB-E9EA-46B0-94EB-24BD0088A9FE}</ProjectGuid>
+    <ProjectGuid>{B38FD40A-310B-434E-952E-952D3B977BD0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Poker.Test</RootNamespace>
-    <AssemblyName>Poker.Test</AssemblyName>
+    <RootNamespace>MatrixWalkTests</RootNamespace>
+    <AssemblyName>MatrixWalkTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,19 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="TestCard.cs" />
+    <Compile Include="GameFieldTests.cs" />
+    <Compile Include="DirectionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestHand.cs" />
-    <Compile Include="TestPokerHandsChecker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Poker.csproj">
-      <Project>{28fe6ba3-4622-406e-81c4-419b0d2368f9}</Project>
-      <Name>Poker</Name>
+    <ProjectReference Include="..\Refactoring-Homework\MatrixWalk.csproj">
+      <Project>{4d520899-7061-4eaa-b67e-d14ee8b30462}</Project>
+      <Name>MatrixWalk</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
