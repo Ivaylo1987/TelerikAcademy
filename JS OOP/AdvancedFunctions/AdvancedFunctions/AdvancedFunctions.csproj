@@ -68,6 +68,9 @@
   <ItemGroup>
     <Content Include="Task 1\domModule.js" />
     <Content Include="Task 1\index.html" />
+    <Content Include="Task 2\index.html" />
+    <Content Include="Task 2\movingShapes.js" />
+    <Content Include="Task 2\styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
