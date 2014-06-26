@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM Module Index</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <ul id="ul">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ul>
+    <button id="button">Generate 100 Divs</button>
+
+    <script src="domModule.js"></script>
+    <script>
+        var div = document.createElement('div'),
+            a = document.createElement('a'),
+            button;
+
+        a.href = '#';
+        a.innerText = 'Click me to add the first List Element';
+        div.id = 'added-by-module';
+        div.appendChild(a);
+
+        domModule.appendChild(div, "#wrapper")
+
+        domModule.removeChild("ul", "li:first-child");
+
+        domModule.addHandler('#added-by-module', 'click', function () {
+            var li = document.createElement('li'),
+            ulp = document.getElementById('ul');
+
+            li.innerText = 'I become First';
+            ul.insertBefore(li, ul.firstElementChild);
+        });
+
+        button = document.getElementById('button');
+        button.addEventListener('click', function () {
+            for (var i = 0; i < 101; i++) {
+                var div = document.createElement('div');
+                div.innerText = i + ' Div';
+                domModule.appendToBuffer('#wrapper', div);
+            }
+
+        })
+       
+    </script>
+</body>
+</html>
