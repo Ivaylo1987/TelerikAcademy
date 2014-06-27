@@ -2,59 +2,61 @@
     var interval = undefined;
 
     function move() {
-        var element = document.getElementsByClassName('rect');
-        var circle = document.getElementsByClassName('circle');
+        var rects = document.getElementsByClassName('rect');
+        var circles = document.getElementsByClassName('circle');
         var position = 'down';
         var angle = 0.1;
         var radius = 100;
-        var top = element.offsetTop;
-        var left = element.offsetTop;
-
-        for (var i = 0, len = element.length; i < len; i++) {
-            moveElementInRect(element[i]);
+        var movingStep = 3;  // could be more or less
+        
+        for (var i = 0, len = rects.length; i < len; i++) {
+            moveElementInRect(rects[i]);
         }
-        for (var r = 0, length = circle.length; r < length; r++) {
-            moveElementInCiricle(circle[r]);
-        }
-
-        function moveElementInRect(element) {
-            var position = element.getAttribute('wayToMove');
-
-            if (parseInt(element.offsetTop) < 200 && position == 'down') {
-                element.style.top = parseInt(element.offsetTop) + 3 + 'px';
-                if (parseInt(element.offsetTop) >= 200) {
-                    element.setAttribute('wayToMove', 'right');
-                }
-            }
-            else if (parseInt(element.offsetLeft) < 200 && position == 'right') {
-                element.style.left = parseInt(element.offsetLeft) + 3 + 'px';
-                if (parseInt(element.offsetLeft) >= 200) {
-                    element.setAttribute('wayToMove', 'up');
-                }
-            }
-            else if (parseInt(element.offsetTop) > 0 && position == 'up') {
-                element.style.top = parseInt(element.offsetTop) - 3 + 'px';
-                if (parseInt(element.offsetTop) <= 0) {
-                    element.setAttribute('wayToMove', 'left');
-                }
-            }
-            else if (parseInt(element.offsetLeft) > 0 && position == 'left') {
-                element.style.left = parseInt(element.offsetLeft) - 3 + 'px';
-                if (parseInt(element.offsetLeft) <= 0) {
-                    element.setAttribute('wayToMove', 'down');
-                }
-            }
+        for (var j = 0, length = circles.length; j < length; j++) {
+            moveElementInCiricle(circles[j]);
         }
 
-        function moveElementInCiricle(rect) {
-            var angle = parseFloat(rect.getAttribute('angle'));
-            rect.style.left = Math.cos(angle + 2 * Math.PI ) / radius * 10000 + "px";
-            rect.style.top = Math.sin(angle + 2 * Math.PI ) / radius * 10000 + "px";
+        // move in rect path using Offset to parent
+        function moveElementInRect(rect) {
+            var position = rect.getAttribute('wayToMove');
+           
+            if (parseInt(rect.offsetTop) < 200 && position == 'down') {
+                rect.style.top = parseInt(rect.offsetTop) + movingStep + 'px';
+                if (parseInt(rect.offsetTop) >= 200) {
+                    rect.setAttribute('wayToMove', 'right');
+                }
+            }
+            else if (parseInt(rect.offsetLeft) < 200 && position == 'right') {
+                rect.style.left = parseInt(rect.offsetLeft) + movingStep + 'px';
+                if (parseInt(rect.offsetLeft) >= 200) {
+                    rect.setAttribute('wayToMove', 'up');
+                }
+            }
+            else if (parseInt(rect.offsetTop) > 0 && position == 'up') {
+                rect.style.top = parseInt(rect.offsetTop) - movingStep + 'px';
+                if (parseInt(rect.offsetTop) <= 0) {
+                    rect.setAttribute('wayToMove', 'left');
+                }
+            }
+            else if (parseInt(rect.offsetLeft) > 0 && position == 'left') {
+                rect.style.left = parseInt(rect.offsetLeft) - movingStep + 'px';
+                if (parseInt(rect.offsetLeft) <= 0) {
+                    rect.setAttribute('wayToMove', 'down');
+                }
+            }
+        }
+
+        // move in ellipese path
+        function moveElementInCiricle(circle) {
+            var angle = parseFloat(circle.getAttribute('angle'));
+            circle.style.left = Math.cos(angle + 2 * Math.PI) * radius + "px";
+            circle.style.top = Math.sin(angle + 2 * Math.PI) * radius  + "px";
             angle += 0.1;
-            rect.setAttribute('angle', angle);
+            circle.setAttribute('angle', angle);
         }
     }
 
+    // append new rect
     function addRectToHolder() {
         var holder = document.getElementById('holderForRect');
         var div = document.createElement('div');
@@ -64,9 +66,11 @@
         div.innerHTML = 'DIV';
         div.className = 'rect';
         div.setAttribute('wayToMove', 'down');
+
         holder.appendChild(div);
     }
 
+    // append new circle
     function addCircleToHolder() {
         var holder = document.getElementById('holderForCircle');
         var div = document.createElement('div');
@@ -76,7 +80,7 @@
         div.innerHTML = 'DIV';
         div.className = 'circle';
         div.setAttribute('angle', '0.1');
-        div.style.top = '100px';
+        div.style.top = '0px';
         div.style.left = '100px';
 
         holder.appendChild(div);
@@ -90,6 +94,7 @@
         return "rgb(" + red + "," + green + "," + blue + ")";
     }
 
+    // add a shape
     function add(shapeName) {
         switch (shapeName) {
             case 'rect': addRectToHolder(); break;
@@ -99,6 +104,7 @@
         }
     }
 
+    // mode all shapes
     var moveElements = function () {
         if (interval) {
             clearInterval(interval);
@@ -109,6 +115,7 @@
         }
     }
 
+    // module returns the above two functions
     return {
         add: add,
         move: moveElements

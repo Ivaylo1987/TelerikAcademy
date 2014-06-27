@@ -1,4 +1,5 @@
-﻿using System;
+﻿//This homework is the poker game from test-driven development + Logger added to demonstrate logging with log4net
+using System;
 using System.Collections.Generic;
 using log4net.Config;
 
