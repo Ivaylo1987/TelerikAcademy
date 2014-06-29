@@ -5,6 +5,22 @@
     <script src="shapes.js"></script>
 </head>
 <body>
+    <canvas id="myCanvas" width="500" height="400">
+        Browser dosent support canvas
+    </canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
 
+        var rect = new shapes.Rect(10, 10, 100, 70);
+        rect.draw(ctx);
+
+        var circle = new shapes.Circle(100, 140, 50);
+        circle.draw(ctx);
+
+        var line = new shapes.Line(200, 110, 280, 110);
+        line.draw(ctx);
+
+    </script>
 </body>
 </html>
