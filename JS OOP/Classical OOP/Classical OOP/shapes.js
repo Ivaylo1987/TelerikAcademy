@@ -1,0 +1,5 @@
+﻿var shapes = (function () {
+    return {
+
+    }
+}())
