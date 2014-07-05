@@ -68,6 +68,11 @@
     <Content Include="index.html" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\libs\require.js" />
+    <Content Include="scripts\modules\canvas.js" />
+    <Content Include="scripts\modules\item.js" />
+    <Content Include="scripts\modules\point.js" />
+    <Content Include="scripts\modules\snake.js" />
+    <Content Include="scripts\_reference.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
