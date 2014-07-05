@@ -2,10 +2,20 @@
 define(['point'], function (Point) {
     var Item = (function () {
 
-        var Item = function Item(size, x, y) {
+        var getRandomCoords = function (size) {
+            var coords = {};
+
+            coords.x = Math.round(Math.random() * (canvas.width - size));
+            coords.y = Math.round(Math.random() * (canvas.height - size));
+
+            return coords;
+        }
+
+        var Item = function Item(x, y, size) {
             this.size = size || 10;
-            this.x = x || this.x;
-            this.y = y || this.y;
+            var random = getRandomCoords(this.size);
+            this.x = x || random.x;
+            this.y = y || random.y;
         }
 
         Item.prototype = new Point()

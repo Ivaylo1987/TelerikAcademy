@@ -1,5 +1,5 @@
 ﻿/// <reference path="../_reference.js" />
-define(['item'], function () {
+define(['item'], function (Item) {
     var Snake = (function () {
 
         var initialBodyCount = 5;
@@ -8,7 +8,7 @@ define(['item'], function () {
         function Snake() {
             this.body = [];
             for (var i = 0; i < initialBodyCount; i++) {
-                this.body.push(new Item(bodyPartSize, (100 + i * bodyPartSize), 250));
+                this.body.push(new Item((100 + i * bodyPartSize), 250, bodyPartSize));
             }
         }
 
