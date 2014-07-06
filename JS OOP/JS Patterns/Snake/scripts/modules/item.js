@@ -2,24 +2,29 @@
 define(['point'], function (Point) {
     var Item = (function () {
 
-        var getRandomCoords = function (size) {
-            var coords = {};
-
-            coords.x = Math.round(Math.random() * (canvas.width - size));
-            coords.y = Math.round(Math.random() * (canvas.height - size));
-
-            return coords;
+        var getRandomCoord = function (size) {
+            // devided by the size of the item for easy drwaing in canvas see canvas.drawRect;
+            return Math.round(Math.random() * (canvas.width - size) / size);;
         }
 
         var Item = function Item(x, y, size) {
+            var coordX,
+                coodrY;
             this.size = size || 10;
-            var random = getRandomCoords(this.size);
-            this.x = x || random.x;
-            this.y = y || random.y;
-        }
 
-        Item.prototype = new Point()
-        Item.prototype.constructor = Item;
+            if (arguments.length > 1) {
+                this.x = x 
+                this.y = y 
+            }
+            else {
+                coordX = getRandomCoord(this.size);
+                this.x = coordX;
+
+                coodrY = getRandomCoord(this.size);
+                this.y = coodrY;
+            }
+            
+        }
 
        return Item;
     }())

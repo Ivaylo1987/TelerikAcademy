@@ -10,8 +10,8 @@
             }
     })
 
-    require(['canvas', 'snake', 'engine'], function (canvas, Snake, engine) {
+    require(['canvas', 'snake', 'engine'], function (canvas, Snake, gameLoop) {
 
-        setInterval(engine, 100);
+        gameLoop();
     })
 }())
