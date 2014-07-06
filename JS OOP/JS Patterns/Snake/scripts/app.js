@@ -11,7 +11,7 @@
     })
 
     require(['canvas', 'snake', 'engine'], function (canvas, Snake, engine) {
-        
-        setInterval(engine, 200);
+
+        setInterval(engine, 100);
     })
 }())

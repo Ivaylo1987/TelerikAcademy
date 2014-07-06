@@ -8,7 +8,7 @@ define(['item'], function (Item) {
         function Snake() {
             this.body = [];
             for (var i = 0; i < initialBodyCount; i++) {
-                this.body.push(new Item((100 + i * bodyPartSize), 250, bodyPartSize));
+                this.body.push(new Item(i, 10, bodyPartSize));
             }
         }
 

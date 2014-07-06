@@ -14,8 +14,8 @@ define(function () {
             ctx.fillStyle = fillStyle;
             ctx.strokeStyle = "black";
 
-            ctx.fillRect(x, y, rectSize, rectSize);
-            ctx.strokeRect(x, y, rectSize, rectSize);
+            ctx.fillRect(x * rectSize, y * rectSize, rectSize, rectSize);
+            ctx.strokeRect(x * rectSize, y * rectSize, rectSize, rectSize);
             ctx.closePath()
         }
 
