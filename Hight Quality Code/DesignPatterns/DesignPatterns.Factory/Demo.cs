@@ -3,7 +3,7 @@
     using System;
 
     /// <summary>
-    /// Demo for Factory Method Design Pattern
+    /// Demo for Factory Method Design Pattern - Creational
     /// </summary>
     class Demo
     {
