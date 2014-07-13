@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABSBrake.cs" />
+    <Compile Include="BrakeSystem.cs" />
+    <Compile Include="Car.cs" />
     <Compile Include="Demo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SportBrake.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
