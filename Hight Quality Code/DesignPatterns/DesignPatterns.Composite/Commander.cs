@@ -3,6 +3,10 @@
     using System;
     using System.Collections.Generic;
 
+
+    /// <summary>
+    /// The 'Composite'
+    /// </summary>
     class Commander : MilitaryPerson
     {
         private IList<MilitaryPerson> subordinates;

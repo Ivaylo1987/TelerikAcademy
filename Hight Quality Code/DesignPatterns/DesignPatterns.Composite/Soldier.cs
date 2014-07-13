@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// The 'Leaf'
+    /// </summary>
     class Soldier : MilitaryPerson
     {
         public Soldier(string name)

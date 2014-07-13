@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Compisite Design Pattern - Structural
+    /// </summary>
     class Demo
     {
         static void Main()
