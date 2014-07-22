@@ -57,7 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scripts\libs\underscore-min.map" />
+    <Content Include="Animals\index.html" />
+    <Content Include="Animals\scripts.js" />
+    <Content Include="Books\index.html" />
+    <Content Include="Books\scripts.js" />
+    <Content Include="Names\index.html" />
+    <Content Include="Names\scripts.js" />
+    <Content Include="Scripts\libs\underscore-min.map" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -67,11 +73,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="students\index.html" />
-    <Content Include="scripts\libs\underscore-min.js" />
-    <Content Include="scripts\libs\underscore.js" />
-    <Content Include="students\scripts.js" />
-    <None Include="scripts\_references.js" />
+    <Content Include="Students\index.html" />
+    <Content Include="Scripts\libs\underscore-min.js" />
+    <Content Include="Scripts\libs\underscore.js" />
+    <Content Include="Students\scripts.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
