@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="Scripts\helper.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\scripts.js" />
     <None Include="Scripts\_references.js" />
