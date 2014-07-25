@@ -19,8 +19,17 @@ var requester = (function () {
         })
     }
 
+    var deleteByID = function (url, id, headers) {
+        return $.ajax({
+            type: 'DELETE',
+            url: url + '/' + id + '/',
+            headers: headers
+        })
+    }
+
     return {
         getJSON: getJSON,
-        postJSON: postJSON
+        postJSON: postJSON,
+        deleteByID: deleteByID
     }
 }())

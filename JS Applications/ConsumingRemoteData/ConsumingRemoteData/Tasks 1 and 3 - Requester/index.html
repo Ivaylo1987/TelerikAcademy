@@ -17,6 +17,7 @@
         //requester.postJSON(destination, pecko);
 
         var contentTypeHeader = { 'Content-Type': 'application/json; text', 'Accept-Language': 'en-US' };
+        var rqs = { 'Access-Control-Allow-Headers': 'x-requested-with, x-requested-by' };
 
         //used as promise
         requester.getJSON(destination, contentTypeHeader)
@@ -29,6 +30,9 @@
             function error(error) {
                 console.log(error);
             });
+
+        //server should be amended. if not only hacks work.
+        requester.deleteByID(destination, 5, rqs);
     </script>
 </body>
 </html>
