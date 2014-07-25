@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Requester</title>
+    <script src="../Scripts/jquery-2.1.1.js"></script>
+    <script src="scripts/requester.js"></script>
+</head>
+<body>
+    <script>
+        // the node.js server should be started.
+        var destination = 'http://localhost:3000/students';
+        var icko = { name: 'Hristo', grade: '5' };
+        var pecko = { name: 'Petko', grade: '6' };
+
+        //uncomment to create students
+        //requester.postJSON(destination, icko);
+        //requester.postJSON(destination, pecko);
+
+        var contentTypeHeader = { 'Content-Type': 'application/json; text', 'Accept-Language': 'en-US' };
+
+        //used as promise
+        requester.getJSON(destination, contentTypeHeader)
+            .then(
+            function success(data) {
+                data.students.forEach(function (student) {
+                    console.log(student);
+                })
+            },
+            function error(error) {
+                console.log(error);
+            });
+    </script>
+</body>
+</html>
