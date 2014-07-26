@@ -67,6 +67,25 @@
   <ItemGroup>
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Task 2\TwitterAPI.html" />
+    <Content Include="Task 3\app.js" />
+    <Content Include="Task 3\controllers\addStudentController.js" />
+    <Content Include="Task 3\controllers\deleteStudent.js" />
+    <Content Include="Task 3\controllers\listStudentsController.js" />
+    <Content Include="Task 3\index.html" />
+    <Content Include="Task 3\modules\requester.js" />
+    <Content Include="Task 3\modules\storager.js" />
+    <Content Include="Task 3\modules\templater.js" />
+    <Content Include="Task 3\modules\viewLoader.js" />
+    <Content Include="Task 3\scripts\appConfig.js" />
+    <Content Include="Task 3\scripts\libs\jquery.js" />
+    <Content Include="Task 3\scripts\libs\mustache.js" />
+    <Content Include="Task 3\scripts\libs\q.js" />
+    <Content Include="Task 3\scripts\libs\require.js" />
+    <Content Include="Task 3\scripts\libs\sammy.js" />
+    <Content Include="Task 3\scripts\libs\underscore.js" />
+    <Content Include="Task 3\scripts\moduleLoader.js" />
+    <Content Include="Task 3\views\addStudent.html" />
+    <Content Include="Task 3\views\listStudents.html" />
     <Content Include="Tasks 1\index.html" />
     <Content Include="Tasks 1\scripts\requester.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -78,9 +97,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Task 3\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
