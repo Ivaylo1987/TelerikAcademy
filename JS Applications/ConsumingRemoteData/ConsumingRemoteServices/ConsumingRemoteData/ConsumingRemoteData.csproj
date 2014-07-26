@@ -66,8 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
-    <Content Include="Tasks 1 and 3 - Requester\index.html" />
-    <Content Include="Tasks 1 and 3 - Requester\scripts\requester.js" />
+    <Content Include="Task 2\TwitterAPI.html" />
+    <Content Include="Tasks 1\index.html" />
+    <Content Include="Tasks 1\scripts\requester.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="packages.config" />
     <None Include="Scripts\_references.js" />
@@ -76,6 +77,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Task 3\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

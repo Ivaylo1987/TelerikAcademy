@@ -6,20 +6,21 @@
     <script src="scripts/requester.js"></script>
 </head>
 <body>
+    <div>Please, open console for result.</div>
     <script>
-        // the node.js server should be started.
+        // the node.js server should be started to reach this destination.
         var destination = 'http://localhost:3000/students';
         var icko = { name: 'Hristo', grade: '5' };
         var pecko = { name: 'Petko', grade: '6' };
 
-        //uncomment to create students
-        //requester.postJSON(destination, icko);
-        //requester.postJSON(destination, pecko);
+        // uncomment to create students or comment not to create.
+        requester.postJSON(destination, icko);
+        requester.postJSON(destination, pecko);
 
         var contentTypeHeader = { 'Content-Type': 'application/json; text', 'Accept-Language': 'en-US' };
-        var rqs = { 'Access-Control-Allow-Headers': 'x-requested-with, x-requested-by' };
+        var rqheader = { 'Access-Control-Allow-Headers': 'x-requested-with, x-requested-by' };
 
-        //used as promise
+        // used as promise
         requester.getJSON(destination, contentTypeHeader)
             .then(
             function success(data) {
@@ -31,8 +32,8 @@
                 console.log(error);
             });
 
-        //server should be amended. if not only hacks work.
-        requester.deleteByID(destination, 5, rqs);
+        // server should be amended for the delete to work, if not only hacks work.
+        // requester.deleteByID(destination, 5, rqheader);
     </script>
 </body>
 </html>
