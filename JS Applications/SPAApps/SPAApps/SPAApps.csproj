@@ -59,11 +59,12 @@
   <ItemGroup>
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="CrowdChat\app.js" />
+    <Content Include="CrowdChat\Controllers\chatRoomController.js" />
     <Content Include="CrowdChat\Controllers\initialViewController.js" />
     <Content Include="CrowdChat\HtmlRequester\requester.js" />
     <Content Include="CrowdChat\ViewLoader\viewLoader.js" />
     <Content Include="CrowdChat\Views\initianlView.html" />
-    <Content Include="CrowdChat\Views\chatRoom.html" />
+    <Content Include="CrowdChat\Views\chatRoomView.html" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">

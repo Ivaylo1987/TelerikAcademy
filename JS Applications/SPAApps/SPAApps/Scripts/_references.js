@@ -7,3 +7,4 @@
 /// <reference path="../Crowdchat/Htmlrequester/requester.js" />
 /// <reference path="../crowdchat/controllers/initialviewcontroller.js" />
 /// <reference path="mustache.js" />
+/// <reference path="../crowdchat/controllers/chatroomcontroller.js" />
