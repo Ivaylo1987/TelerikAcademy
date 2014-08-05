@@ -4,7 +4,6 @@ define(['viewLoader', 'jQuery', 'mustache', 'requester'], function (viewLoader, 
 
     var renderTemplate = function (template, data) {
         var rendered = mustache.render(template, data);
-        //$(container).html(rendered);
         return rendered;
     }
 
@@ -31,14 +30,14 @@ define(['viewLoader', 'jQuery', 'mustache', 'requester'], function (viewLoader, 
     }
 
     var run = function (container) {
-        viewLoader.loadView(viewURL).
-        then(function (view) {
-            $(container).html(view);
-            $('#submit-button').on('click', sendToChat);
-            setInterval(getLatestMessages, 1000);
-        }, function (error) {
-            console.log(error);
-        });
+        viewLoader.loadView(viewURL)
+            .then(function (view) {
+                $(container).html(view);
+                $('#submit-button').on('click', sendToChat);
+                setInterval(getLatestMessages, 1000);
+            }, function (error) {
+                console.log(error);
+            });
     }
 
     return {

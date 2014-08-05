@@ -9,7 +9,7 @@ define(['jQuery'], function () {
         });
     };
 
-    // retunrs promise
+    // returns promise
     var get = function (url) {
         return makeRequest(url, 'GET');
     }
