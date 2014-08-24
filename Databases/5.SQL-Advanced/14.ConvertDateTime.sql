@@ -1,0 +1,1 @@
+SELECT CONVERT(nvarchar(50), GETDATE(), 113)
