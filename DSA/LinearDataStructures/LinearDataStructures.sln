@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8.FindMajorant", "FindMajor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.ShortestSequenceOfOperations", "ShortestSequenceOfOperations\10.ShortestSequenceOfOperations.csproj", "{9AE098B9-3621-40D2-B8E7-38B2AD312590}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.LinkedList", "LinkedList\11.LinkedList.csproj", "{2FB0DAFB-1A37-4C9C-8A9A-B3EA47D91A72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{9AE098B9-3621-40D2-B8E7-38B2AD312590}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AE098B9-3621-40D2-B8E7-38B2AD312590}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AE098B9-3621-40D2-B8E7-38B2AD312590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB0DAFB-1A37-4C9C-8A9A-B3EA47D91A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB0DAFB-1A37-4C9C-8A9A-B3EA47D91A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB0DAFB-1A37-4C9C-8A9A-B3EA47D91A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB0DAFB-1A37-4C9C-8A9A-B3EA47D91A72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
