@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class NumberOfOccurances
+    class Demo
     {
         static void Main()
         {

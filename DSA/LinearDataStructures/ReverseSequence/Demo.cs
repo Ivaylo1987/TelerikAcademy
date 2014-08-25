@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class ReverseSequence
+    class Demo
     {
         static void Main()
         {

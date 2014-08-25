@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class LongestSequence
+    class Demo
     {
         private static IList<int> MaxSequenceOfEqual(IList<int> sequence)
         {

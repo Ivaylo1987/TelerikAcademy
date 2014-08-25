@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class RemoveOdd
+    class Demo
     {
         static void Main()
         {

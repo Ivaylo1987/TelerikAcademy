@@ -1,10 +1,10 @@
-﻿namespace SortIncreasingOrder
+﻿namespace IntegerSequence
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    class SortIncreasingOrder
+    class Demo
     {
         static void Main()
         {
@@ -14,7 +14,7 @@
             while (true)
             {
                 var input = Console.ReadLine();
-
+                
                 if (string.IsNullOrEmpty(input))
                 {
                     break;
@@ -25,12 +25,13 @@
                 {
                     Console.WriteLine("Input should be valid integer");
                     continue;
-                }
+                } 
 
                 sequence.Add(current);
             }
-            
-            Console.WriteLine(string.Join(", ", sequence.OrderBy(n => n)));
+
+            Console.WriteLine("Sequence average is: {0}", sequence.Average());
+            Console.WriteLine("Sequence sum is: {0}", sequence.Sum()); 
         }
     }
 }

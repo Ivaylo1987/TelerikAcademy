@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A33648D4-7FBC-42AE-9C24-5A29D30E3526}</ProjectGuid>
+    <ProjectGuid>{9AE098B9-3621-40D2-B8E7-38B2AD312590}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SortIncreasingOrder</RootNamespace>
-    <AssemblyName>SortIncreasingOrder</AssemblyName>
+    <RootNamespace>ShortestSequenceOfOperations</RootNamespace>
+    <AssemblyName>ShortestSequenceOfOperations</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

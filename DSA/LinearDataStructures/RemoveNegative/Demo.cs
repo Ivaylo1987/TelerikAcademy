@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class RemoveNegative
+    class Demo
     {
         private static Random randomGenerator = new Random();
 
