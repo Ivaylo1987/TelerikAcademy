@@ -5,6 +5,14 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerSequence", "IntegerSequence\IntegerSequence.csproj", "{B9191972-7025-4512-8148-11F3A3E6AE32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseSequence", "ReverseSequence\ReverseSequence.csproj", "{CF87F685-FFA0-4C28-8208-1BC03A02A22C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortIncreasingOrder", "SortIncreasingOrder\SortIncreasingOrder.csproj", "{A33648D4-7FBC-42AE-9C24-5A29D30E3526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequence", "LongestSequence\LongestSequence.csproj", "{290F150A-3745-45DF-8EF0-616508487475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveNegative", "RemoveNegative\RemoveNegative.csproj", "{929C8661-5339-4DEF-B119-075649DE434A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{B9191972-7025-4512-8148-11F3A3E6AE32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9191972-7025-4512-8148-11F3A3E6AE32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9191972-7025-4512-8148-11F3A3E6AE32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF87F685-FFA0-4C28-8208-1BC03A02A22C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF87F685-FFA0-4C28-8208-1BC03A02A22C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF87F685-FFA0-4C28-8208-1BC03A02A22C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF87F685-FFA0-4C28-8208-1BC03A02A22C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A33648D4-7FBC-42AE-9C24-5A29D30E3526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A33648D4-7FBC-42AE-9C24-5A29D30E3526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A33648D4-7FBC-42AE-9C24-5A29D30E3526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A33648D4-7FBC-42AE-9C24-5A29D30E3526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{290F150A-3745-45DF-8EF0-616508487475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290F150A-3745-45DF-8EF0-616508487475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290F150A-3745-45DF-8EF0-616508487475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290F150A-3745-45DF-8EF0-616508487475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929C8661-5339-4DEF-B119-075649DE434A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929C8661-5339-4DEF-B119-075649DE434A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929C8661-5339-4DEF-B119-075649DE434A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929C8661-5339-4DEF-B119-075649DE434A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

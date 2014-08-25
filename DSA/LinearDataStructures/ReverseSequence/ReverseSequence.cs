@@ -1,20 +1,20 @@
-﻿namespace IntegerSequence
+﻿namespace ReverseSequence
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    class IntegerSequence
+    class ReverseSequence
     {
         static void Main()
         {
-            List<int> sequence = new List<int>();
+            Stack<int> sequenceStack = new Stack<int>();
             Console.WriteLine("Please, enter some integers. To break enter an empty line.");
 
             while (true)
             {
                 var input = Console.ReadLine();
-                
+
                 if (string.IsNullOrEmpty(input))
                 {
                     break;
@@ -25,13 +25,15 @@
                 {
                     Console.WriteLine("Input should be valid integer");
                     continue;
-                } 
+                }
 
-                sequence.Add(current);
+                sequenceStack.Push(current);
             }
 
-            Console.WriteLine("Sequence average is: {0}", sequence.Average());
-            Console.WriteLine("Sequence sum is: {0}", sequence.Sum()); 
+            while (sequenceStack.Count > 0)
+            {
+                Console.WriteLine(sequenceStack.Pop());
+            }
         }
     }
 }
