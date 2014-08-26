@@ -13,7 +13,6 @@
             Console.WriteLine(string.Join(", ", sequence));
 
             var numbersAndOccurances = new Dictionary<int, int>();
-
             for (int i = 0; i < sequence.Count; i++)
             {
                 if (numbersAndOccurances.ContainsKey(sequence[i]))
