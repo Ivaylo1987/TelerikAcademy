@@ -3,12 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
     using System.Text;
 
-    class Demo
+    class TraverseDirectories
     {
-        private static StringBuilder FindExeFiles(IEnumerable<DirectoryInfo> directories)
+        private static StringBuilder FindFiles(IEnumerable<DirectoryInfo> directories, string filePattern)
         {
             var result = new StringBuilder();
 
@@ -16,7 +15,7 @@
             {
                 try
                 {
-                    var files = directory.EnumerateFiles("*.exe");
+                    var files = directory.EnumerateFiles(filePattern);
                     foreach (var file in files)
                     {
                         result.AppendLine(file.Name);
@@ -24,7 +23,7 @@
 
                     var subDirectories = directory.EnumerateDirectories();
 
-                    result.Append(FindExeFiles(subDirectories));
+                    result.Append(FindFiles(subDirectories, filePattern));
                 }
                 catch (UnauthorizedAccessException)
                 {
@@ -41,7 +40,7 @@
         {
             var startDirectory = new DirectoryInfo(@"C:\Windows").EnumerateDirectories();
 
-            var allExeFiles = FindExeFiles(startDirectory).ToString();
+            var allExeFiles = FindFiles(startDirectory, "*.exe").ToString();
             Console.WriteLine(allExeFiles);
             
         }
