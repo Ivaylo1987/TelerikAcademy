@@ -6,10 +6,10 @@
 
     class Demo
     {
-        private static int FindRoot(IDictionary<int, Node<int>> nodes)
+        private static Node<int> FindRoot(IDictionary<int, Node<int>> nodes)
         {
             var result = nodes.First(pair => !pair.Value.HasParent);
-            return result.Key;
+            return result.Value;
         }
 
         private static IEnumerable<int> Findleaves(IDictionary<int, Node<int>> nodes)
@@ -22,6 +22,24 @@
         {
             var result = nodes.Where(pair => pair.Value.Children.Count != 0 && pair.Value.HasParent);
             return result.Select(pair => pair.Key);
+        }
+
+        private static int DFS(Node<int> node)
+        {
+            if (node.Children.Count == 0)
+            {
+                return 0;
+            }
+
+            int maxPathSoFar = 0;
+
+            foreach (var child in node.Children)
+            {
+                maxPathSoFar = Math.Max(maxPathSoFar, DFS(child));
+            }
+
+            // returns + 1 for each node that is parent in the tree.
+            return maxPathSoFar + 1;
         }
 
         static void Main()
@@ -53,11 +71,13 @@
             }
 
             // Find root
-            Console.WriteLine(FindRoot(nodes));
+            Console.WriteLine(FindRoot(nodes).Value);
             // Find Leaves
             Console.WriteLine(string.Join(", ", Findleaves(nodes)));
             // Find Middle Children
             Console.WriteLine(string.Join(", ", FindMiddleChildren(nodes)));
+            // Find ShortestPath
+            Console.WriteLine(DFS(FindRoot(nodes)) + 1);
         }
     }
 }

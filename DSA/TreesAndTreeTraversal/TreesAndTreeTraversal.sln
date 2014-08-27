@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeManupulations", "TreeManupulations\TreeManupulations.csproj", "{9B90209D-A383-400F-AD09-F2061711BBC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraverseDirectories", "TraverseDirectories\TraverseDirectories.csproj", "{2F00099D-8C3C-46C3-B95E-198F868391B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9B90209D-A383-400F-AD09-F2061711BBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B90209D-A383-400F-AD09-F2061711BBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B90209D-A383-400F-AD09-F2061711BBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F00099D-8C3C-46C3-B95E-198F868391B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F00099D-8C3C-46C3-B95E-198F868391B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F00099D-8C3C-46C3-B95E-198F868391B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F00099D-8C3C-46C3-B95E-198F868391B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
