@@ -7,6 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Northwind", "Northwind", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind", "Northwind\Northwind.csproj", "{ECC12A53-479D-4422-A1C6-87E7067BCBC6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OleDB", "OleDB", "{C7C67E99-B489-479E-8BE4-06EAFAB7409B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelManipulation", "ExcelManipulation\ExcelManipulation.csproj", "{D6FF0493-5ABA-4A43-95B1-471BB0FDD531}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySql", "MySql", "{CDE7C131-6AB6-4701-AE45-EB1CF54AE8A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLManipulation", "MySQLManipulation\MySQLManipulation.csproj", "{558B8D91-351D-4645-A568-6EBCAFEF2F8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +25,21 @@ Global
 		{ECC12A53-479D-4422-A1C6-87E7067BCBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECC12A53-479D-4422-A1C6-87E7067BCBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECC12A53-479D-4422-A1C6-87E7067BCBC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FF0493-5ABA-4A43-95B1-471BB0FDD531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FF0493-5ABA-4A43-95B1-471BB0FDD531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FF0493-5ABA-4A43-95B1-471BB0FDD531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FF0493-5ABA-4A43-95B1-471BB0FDD531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{558B8D91-351D-4645-A568-6EBCAFEF2F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{558B8D91-351D-4645-A568-6EBCAFEF2F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{558B8D91-351D-4645-A568-6EBCAFEF2F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{558B8D91-351D-4645-A568-6EBCAFEF2F8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ECC12A53-479D-4422-A1C6-87E7067BCBC6} = {2E1604CE-3F9E-4076-8EE4-45C0D1E6A0A0}
+		{D6FF0493-5ABA-4A43-95B1-471BB0FDD531} = {C7C67E99-B489-479E-8BE4-06EAFAB7409B}
+		{558B8D91-351D-4645-A568-6EBCAFEF2F8F} = {CDE7C131-6AB6-4701-AE45-EB1CF54AE8A6}
 	EndGlobalSection
 EndGlobal

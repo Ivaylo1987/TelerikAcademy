@@ -1,6 +1,7 @@
 ﻿namespace Northwind
 {
     using System;
+    using System.Data;
     using System.Data.SqlClient;
     using System.Drawing;
     using System.IO;
@@ -108,7 +109,6 @@
                     Console.WriteLine("You can find the pictures in the bin/debug folder.");
                 }
             }
-
         }
     }
 }
