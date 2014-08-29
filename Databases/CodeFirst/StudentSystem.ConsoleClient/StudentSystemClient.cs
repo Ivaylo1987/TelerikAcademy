@@ -18,9 +18,18 @@
 
         public static void Main()
         {
+            DatabaseInitiaze();
             var db = new StudentSystemContext();
-            var courses = db.Courses.Add(new Course() { Name="Databases"});
-            
+            var students = db.Students;
+
+            var DSACourse = db.Courses.First(c => c.Name == "DSA");
+
+            foreach (var student in students)
+            {
+                student.Courses.Add(DSACourse);
+            }
+
+            db.SaveChanges();
         }
     }
 }

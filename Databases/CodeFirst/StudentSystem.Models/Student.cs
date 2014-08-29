@@ -1,6 +1,7 @@
 ﻿namespace StudentSystem.Models
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     public class Student
     {
         private ICollection<Course> courses;
@@ -13,8 +14,13 @@
         }
 
         public int Id { get; set; }
+
+        [Required]
+        [MinLength(2)]
         public string Name { get; set; }
         public int Age { get; set; }
+
+        [Required]
         public int Number { get; set; }
 
         public virtual ICollection<Homework> Homeworks

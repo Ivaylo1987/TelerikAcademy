@@ -1,5 +1,6 @@
 namespace StudentSystem.DataContext.Migrations
 {
+    using StudentSystem.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -28,6 +29,21 @@ namespace StudentSystem.DataContext.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Students.AddOrUpdate(
+                new Student() { Name = "Pesho", Number = 123456 },
+                new Student() { Name = "Dechko", Number = 423457 },
+                new Student() { Name = "Gosho", Number = 123458 },
+                new Student() { Name = "Mara", Number = 523459 },
+                new Student() { Name = "Ivcho", Number = 123436 },
+                new Student() { Name = "Mitko", Number = 223416 },
+                new Student() { Name = "Venci", Number = 123116 },
+                new Student() { Name = "jorka", Number = 173456 }
+                );
+            context.Courses.AddOrUpdate(
+                new Course() { Name = "DSA" },
+                new Course() { Name = "Databases" }
+                );
         }
     }
 }
