@@ -61,6 +61,7 @@
             DataAccessObject.InsertOrders(correntOrder, inCorrentOrder);
 
             var db = new NorthwindEntities();
+            var orders = db.Orders.ToArray();
 
             //Sorry no time for 10 and 11 :(
         }
