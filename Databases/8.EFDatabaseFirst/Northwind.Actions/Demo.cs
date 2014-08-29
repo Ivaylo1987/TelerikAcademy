@@ -60,6 +60,8 @@
 
             DataAccessObject.InsertOrders(correntOrder, inCorrentOrder);
 
+            var db = new NorthwindEntities();
+
             //Sorry no time for 10 and 11 :(
         }
     }
