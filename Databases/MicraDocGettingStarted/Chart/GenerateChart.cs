@@ -70,32 +70,33 @@
         public static void DefineChart(Document document)
         {
             Section section = document.AddSection();
-            Paragraph paragraph = section.AddParagraph("Projects", "Heading1");
+            section.PageSetup.LeftMargin = Unit.FromCentimeter(0.5);
 
-            paragraph.AddBookmark("Chart");
+            section.AddParagraph("And One Constructions Inc.", "Heading1");
 
-            document.LastSection.AddParagraph("DeadLines By Month", "Heading2");
+            section.AddParagraph("Projects By Month", "Heading2");
 
             Chart chart = new Chart();
             chart.Left = 0;
 
-            chart.Width = Unit.FromCentimeter(16);
+            chart.Width = Unit.FromCentimeter(20);
             chart.Height = Unit.FromCentimeter(12);
 
-            Series series = chart.SeriesCollection.AddSeries();
-            series.ChartType = ChartType.Column2D;
-            series.Add(new double[] { 1, 17, 45, 5, 3, 20, 11, 23, 8, 19 });
-            series.HasDataLabel = true;
+            //Series series = chart.SeriesCollection.AddSeries();
+            //series.ChartType = ChartType.Column2D;
+            //series.Add(new double[] { 1, 17, 45, 5, 3, 20, 11, 23, 8, 19 });
+            //series.HasDataLabel = true;
 
-            series = chart.SeriesCollection.AddSeries();
+            var series = chart.SeriesCollection.AddSeries();
             series.ChartType = ChartType.Line;
-            series.Add(new double[] { 41, 7, 5, 45, 13, 10, 21, 13, 18, 9 });
+            series.DataLabel.Type = DataLabelType.Value;
+            series.Add(new double[] { 1, 7, 5, 5, 3, 0, 1, 13, 18, 9, 10, 11 });
 
             XSeries xseries = chart.XValues.AddXSeries();
-            xseries.Add("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            xseries.Add("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
 
             chart.XAxis.MajorTickMark = TickMarkType.Outside;
-            chart.XAxis.Title.Caption = "X-Axis";
+            chart.XAxis.Title.Caption = "Months";
 
             chart.YAxis.MajorTickMark = TickMarkType.Outside;
             chart.YAxis.HasMajorGridlines = true;
@@ -135,7 +136,7 @@
             renderer.RenderDocument();
 
             // Save the document...
-            string filename = "MigraDocChart6.pdf";
+            string filename = "MigraDocChart.pdf";
             renderer.PdfDocument.Save(filename);
 
             // ...and start a viewer.
