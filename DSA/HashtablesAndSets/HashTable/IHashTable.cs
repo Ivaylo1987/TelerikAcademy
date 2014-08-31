@@ -70,7 +70,8 @@
                 else
                 {
                     var pair = this.FindElement(hash, index);
-                    pair = new KeyValuePair<TKey, TValue>(index, value);
+                    this.Remove(index);
+                    this.Add(index, value);
                 }
             }
         }
@@ -89,6 +90,11 @@
 
         public void Add(TKey key, TValue value)
         {
+            if (this.ShouldHashTableResize())
+            {
+                this.Resize();
+            }
+
             var hash = IGetHashCode(key);
 
             if (this.elements[hash] == null)
@@ -98,6 +104,8 @@
 
             var pair = new KeyValuePair<TKey, TValue>(key, value);
             this.elements[hash].Add(pair);
+
+            this.count++;
         }
 
         public TValue Find(TKey key)
@@ -140,6 +148,14 @@
             hash = Math.Abs(hash) % this.elements.Length;
 
             return hash;
+        }
+
+        public void Remove(TKey key)
+        {
+            var hash = IGetHashCode(key);
+            var element = FindElement(hash, key);
+
+            this.elements[hash].Remove(element);
         }
     }
 }
