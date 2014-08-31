@@ -30,6 +30,8 @@
             hashTable["fourth"] = 4;
 
             Console.WriteLine(hashTable["fourth"]);
+            // count
+            Console.WriteLine(hashTable.Count);
         }
     }
 }

@@ -42,10 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Demo.cs" />
+    <Compile Include="IHashSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HashTable\4.IHashTable.csproj">
+      <Project>{9e19e42e-698a-410d-a2fe-9034c124c8ee}</Project>
+      <Name>4.IHashTable</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

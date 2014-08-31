@@ -1,15 +1,26 @@
 ﻿namespace IHashSet
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     class Demo
     {
         static void Main()
         {
+            var hasSet = new IHashSet<string>();
+
+            hasSet.Add("first");
+            hasSet.Add("second");
+
+            var otherHasSet = new IHashSet<string>();
+            otherHasSet.Add("third");
+            otherHasSet.Add("fourth");
+
+            var union = hasSet.Union(otherHasSet);
+
+            foreach (var item in union)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

@@ -1,9 +1,10 @@
 ﻿namespace HashTable
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
 
-    public class IHashTable<TKey, TValue>
+    public class IHashTable<TKey, TValue> : IEnumerable<KeyValuePair<TKey, TValue>>
         where TKey : IEquatable<TKey>
     {
         private const int InitialSize = 16;
@@ -90,6 +91,11 @@
 
         public void Add(TKey key, TValue value)
         {
+            if (this.ContainsKey(key))
+            {
+                throw new ArgumentException("Key is already contined in the structure.");
+            }
+
             if (this.ShouldHashTableResize())
             {
                 this.Resize();
@@ -130,6 +136,29 @@
             return result;
         }
 
+        public bool ContainsKey(TKey key)
+        {
+            var hash = IGetHashCode(key);
+            var result = false;
+
+            if (this.elements[hash] == null)
+            {
+                return result;
+            }
+            else
+            {
+                foreach (var pair in this.elements[hash])
+                {
+                    if (pair.Key.Equals(key))
+                    {
+                        result = true;
+                    }
+                }
+            }
+
+            return result;
+        }
+
         private bool IsHasPresent(int hash)
         {
             var result = true;
@@ -156,6 +185,30 @@
             var element = FindElement(hash, key);
 
             this.elements[hash].Remove(element);
+            this.count--;
+        }
+
+        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
+        {
+            foreach (var container in this.elements)
+            {
+                if (container != null)
+                {
+                    foreach (var element in container)
+                    {
+                        if (elements != null)
+                        {
+                            yield return element;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
         }
     }
 }
