@@ -16,7 +16,7 @@ namespace ATM.Model
     public partial class ATMEntities : DbContext
     {
         public ATMEntities()
-            : base("name=ATMEntities")
+            : base("ATMEntities")
         {
         }
     
