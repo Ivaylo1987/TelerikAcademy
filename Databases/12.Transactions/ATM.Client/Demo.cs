@@ -1,13 +1,9 @@
 ﻿namespace ATM.Client
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using ATM.Model;
+    using System;
     using System.Data;
-using System.Data.Entity;
+    using System.Linq;
 
     class Demo
     {
@@ -52,11 +48,30 @@ using System.Data.Entity;
             accountTo.CardCash = accountTo.CardCash + amount;
         }
 
+        private static void CreateHistoryRecord(ATMEntities db, decimal amount, string cardNumber, string transferCard)
+        {
+            var transactionHistoryRecords = new TransactionHistory()
+            {
+                Amount = amount,
+                TransactionDate = DateTime.Now,
+                CardNumber = cardNumber,
+                TransferToCardNumber = transferCard
+            };
+
+            db.TransactionHistories.Add(transactionHistoryRecords);
+        }
+
         static void Main()
         {
             using (var db = new ATMEntities())
             {
                 var tran = db.Database.BeginTransaction(IsolationLevel.RepeatableRead);
+                var amount = 200m;
+
+                // Use this for input:
+                // 1234SA78P
+                // 1234
+                // 456KRW81
 
                 var cardNumber = Console.ReadLine();
                 var pin = Console.ReadLine();
@@ -68,16 +83,16 @@ using System.Data.Entity;
                     return;
                 }
 
-                if (!CheckIfAccounBallanceIsSufficient(cardNumber, 200))
+                if (!CheckIfAccounBallanceIsSufficient(cardNumber, amount))
                 {
                     tran.Rollback();
                     return;
                 }
 
-                TransferMoney(cardNumber, transferCard, 200, db);
+                TransferMoney(cardNumber, transferCard, amount, db);
+                CreateHistoryRecord(db, amount, cardNumber, transferCard);
 
                 db.SaveChanges();
-
                 tran.Commit();
                 //tran.Rollback();
             }

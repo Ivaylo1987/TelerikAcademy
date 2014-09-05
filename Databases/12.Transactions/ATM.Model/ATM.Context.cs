@@ -16,7 +16,7 @@ namespace ATM.Model
     public partial class ATMEntities : DbContext
     {
         public ATMEntities()
-            : base("ATMEntities")
+            : base("name=ATMEntities")
         {
         }
     
@@ -26,5 +26,6 @@ namespace ATM.Model
         }
     
         public virtual DbSet<CardAccount> CardAccounts { get; set; }
+        public virtual DbSet<TransactionHistory> TransactionHistories { get; set; }
     }
 }
