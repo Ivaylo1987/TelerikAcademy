@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RSSParser")]
+[assembly: AssemblyTitle("ToyStore.ConsoleClient")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RSSParser")]
+[assembly: AssemblyProduct("ToyStore.ConsoleClient")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a9aa8f1f-b277-45a5-942b-bcc7219934bb")]
+[assembly: Guid("5c4f148d-7576-41d1-a553-dc613139e34c")]
 
 // Version information for an assembly consists of the following four values:
 //
