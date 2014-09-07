@@ -49,7 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="ImportController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,13 +60,17 @@
       <Project>{dae59c51-3a8a-4ccf-8a3b-4ddc0a7ecbbf}</Project>
       <Name>BookStore.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BookStore.ExportContoller\BookStore.ExportContoller.csproj">
+      <Project>{1db468fc-482d-4869-80d0-cf5b00c0b08f}</Project>
+      <Name>BookStore.ExportContoller</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookStore\BookStore.Model.csproj">
       <Project>{8099b1f6-d5a0-4ba9-b02e-8a0fa8f3c4df}</Project>
       <Name>BookStore.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XMLImporter\XMLImporter.csproj">
+    <ProjectReference Include="..\XMLImporter\BookStore.ImportController.csproj">
       <Project>{c22a17eb-d6d5-4860-9e29-9dbbe245374d}</Project>
-      <Name>XMLImporter</Name>
+      <Name>BookStore.ImportController</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
