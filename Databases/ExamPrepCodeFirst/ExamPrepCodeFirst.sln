@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Data", "BookStore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Client", "BookStore.Client\BookStore.Client.csproj", "{960E3BE5-D17E-4BF5-88BE-E4623B65CCD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.ImportController", "XMLImporter\BookStore.ImportController.csproj", "{C22A17EB-D6D5-4860-9E29-9DBBE245374D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.ImportController", "BookStore.ImportController\BookStore.ImportController.csproj", "{C22A17EB-D6D5-4860-9E29-9DBBE245374D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.ExportContoller", "BookStore.ExportContoller\BookStore.ExportContoller.csproj", "{1DB468FC-482D-4869-80D0-CF5B00C0B08F}"
 EndProject

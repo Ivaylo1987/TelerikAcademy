@@ -68,7 +68,7 @@
       <Project>{8099b1f6-d5a0-4ba9-b02e-8a0fa8f3c4df}</Project>
       <Name>BookStore.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XMLImporter\BookStore.ImportController.csproj">
+    <ProjectReference Include="..\BookStore.ImportController\BookStore.ImportController.csproj">
       <Project>{c22a17eb-d6d5-4860-9e29-9dbbe245374d}</Project>
       <Name>BookStore.ImportController</Name>
     </ProjectReference>

@@ -11,6 +11,7 @@
             var db = new BookStoreContext();
 
             var xmlImporter = new XMLImporter(db);
+            //uncomment below to import data
             //xmlImporter.ImporXML("../../complex-books.xml");
 
             var xmlExporter = new XMLExporter(db);

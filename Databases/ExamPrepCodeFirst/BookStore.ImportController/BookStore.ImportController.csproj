@@ -7,7 +7,7 @@
     <ProjectGuid>{C22A17EB-D6D5-4860-9E29-9DBBE245374D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XMLImporter</RootNamespace>
+    <RootNamespace>BookStore.ImportController</RootNamespace>
     <AssemblyName>XMLImporter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImportController.cs" />
+    <Compile Include="XMLImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
