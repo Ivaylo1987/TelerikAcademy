@@ -43,7 +43,6 @@
                 searchResults.Add(resultSet);
             }
 
-
             searchResults.Save(fileName);
         }
 
