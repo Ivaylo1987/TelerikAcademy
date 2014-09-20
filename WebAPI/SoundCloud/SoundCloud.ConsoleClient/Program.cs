@@ -13,7 +13,8 @@
         static void Main()
         {
             var db = new SoundCloudData();
-            db.Artists.SearchFor( a => a.Name == null);
+            var artists = db.Artists.All().ToArray();
+
         }
     }
 }

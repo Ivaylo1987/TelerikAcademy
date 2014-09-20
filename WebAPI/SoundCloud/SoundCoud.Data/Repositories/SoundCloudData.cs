@@ -34,7 +34,6 @@
             get { return GetRepository<Album>(); }
         }
 
-
         public int SaveChanges()
         {
             return this.context.SaveChanges();

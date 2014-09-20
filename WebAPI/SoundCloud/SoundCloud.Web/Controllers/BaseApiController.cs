@@ -8,18 +8,26 @@
     using System.Net.Http;
     using System.Web.Http;
 
-    public class BaseController : ApiController
+    public class BaseApiController : ApiController
     {
-        private ISoundCloudData data;
+        private SoundCloudData data;
 
-        public BaseController()
+        public BaseApiController()
             : this(new SoundCloudData())
         {
         }
 
-        public BaseController(ISoundCloudData data)
+        public BaseApiController(SoundCloudData data)
         {
             this.data = data;
+        }
+
+        protected SoundCloudData Data
+        { 
+            get
+            {
+                return this.data;
+            } 
         }
     }
 }

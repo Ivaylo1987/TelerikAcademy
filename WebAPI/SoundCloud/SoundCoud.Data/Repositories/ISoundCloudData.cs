@@ -8,5 +8,6 @@
         IGenericRepository<Artist> Artists { get;  }
 
         IGenericRepository<Album> Albums { get; }
+
     }
 }
