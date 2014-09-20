@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundCloud.Models", "SoundCloud.Models\SoundCloud.Models.csproj", "{533927AE-027E-4D01-AB25-AA5CAF84557D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundCoud.Data", "SoundCoud.Data\SoundCoud.Data.csproj", "{07F34B48-5404-4A60-A01A-84A016F06D7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundCloud.ConsoleClient", "SoundCloud.ConsoleClient\SoundCloud.ConsoleClient.csproj", "{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{533927AE-027E-4D01-AB25-AA5CAF84557D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{533927AE-027E-4D01-AB25-AA5CAF84557D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{533927AE-027E-4D01-AB25-AA5CAF84557D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{533927AE-027E-4D01-AB25-AA5CAF84557D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07F34B48-5404-4A60-A01A-84A016F06D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F34B48-5404-4A60-A01A-84A016F06D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F34B48-5404-4A60-A01A-84A016F06D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F34B48-5404-4A60-A01A-84A016F06D7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
