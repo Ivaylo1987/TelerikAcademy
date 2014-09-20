@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundCoud.Data", "SoundCoud
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundCloud.ConsoleClient", "SoundCloud.ConsoleClient\SoundCloud.ConsoleClient.csproj", "{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundCloud.Web", "SoundCloud.Web\SoundCloud.Web.csproj", "{BB27EDF4-66BE-4D1B-8F04-ED7DBC9020E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BD8896A-E3A8-4A0B-88FE-346D9305A2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB27EDF4-66BE-4D1B-8F04-ED7DBC9020E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB27EDF4-66BE-4D1B-8F04-ED7DBC9020E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB27EDF4-66BE-4D1B-8F04-ED7DBC9020E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB27EDF4-66BE-4D1B-8F04-ED7DBC9020E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
