@@ -14,7 +14,7 @@
     public class DbContext : IdentityDbContext<User>, IDbContext
     {
         public DbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ArticleSystem", throwIfV1Schema: false)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<DbContext, Configuration>());
         }
