@@ -12,6 +12,7 @@
         IDbSet<Tag> Tags { get; set; }
 
         IDbSet<Category> Categories { get; set; }
+        IDbSet<Like> Likes { get; set; }
 
         DbSet<T> Set<T>() where T : class;
 

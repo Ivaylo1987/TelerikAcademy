@@ -17,7 +17,6 @@ namespace Application.Web
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -27,6 +26,27 @@ namespace Application.Web
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "Comments",
+                routeTemplate: "api/articles/{id}/comments",
+                defaults: new
+                {
+                    controller = "Comments"
+                }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "Likes",
+                routeTemplate: "api/articles/like/{id}",
+                defaults: new
+                {
+                    controller = "Likes"
+                }
+            );
+
+            var cros = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cros);
         }
     }
 }

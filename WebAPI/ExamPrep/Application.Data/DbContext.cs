@@ -16,7 +16,7 @@
         public DbContext()
             : base("ArticleSystem", throwIfV1Schema: false)
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DbContext, Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DbContext, Application.Data.Migrations.Configuration>());
         }
 
         public static DbContext Create()
@@ -28,5 +28,6 @@
        public IDbSet<Comment> Comments { get; set; }
        public IDbSet<Tag> Tags { get; set; }
        public IDbSet<Category> Categories { get; set; }
+       public IDbSet<Like> Likes { get; set; }
     }
 }

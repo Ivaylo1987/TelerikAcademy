@@ -51,6 +51,22 @@
             }
         }
 
+        public IGenericRepository<Like> Likes
+        {
+            get
+            {
+                return this.GetRepository<Like>();
+            }
+        }
+
+        public IGenericRepository<User> Users
+        {
+            get
+            {
+                return this.GetRepository<User>();
+            }
+        }
+
         public int SaveChanges()
         {
             return this.context.SaveChanges();

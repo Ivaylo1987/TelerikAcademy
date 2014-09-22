@@ -23,6 +23,7 @@ namespace Application.Web
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
             Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            Response.Headers.Add("Allow", "*");
         }
     }
 }

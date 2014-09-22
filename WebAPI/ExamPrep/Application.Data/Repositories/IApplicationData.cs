@@ -10,5 +10,9 @@
         IGenericRepository<Tag> Tags { get; }
 
         IGenericRepository<Category> Categories { get; }
+        IGenericRepository<Like> Likes { get; }
+        IGenericRepository<User> Users { get; }
+
+        int SaveChanges();
     }
 }

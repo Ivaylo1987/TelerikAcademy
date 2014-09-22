@@ -10,9 +10,9 @@
     {
         public Article()
         {
-            this.Categories = new HashSet<Category>();
             this.Tags = new HashSet<Tag>();
             this.Comments = new HashSet<Comment>();
+            this.Likes = new HashSet<Like>();
         }
 
         public int Id { get; set; }
@@ -25,8 +25,9 @@
 
         public string Content { get; set; }
 
-        public virtual ICollection<Category> Categories { get; set; }
+        public virtual Category Category { get; set; }
         public virtual ICollection<Tag> Tags { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Like> Likes { get; set; }
     }
 }

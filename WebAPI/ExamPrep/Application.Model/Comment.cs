@@ -13,7 +13,7 @@ namespace Application.Models
 
         public virtual Article Article { get; set; }
 
-        public DateTime DateCreate { get; set; }
+        public DateTime DateCreated { get; set; }
 
         public virtual User Author { get; set; }
     }
