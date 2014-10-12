@@ -73,6 +73,7 @@ namespace Application.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IHttpActionResult GetAll(string category)
         {
             var articles = GetArticles(0, category);
@@ -80,6 +81,7 @@ namespace Application.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IHttpActionResult GetAll(int page, string category)
         {
             var articles = GetArticles(page, category);

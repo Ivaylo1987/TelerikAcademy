@@ -2,10 +2,15 @@
 $(function () {
 
     $.fn.dropDownList = function () {
-        var classOfgenerated = this.selector.substr(1, this.selector.length  - 1) + '-list-container';
+        var classOfgenerated = this.selector.substr(1, this.selector.length - 1) + '-list-container';
         var wrapper = $('<div />').addClass(classOfgenerated);
         var ul = $('<ul />').addClass(classOfgenerated);
         var li;
+
+
+        if (true) {
+
+        }
 
         this.children().each(function () {
             li = $('<li />');
@@ -24,7 +29,7 @@ $(function () {
         var clickBlick = $('.' + classOfgenerated);
 
         // Makes list selectable
-        clickBlick.on('click','li', function () {
+        clickBlick.on('click', 'li', function () {
             $clicked = $(this);
             $clicked.parent().find('.selected').removeClass('selected');
             $clicked.addClass('selected');
@@ -33,5 +38,5 @@ $(function () {
 
     $('#generateList').on('click', function () {
         $('#dropdown').dropDownList();
-    })
+    });
 })

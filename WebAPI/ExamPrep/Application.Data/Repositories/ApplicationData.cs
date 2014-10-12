@@ -67,6 +67,14 @@
             }
         }
 
+        public IGenericRepository<Alert> Alerts
+        {
+            get
+            {
+                return this.GetRepository<Alert>();
+            }
+        }
+
         public int SaveChanges()
         {
             return this.context.SaveChanges();

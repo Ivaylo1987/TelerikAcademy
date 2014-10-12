@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alert.cs" />
     <Compile Include="Like.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Article.cs" />

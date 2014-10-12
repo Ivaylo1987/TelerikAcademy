@@ -11,6 +11,7 @@ namespace Application.Data.Migrations
         {
             this.AutomaticMigrationsEnabled = true;
             this.AutomaticMigrationDataLossAllowed = true;
+            ContextKey = "Exam.Data.DbContext";
             
         }
 

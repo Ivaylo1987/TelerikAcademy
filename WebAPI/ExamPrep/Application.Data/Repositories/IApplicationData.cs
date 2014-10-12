@@ -12,6 +12,7 @@
         IGenericRepository<Category> Categories { get; }
         IGenericRepository<Like> Likes { get; }
         IGenericRepository<User> Users { get; }
+        IGenericRepository<Alert> Alerts { get;  }
 
         int SaveChanges();
     }

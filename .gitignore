@@ -166,3 +166,4 @@ $RECYCLE.BIN/
 /JS Applications/UnderscoreJS/packages
 /JS Applications/ConsumingRemoteData/packages
 *.zip
+node_modules/
