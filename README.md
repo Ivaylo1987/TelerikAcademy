@@ -1,2 +1,2 @@
-TelerikAcademy Homeworks
+Telerik Academy Assignments
 ========================
