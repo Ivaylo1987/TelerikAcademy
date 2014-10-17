@@ -1,0 +1,65 @@
+extends ../shared/layout
+block main-content
+    .well.well-lg: h2 You can now enter all details for your CV
+    .well.bs-component.col-lg-6
+        form.form-horizontal(method="post")
+            fieldset
+                legend.legend Personal
+                label.label.label-default(for="name") Name
+                input.form-control(id="name" type="text" name="name" placeholder="Name")
+
+                label.label.label-default(for="age") Age
+                input.form-control(id="age" type="number" name="age" placeholder="Age")
+
+                label.label.label-default(for="Email") E-mail
+                input.form-control(id="Email" type="text" name="email" placeholder="E-mail")
+
+                label.label.label-default(for="address") Address
+                textarea.form-control(rows='3', id='address', name='address', placeholder='Full Address')
+                br
+            fieldset#experience
+                legend.legend Experience
+                .job-container
+                    //.btn.btn-danger.btn-xs.pull-right.remove-job remove
+                    //br
+                    label.label.label-default.titleLabel(for="title_0") Job Title
+                    input.form-control(id="title_0" type="text" name="title_0" placeholder="Title")
+                    label.label.label-default.companyLabel(for="company_0") Company
+                    input.form-control(id="company_0" type="text" name="company_0" placeholder="Company")
+                    label.label.label-default Time Frame
+                    .input-daterange.input-group.datepicker
+                        input.input-sm.form-control.from(type="text", name="from_0")
+                        span.input-group-addon to
+                        input.input-sm.form-control.to(type="text", name="to_0")
+                    br
+                .btn.btn-info.btn-sm.pull-right#add-job Add new
+                br
+            fieldset
+                legend.legend Skills
+                label.label.label-default(for="skills") Skills
+                input.form-control(id="skills" type="text" name="skills" placeholder="Skill1; Skill2; Skill3")
+                span.help-block Please, enter skills separated by '; ' (semi-colon and space)
+            fieldset
+                legend.legend Languages
+                label.label.label-default(for="skills") Languages
+                input.form-control(id="skills" type="text" name="languages" placeholder="language1; language2; language3")
+                span.help-block Please, enter languages separated by '; ' (semi-colon and space)
+                br
+            fieldset#certifications
+                legend.legend Cerfications
+                .cert-container
+                    //.btn.btn-danger.btn-xs.pull-right.remove-cert remove
+                    //br
+                    label.label.label-default.title-label(for="certification_0") Title
+                    input.form-control(id="certification_0" type="text" name="certification_0" placeholder="Certification Title")
+                    label.label.label-default.description-label(for="certDescription_0") Description
+                    input.form-control(id="certDescription_0" type="text" name="certDescription_0" placeholder="Description")
+                    br
+                .btn.btn-info.btn-sm.pull-right#add-cert Add new
+                br
+            input.btn.btn-success(type="submit" value="Submit")
+
+block page-scripts
+    script(src='/lib/dateTimePicker/bootstrap-datepicker.js')
+    script(src="/app/datePicker.js")
+

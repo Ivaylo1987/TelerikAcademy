@@ -1,0 +1,11 @@
+extends ../shared/layout
+block main-content
+    .well.well-lg: h2 Main CV page
+        a.btn.btn-success.btn-lg.pull-right(href='/cv/create') Add New CV
+        .panel.panel-default
+            .panel-heading
+            .panel-body
+                if !cv
+                    div No CVs
+                else
+                    div #{cv.name}

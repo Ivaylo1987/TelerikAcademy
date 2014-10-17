@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CV Creator</title>
+    <link rel="stylesheet" href="/lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body>
+    <header class="nav navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a href="/" class="navbar-brand">CV Creator</a></div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container"><br>
+      <div class="well well-lg">
+        <h2>You can now enter all details for your CV</h2>
+      </div>
+      <div class="well bs-component col-lg-6">
+        <form method="post" class="form-horizontal">
+          <fieldset>
+            <legend class="legend">Personal</legend>
+            <label for="name" class="label label-default">Name</label>
+            <input id="name" type="text" name="name" placeholder="Name" class="form-control">
+            <label for="age" class="label label-default">Age</label>
+            <input id="age" type="number" name="age" placeholder="Age" class="form-control">
+            <label for="Email" class="label label-default">E-mail</label>
+            <input id="Email" type="text" name="email" placeholder="E-mail" class="form-control">
+            <label for="address" class="label label-default">Address</label>
+            <textarea rows="3" id="address" name="address" placeholder="Full Address" class="form-control"></textarea><br>
+          </fieldset>
+          <fieldset id="experience">
+            <legend class="legend">Experience</legend>
+            <div class="job-container">
+              <!--.btn.btn-danger.btn-xs.pull-right.remove-job remove-->
+              <!--br-->
+              <label for="title_0" class="label label-default titleLabel">Job Title</label>
+              <input id="title_0" type="text" name="title_0" placeholder="Title" class="form-control">
+              <label for="company_0" class="label label-default companyLabel">Company</label>
+              <input id="company_0" type="text" name="company_0" placeholder="Company" class="form-control">
+              <label class="label label-default">Time Frame</label>
+              <div class="input-daterange input-group datepicker">
+                <input type="text" name="from_0" class="input-sm form-control from"><span class="input-group-addon">to</span>
+                <input type="text" name="to_0" class="input-sm form-control to">
+              </div><br>
+            </div>
+            <div id="add-job" class="btn btn-info btn-sm pull-right">Add new</div><br>
+          </fieldset>
+          <fieldset>
+            <legend class="legend">Skills</legend>
+            <label for="skills" class="label label-default">Skills</label>
+            <input id="skills" type="text" name="skills" placeholder="Skill1; Skill2; Skill3" class="form-control"><span class="help-block">Please, enter skills separated by '; ' (semi-colon and space)</span>
+          </fieldset>
+          <fieldset>
+            <legend class="legend">Languages</legend>
+            <label for="skills" class="label label-default">Languages</label>
+            <input id="skills" type="text" name="languages" placeholder="language1; language2; language3" class="form-control"><span class="help-block">Please, enter languages separated by '; ' (semi-colon and space)</span><br>
+          </fieldset>
+          <fieldset id="certifications">
+            <legend class="legend">Cerfications</legend>
+            <div class="cert-container">
+              <!--.btn.btn-danger.btn-xs.pull-right.remove-cert remove-->
+              <!--br-->
+              <label for="certification_0" class="label label-default title-label">Title</label>
+              <input id="certification_0" type="text" name="certification_0" placeholder="Certification Title" class="form-control">
+              <label for="certDescription_0" class="label label-default description-label">Description</label>
+              <input id="certDescription_0" type="text" name="certDescription_0" placeholder="Description" class="form-control"><br>
+            </div>
+            <div id="add-cert" class="btn btn-info btn-sm pull-right">Add new</div><br>
+          </fieldset>
+          <input type="submit" value="Submit" class="btn btn-success">
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p class="text-center">&copy; Dev Inc.</p>
+    </footer>
+    <script src="/lib/jquery-2.1.1/jquery-2.1.1.min.js"></script>
+    <script src="/lib/dateTimePicker/bootstrap-datepicker.js"></script>
+    <script src="/app/datePicker.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CV Creator</title>
+    <link rel="stylesheet" href="/lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body>
+    <header class="nav navbar-inverse">
+      <div class="container">
+        <div class="navbar-header"><a href="/" class="navbar-brand">CV Creator</a></div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container"><br>
+      <div class="well bs-component col-lg-6">
+        <form method="post" class="form-horizontal">
+          <label for="username" class="label label-default">Username</label>
+          <input id="username" type="text" name="username" placeholder="Username" class="form-control">
+          <label for="password" class="label label-default">Password</label>
+          <input id="password" type="password" name="password" placeholder="Password" class="form-control">
+          <label for="confirm-password" class="label label-default">Confirm Password</label>
+          <input id="confirm-password" type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control"><br>
+          <input type="submit" value="Submit" class="btn btn-success">
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p class="text-center">&copy; Dev Inc.</p>
+    </footer>
+    <script src="/lib/jquery-2.1.1/jquery-2.1.1.min.js"></script>
+  </body>
+</html>

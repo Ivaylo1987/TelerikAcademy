@@ -1,0 +1,14 @@
+{
+  "name": "FileUploadHomework",
+  "version": "0.0.1",
+  "description": "Create file upload web site with NodeJS. You should have the option to upload a file and be given an unique URL for its download. Use GUID.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DK",
+  "license": "MIT",
+  "dependencies": {
+    "multiparty": "^3.3.2"
+  }
+}
