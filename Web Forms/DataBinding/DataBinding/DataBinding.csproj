@@ -38,6 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -57,6 +63,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Northwind\FormView\EmployeesWithDetails.aspx" />
+    <Content Include="Northwind\GridView\DetailView.aspx" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -66,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CarDealer\CarDealer.aspx" />
+    <Content Include="Northwind\GridView\Employees.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -79,7 +89,35 @@
     <Compile Include="CarDealer\Extra.cs" />
     <Compile Include="CarDealer\Manifacturer.cs" />
     <Compile Include="CarDealer\Model.cs" />
+    <Compile Include="Northwind\FormView\EmployeesWithDetails.aspx.cs">
+      <DependentUpon>EmployeesWithDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Northwind\FormView\EmployeesWithDetails.aspx.designer.cs">
+      <DependentUpon>EmployeesWithDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Northwind\GridView\DetailView.aspx.cs">
+      <DependentUpon>DetailView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Northwind\GridView\DetailView.aspx.designer.cs">
+      <DependentUpon>DetailView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Northwind\GridView\Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Northwind\GridView\Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Northwind\Northwind.csproj">
+      <Project>{90277fe0-047b-4b0c-8380-89725ffb7850}</Project>
+      <Name>Northwind</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding.csproj", "{1ABF5EA9-DBA9-43A3-B91D-A379CE50C069}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind", "Northwind\Northwind.csproj", "{90277FE0-047B-4B0C-8380-89725FFB7850}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1ABF5EA9-DBA9-43A3-B91D-A379CE50C069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ABF5EA9-DBA9-43A3-B91D-A379CE50C069}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ABF5EA9-DBA9-43A3-B91D-A379CE50C069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90277FE0-047B-4B0C-8380-89725FFB7850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90277FE0-047B-4B0C-8380-89725FFB7850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90277FE0-047B-4B0C-8380-89725FFB7850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90277FE0-047B-4B0C-8380-89725FFB7850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
