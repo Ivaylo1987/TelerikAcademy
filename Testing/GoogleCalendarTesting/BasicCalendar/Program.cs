@@ -33,6 +33,27 @@
                 ApplicationName = "CalendarApiTest"
             });
 
+            var list = calendarService.CalendarList.List().Execute().Items;
+
+            if (list.Count <= 0)
+            {
+                var cal = new Calendar();
+                cal.Summary = "Service Owned Calendar";
+
+                var serviceOwned = calendarService.Calendars.Insert(cal).Execute();
+                Console.WriteLine(serviceOwned.Id);
+            }
+
+            //calendarService.CalendarList.Delete("sc2akpavvr45e7re09ra8tq4ag@group.calendar.google.com").Execute();
+
+            AclRule rule = new AclRule();
+            rule.Role = "owner";
+            rule.Scope = new AclRule.ScopeData();
+            rule.Scope.Type = "user";
+            rule.Scope.Value = "dev.testing.ivo@gmail.com";
+
+            calendarService.Acl.Insert(rule, "sc2akpavvr45e7re09ra8tq4ag@group.calendar.google.com");
+
 
             Event @event = new Event()
             {
@@ -40,8 +61,8 @@
                 Location = "Somewhere",
                 Start = new EventDateTime()
                 {
-                    DateTime = new DateTime(2014, 11, 27, 16, 00, 00 ),
-                    TimeZone="Europe/Zurich"
+                    DateTime = new DateTime(2014, 11, 27, 16, 00, 00),
+                    TimeZone = "Europe/Zurich"
                 },
                 End = new EventDateTime()
                 {
@@ -53,24 +74,6 @@
                     new EventAttendee() { Email = "dev.testing.ivo@gmail.com"}
                 }
             };
-
-            var cal = new Calendar();
-            cal.Summary = "Service Owned Calendar";
-
-            //var serviceOwned = calendarService.Calendars.Insert(cal).Execute();
-            //var calId = serviceOwned.Id;
-
-            //var recurringEvent = calendarService.Events.Insert(@event, "primary").Execute();
-
-            var list = calendarService.CalendarList.List().Execute().Items;
-
-            AclRule rule = new AclRule();
-            rule.Role = "owner";
-            rule.Scope = new AclRule.ScopeData();
-            rule.Scope.Type = "user";
-            rule.Scope.Value = "dev.testing.ivo@gmail.com";
-
-            calendarService.Acl.Insert(rule, "sc2akpavvr45e7re09ra8tq4ag@group.calendar.google.com");
 
             var recurringEvent = calendarService.Events.Insert(@event, "sc2akpavvr45e7re09ra8tq4ag@group.calendar.google.com").Execute();
 
