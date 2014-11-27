@@ -33,9 +33,10 @@
                 ApplicationName = "CalendarApiTest"
             });
 
-            var list = calendarService.CalendarList.List().Execute().Items;
 
-            if (list.Count <= 0)
+            var calendarList = calendarService.CalendarList.List().Execute().Items;
+
+            if (calendarList.Count <= 0)
             {
                 var cal = new Calendar();
                 cal.Summary = "Service Owned Calendar";
@@ -44,16 +45,20 @@
                 Console.WriteLine(serviceOwned.Id);
             }
 
-            //calendarService.CalendarList.Delete("sc2akpavvr45e7re09ra8tq4ag@group.calendar.google.com").Execute();
+            //calendarService.CalendarList.Delete("qlgi89v6igg9ui8fccrtg6jnl8@group.calendar.google.com").Execute();
+            calendarService.Calendars.Delete("qlgi89v6igg9ui8fccrtg6jnl8@group.calendar.google.com").Execute();
+            var aclList = calendarService.Acl.List("dc37sl7l13vfp2pobmkdoqnnq0@group.calendar.google.com").Execute().Items;
 
-            AclRule rule = new AclRule();
-            rule.Role = "owner";
-            rule.Scope = new AclRule.ScopeData();
-            rule.Scope.Type = "user";
-            rule.Scope.Value = "dev.testing.ivo@gmail.com";
+            if (aclList.Count <= 0 )
+            {
+                AclRule rule = new AclRule();
+                rule.Role = "owner";
+                rule.Scope = new AclRule.ScopeData();
+                rule.Scope.Type = "user";
+                rule.Scope.Value = "dev.testing.ivo@gmail.com";
 
-            calendarService.Acl.Insert(rule, "sc2akpavvr45e7re09ra8tq4ag@group.calendar.google.com");
-
+                calendarService.Acl.Insert(rule, "dc37sl7l13vfp2pobmkdoqnnq0@group.calendar.google.com").Execute();
+            }
 
             Event @event = new Event()
             {
@@ -75,7 +80,7 @@
                 }
             };
 
-            var recurringEvent = calendarService.Events.Insert(@event, "sc2akpavvr45e7re09ra8tq4ag@group.calendar.google.com").Execute();
+            var recurringEvent = calendarService.Events.Insert(@event, "dc37sl7l13vfp2pobmkdoqnnq0@group.calendar.google.com").Execute();
 
         }
     }
