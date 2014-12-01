@@ -34,7 +34,6 @@
                 ApplicationName = "CalendarApiTest"
             });
 
-
             var calendarList = calendarService.CalendarList.List().Execute().Items;
 
             if (calendarList.Count <= 0)
@@ -47,6 +46,7 @@
             }
 
             var calendarId = calendarList.FirstOrDefault().Id;
+
 
             //calendarService.Calendars.Delete("dc37sl7l13vfp2pobmkdoqnnq0@group.calendar.google.com").Execute();
             var aclList = calendarService.Acl.List(calendarId).Execute().Items;
