@@ -62,12 +62,12 @@
                 calendarService.Acl.Insert(rule, calendarId).Execute();
             }
 
-            var peopleWithBirthDates = new List<Person>();
+            var birthDays = new List<BirthDay>();
 
             using (StreamReader UCNFile = new StreamReader("../../Files/NamesAndUCN.txt"))
             {
                 var fileLine = UCNFile.ReadLine();
-                
+
                 while (fileLine != null)
                 {
                     var peopleUnits = fileLine.Split(new string[] { ";" }, StringSplitOptions.RemoveEmptyEntries);
@@ -84,33 +84,29 @@
                             var ucnDate = int.Parse(ucn.Substring(4, 2));
 
                             int birthDate = ucnDate;
-                            int birthYear;
-                            int birthMonth;
+                            int birthYear = 1900;
+                            int birthMonth = ucnMonth;
 
                             if (ucnMonth > 40)
                             {
-                                birthYear = 2000 + ucnYear;
+                                // born after 2000
+                                birthYear += 100 + ucnYear;
                                 birthMonth = ucnMonth - 40;
                             }
-                            else
-                            {
-                                birthYear = 1900 + ucnYear;
-                                birthMonth = ucnMonth;
-                            }
 
-                            var person = new Person()
+                            var birthDay = new BirthDay()
                             {
                                 Name = name,
-                                BirthDay = new DateTime(birthYear, birthMonth, birthDate)
+                                Date = new DateTime(birthYear, birthMonth, birthDate)
                             };
 
-                            peopleWithBirthDates.Add(person);
+                            birthDays.Add(birthDay);
                         }
                         catch (FormatException)
                         {
                             // handle format exception
                         }
-                        catch(ArgumentException)
+                        catch (ArgumentException)
                         {
                             // handle argument excepton
                         }
@@ -120,41 +116,69 @@
                 }
             }
 
-
-            foreach (var person in peopleWithBirthDates)
+            var birhtDayEvents = new List<Event>();
+            foreach (var birthDay in birthDays)
             {
+                var eventDate = new DateTime(DateTime.Now.Year, birthDay.Date.Month, birthDay.Date.Day);
+                var summery = string.Format("{0} has a BirthDay today. Going {1} !", birthDay.Name, DateTime.Now.Year - birthDay.Date.Year);
+
                 var bdEvent = new Event()
                 {
-                    Summary = person.Name + "has a BirthDay today.",
+                    Summary = birthDay.Name + " has a BirthDay today.",
                     Start = new EventDateTime()
                     {
                         // check date.ToString()?!
-                        Date = person.BirthDay.Year.ToString() + "-"+ person.BirthDay.Month + "-" + person.BirthDay.Day
+                        Date = eventDate.ToString("yyyy-MM-dd")
+                    },
+                    End = new EventDateTime()
+                    {
+                        Date = eventDate.AddDays(1.0).ToString("yyyy-MM-dd")
+                    },
+                    Attendees = new List<EventAttendee>()
+                    {
+                        new EventAttendee() { Email = "dev.testing.ivo@gmail.com"}
                     }
                 };
+
+                birhtDayEvents.Add(bdEvent);
+                var eventsAftercurrent = calendarService.Events.List(calendarId);
+                eventsAftercurrent.TimeMax = eventDate.AddDays(1.0);
+                eventsAftercurrent.TimeMin = eventDate.AddDays(-1.0);
+
+                var eventsInTheSameInterval = eventsAftercurrent.Execute().Items;
+
+                foreach (var item in eventsInTheSameInterval)
+                {
+                    if (item.Summary == summery)
+                    {
+                        continue;
+                    }
+                }
+                
+                calendarService.Events.Insert(bdEvent, calendarId).Execute();
             }
 
-            Event @event = new Event()
-            {
-                Summary = "Appointment",
-                Location = "Somewhere",
-                Start = new EventDateTime()
-                {
-                    DateTime = new DateTime(2014, 11, 27, 17, 00, 00),
-                    TimeZone = "Europe/Zurich"
-                },
-                End = new EventDateTime()
-                {
-                    DateTime = new DateTime(2014, 11, 27, 18, 00, 00),
-                    TimeZone = "Europe/Zurich"
-                },
-                Attendees = new List<EventAttendee>()
-                {
-                    new EventAttendee() { Email = "dev.testing.ivo@gmail.com"}
-                }
-            };
+            //Event @event = new Event()
+            //{
+            //    Summary = "Appointment",
+            //    Location = "Somewhere",
+            //    Start = new EventDateTime()
+            //    {
+            //        DateTime = new DateTime(2014, 11, 27, 17, 00, 00),
+            //        TimeZone = "Europe/Zurich"
+            //    },
+            //    End = new EventDateTime()
+            //    {
+            //        DateTime = new DateTime(2014, 11, 27, 18, 00, 00),
+            //        TimeZone = "Europe/Zurich"
+            //    },
+            //    Attendees = new List<EventAttendee>()
+            //    {
+            //        new EventAttendee() { Email = "dev.testing.ivo@gmail.com"}
+            //    }
+            //};
 
-            var recurringEvent = calendarService.Events.Insert(@event, calendarId).Execute();
+            //var recurringEvent = calendarService.Events.Insert(@event, calendarId).Execute();
 
         }
     }

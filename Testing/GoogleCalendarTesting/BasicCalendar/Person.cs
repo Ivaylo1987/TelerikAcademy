@@ -2,10 +2,10 @@
 {
     using System;
 
-    class Person
+    class BirthDay
     {
         public string Name { get; set; }
 
-        public DateTime BirthDay { get; set; }
+        public DateTime Date { get; set; }
     }
 }
