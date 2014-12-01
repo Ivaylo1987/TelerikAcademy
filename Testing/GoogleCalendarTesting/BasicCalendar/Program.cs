@@ -46,7 +46,6 @@
             }
 
             //calendarService.CalendarList.Delete("qlgi89v6igg9ui8fccrtg6jnl8@group.calendar.google.com").Execute();
-            calendarService.Calendars.Delete("qlgi89v6igg9ui8fccrtg6jnl8@group.calendar.google.com").Execute();
             var aclList = calendarService.Acl.List("dc37sl7l13vfp2pobmkdoqnnq0@group.calendar.google.com").Execute().Items;
 
             if (aclList.Count <= 0 )
