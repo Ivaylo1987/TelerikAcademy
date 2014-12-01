@@ -87,9 +87,9 @@
                             int birthYear = 1900 + ucnYear;
                             int birthMonth = ucnMonth;
 
+                            // born after 2000 logic
                             if (ucnMonth > 40)
                             {
-                                // born after 2000
                                 birthYear += 100;
                                 birthMonth = ucnMonth - 40;
                             }
@@ -143,8 +143,9 @@
                 var eventsAftercurrent = calendarService.Events.List(calendarId);
                 eventsAftercurrent.TimeMax = eventDate.AddDays(1.0);
                 eventsAftercurrent.TimeMin = eventDate.AddDays(-1.0);
-                var isPresent = false;
                 var eventsInTheSameInterval = eventsAftercurrent.Execute().Items;
+
+                var isPresent = false;
 
                 foreach (var item in eventsInTheSameInterval)
                 {
@@ -159,28 +160,6 @@
                     calendarService.Events.Insert(bdEvent, calendarId).Execute();
                 }
             }
-
-            //Event @event = new Event()
-            //{
-            //    Summary = "Appointment",
-            //    Location = "Somewhere",
-            //    Start = new EventDateTime()
-            //    {
-            //        DateTime = new DateTime(2014, 11, 27, 17, 00, 00),
-            //        TimeZone = "Europe/Zurich"
-            //    },
-            //    End = new EventDateTime()
-            //    {
-            //        DateTime = new DateTime(2014, 11, 27, 18, 00, 00),
-            //        TimeZone = "Europe/Zurich"
-            //    },
-            //    Attendees = new List<EventAttendee>()
-            //    {
-            //        new EventAttendee() { Email = "dev.testing.ivo@gmail.com"}
-            //    }
-            //};
-
-            //var recurringEvent = calendarService.Events.Insert(@event, calendarId).Execute();
 
         }
     }
