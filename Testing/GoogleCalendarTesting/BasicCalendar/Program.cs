@@ -84,13 +84,13 @@
                             var ucnDate = int.Parse(ucn.Substring(4, 2));
 
                             int birthDate = ucnDate;
-                            int birthYear = 1900;
+                            int birthYear = 1900 + ucnYear;
                             int birthMonth = ucnMonth;
 
                             if (ucnMonth > 40)
                             {
                                 // born after 2000
-                                birthYear += 100 + ucnYear;
+                                birthYear += 100;
                                 birthMonth = ucnMonth - 40;
                             }
 
@@ -124,10 +124,9 @@
 
                 var bdEvent = new Event()
                 {
-                    Summary = birthDay.Name + " has a BirthDay today.",
+                    Summary = summery,
                     Start = new EventDateTime()
                     {
-                        // check date.ToString()?!
                         Date = eventDate.ToString("yyyy-MM-dd")
                     },
                     End = new EventDateTime()
@@ -144,18 +143,21 @@
                 var eventsAftercurrent = calendarService.Events.List(calendarId);
                 eventsAftercurrent.TimeMax = eventDate.AddDays(1.0);
                 eventsAftercurrent.TimeMin = eventDate.AddDays(-1.0);
-
+                var isPresent = false;
                 var eventsInTheSameInterval = eventsAftercurrent.Execute().Items;
 
                 foreach (var item in eventsInTheSameInterval)
                 {
                     if (item.Summary == summery)
                     {
-                        continue;
+                        isPresent = true;
                     }
                 }
-                
-                calendarService.Events.Insert(bdEvent, calendarId).Execute();
+
+                if (!isPresent)
+                {
+                    calendarService.Events.Insert(bdEvent, calendarId).Execute();
+                }
             }
 
             //Event @event = new Event()
