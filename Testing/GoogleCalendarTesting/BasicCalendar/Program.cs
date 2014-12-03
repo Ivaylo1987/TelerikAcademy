@@ -34,6 +34,8 @@
                 ApplicationName = "CalendarApiTest"
             });
 
+            
+
             var calendarList = calendarService.CalendarList.List().Execute().Items;
 
             if (calendarList.Count <= 0)
@@ -45,21 +47,33 @@
                 Console.WriteLine(serviceOwned.Id);
             }
 
-            var calendarId = calendarList.FirstOrDefault().Id;
-
-
-            //calendarService.Calendars.Delete("dc37sl7l13vfp2pobmkdoqnnq0@group.calendar.google.com").Execute();
+            var calendarId = calendarService.CalendarList.List().Execute().Items.FirstOrDefault().Id;
+            //calendarService.Calendars.Delete(calendarId).Execute();
+           
             var aclList = calendarService.Acl.List(calendarId).Execute().Items;
+            var isUserInAclList = false;
 
-            if (aclList.Count <= 0)
+            foreach (var rule in aclList)
             {
-                AclRule rule = new AclRule();
-                rule.Role = "owner";
-                rule.Scope = new AclRule.ScopeData();
-                rule.Scope.Type = "user";
-                rule.Scope.Value = "dev.testing.ivo@gmail.com";
+                if (rule.Scope != null)
+                {
+                    var scope = rule.Scope;
+                    if (scope.Type == "user" && scope.Value == "dev.testing.ivo@gmail.com")
+                    {
+                        isUserInAclList = true;
+                    }
+                }
+            }
 
-                calendarService.Acl.Insert(rule, calendarId).Execute();
+            if (!isUserInAclList)
+            {
+                AclRule userRule = new AclRule();
+                userRule.Role = "reader";
+                userRule.Scope = new AclRule.ScopeData();
+                userRule.Scope.Type = "user";
+                userRule.Scope.Value = "dev.testing.ivo@gmail.com";
+
+                calendarService.Acl.Insert(userRule, calendarId).Execute();
             }
 
             var birthDays = new List<BirthDay>();
@@ -116,7 +130,6 @@
                 }
             }
 
-            var birhtDayEvents = new List<Event>();
             foreach (var birthDay in birthDays)
             {
                 var eventDate = new DateTime(DateTime.Now.Year, birthDay.Date.Month, birthDay.Date.Day);
@@ -132,14 +145,9 @@
                     End = new EventDateTime()
                     {
                         Date = eventDate.AddDays(1.0).ToString("yyyy-MM-dd")
-                    },
-                    Attendees = new List<EventAttendee>()
-                    {
-                        new EventAttendee() { Email = "dev.testing.ivo@gmail.com"}
                     }
                 };
 
-                birhtDayEvents.Add(bdEvent);
                 var eventsAftercurrent = calendarService.Events.List(calendarId);
                 eventsAftercurrent.TimeMax = eventDate.AddDays(1.0);
                 eventsAftercurrent.TimeMin = eventDate.AddDays(-1.0);
